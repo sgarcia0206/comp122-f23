@@ -8,8 +8,7 @@
    1. Pickup where were left off
    1. SSH : Walk through of github authentication
    1. Git
-   1. Walk trough of the assignments
-   1. Feedback System
+   1. Walk through of the assignments
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
@@ -41,18 +40,20 @@
      - Feature Creation (common method)
 
   1. List of most common commands for COMP122  (at least for a while)
-     | command            | comment |
-     |--------------------|---------|
-     | `git clone`        | Get the assignment. |
-     | `git pull`         | Get any updates related to the assignment.  |
-     | `subl`             | Work on the assignment (well not a git command).  |
-     | `git add`          | Set the "stage" for your next version repository  |
-     | `git commit`       | Carry out the operations to create the next version of the repository. |
-     | `git log` (--graph)| View the history of your repository |
-     | `git status`       | Get the status of working directory as it relates to staging and the local repo |
-     | `git reset --hard` | Aargh, I screwed up, lets go back to the last valid version.  |
-     | `git tag`          | Assigning a name of a commit |
+     | command            | comment                                                         |
+     |--------------------|-----------------------------------------------------------------|
+     | `git clone`        | Get the assignment.                                             |
+     | `git pull`         | Get any updates related to the assignment.                      |
+     | `subl`             | Work on the assignment (well not a git command).                |
+     | `git add`          | Set the "stage" for your next version repository                |
+     | `git commit`       | Put the file into the local reposition.                         |
+     | `git log` (--graph)| View the history of your repository                             |
+     | `git status`       | Get the status of working directory and the local repo          |
+     | `git repo-status`  | Get the status of your local and remote repositories            |
+     | `git reset --hard` | Aargh, I screwed up, lets go back to the last valid version.    |
+     | `git tag`          | Assigning a name to a commit                                    |
      | `git checkout`     | Go backwards and forwards in time to view a version of the repo |
+     | `git pull-request` | Review what your are submitting as part of the assignment       |
 
    * SSH
       - secure connection to a remote resources

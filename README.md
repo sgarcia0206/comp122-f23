@@ -62,11 +62,11 @@ This README.md file provides you with an overview of this structure and key info
 
   * Section Subdirectories
     - models-comp-comm/
-      - lecture_ordering.md: inform regarding the order of slide presentations
+      - "lecture_ordering.md": inform regarding the order of slide presentations
+      - "slide_presentations/":  subdirectory
       - Lecture Notes (notes_mm_dd.md)
       - Addendum Notes per class <br>
         (addendum_mm_dd_XX.md where XX= MM, MA, TM, TA)
-      - Copies of Slides within the "documents/" subdirectory
 
     - format-encodings/
       - with the same substructure as "models_comp_comm"
