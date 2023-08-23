@@ -2,6 +2,56 @@
 
 # trap 0 cleanup
 
+case ${0} in
+   *mips_subroutine)
+     VERSION="mips"
+     LANG_EXT="s"
+     DUMP_X_REGISTERS="s0 s1 s2 s3 s4 s5 s6 s7 fp gp sp ra"
+     DUMP_REG_LIST=""
+     DUMP_T_REGS=""
+     DUMP_V_REGS=""
+
+     ;;
+
+   *java_subroutine)
+     VERSION="java"
+     LANG_EXT="j"
+     DUMP_X_REGISTERS=""
+     DUMP_REG_LIST=""
+     DUMP_T_REGS=""
+     DUMP_V_REGS=""
+     ;;
+esac
+
+
+### FILE NAME RELATED ENVIRONMENT VARIABLES
+BOOTSTRAP_DIR=".${VERSION}_subroutine.bootstrap"
+mkdir -p ${BOOTSTRAP_DIR}
+
+OUTPUT_FILE="${BOOTSTRAP_DIR}/bootstrap.output"
+ASSEMBLER_FILE="${BOOTSTRAP_DIR}/assembler.output"
+ERROR_FILE="${BOOTSTRAP_DIR}/bootstrap.errors"
+
+BOOTSTRAP_FILE="${BOOTSTRAP_DIR}/${SUB_NAME}.bootstrap.s"
+BOOTSTRAP_FILE="${BOOTSTRAP_DIR}/bootstrap.s"
+
+BOOTSTRAP_JAVA_FILE="${BOOTSTRAP_DIR}/bootstrap.java"
+
+# the PREFIX to simplify error messages
+PWD_STRING=$(pwd)
+
+
+
+MIPS_OS_INTERFACE="$HOME/repositories/mips_subroutine/java/MIPS_OS_Interface"
+
+cleanup () {
+  #  call on a trap on exit
+  rm -f ${BOOTSTRAP_FILE}
+  rm -f ${OUTPUT_FILE}
+  rm -f ${ASSEMBLER_FILE}
+  rm -f ${ERROR_FILE}
+}
+
 ###########################################################################
 # The purpose of this script is to execute a single MIPS subroutine.
 # The two primary uses of this script is
@@ -53,20 +103,20 @@ EOF
 #    MARS_JAR:  The location of the MARS jar file
 ###########################################################################
 
+: ${JAVAC:=$(which JAVAC)}
+: ${JAVA:=$(which JAVA)}
+: ${MARS:=$(which MARS)}
 
-if [[ -z "${MARS}" ]] ; then
-  MARS="$(which mars)"
-fi
+[[ -n "${JAVA}" ]] || { echo "java command not found!"; exit 1; }
 
-if [[ -z "${MARS}" ]] ; then
-  if [[ -z "${MARS_JAR}" ]] ; then
+if [[ -z "${MARS}" ]] ; then 
+  if [[ -n "${MARS_JAR}" ]] ; then
+    MARS="${JAVA} - ${MARS_JAR}"
+  else 
     echo "MARS (MIPS Assembler and Runtime System) not found!"
     exit 2
-  else
-    MARS="java - ${MARS_JAR}"
   fi
 fi
-
 
 ###########################################################################
 # ENVIRONMENT VARABLE DESCRIPTONS
@@ -101,24 +151,6 @@ SUMMARIZE="FALSE"
   # -- should this go to stdout, at the beginning?
   # -- will require processing of files.
 
-# The following are the registers that are dump from $MARS
-# The resulting registers emitted to stderr
-DUMP_X_REGISTERS="s0 s1 s2 s3 s4 s5 s6 s7 fp gp sp ra"
-DUMP_REG_LIST=""
-DUMP_T_REGS=""
-DUMP_V_REGS=""
-
-BOOT_FILE=".boot.s"
-OUTPUT_FILE=".boot.output"
-ASSEMBLER_FILE=".assembler.output"
-ERROR_FILE=".boot.errors"
-cleanup () {
-  #  call on a trap on exit
-  rm -f ${BOOT_FILE}
-  rm -f ${OUTPUT_FILE}
-  rm -f ${ASSEMBLER_FILE}
-  rm -f ${ERROR_FILE}
-}
 
 SPACE15="               "
 SPACE7="       "
@@ -205,12 +237,87 @@ function sub_routine_call () {
 }
 ###########################################################################
 
+build_java_source () {
+
+cat <<-EOF
+class ${SUB_NAME} {
+   static MIPS_OS_Interface mips = new MIPS_OS_Interface();
+
+EOF
+
+cat ${SUB_NAME}.j 
+
+cat <<-EOF
+
+  public static void main(String[] args) {
+  
+    int index;
+EOF
+
+  for ((i=0; i < ${#SUB_ARGS_TEXT[@]}; i++)) ; do
+    _text=${SUB_ARGS_TEXT[$i]}
+    _type=${SUB_ARGS_TYPES[$i]}
+    _value=${SUB_ARGS_VALUES[$i]}
+    if [[ ${ARG_CONVENTION} != "base" ]] ; then
+      _type="string"
+    fi
+  
+    case ${_type} in 
+      double)
+         echo "    double \$a$i = $_value;"
+         ;;
+  
+      char)
+         echo "    char \$a$i   = '$_value';"
+         ;;
+
+      integer)
+         echo "    int  \$a$i   = $_value;"
+         ;;
+  
+      string)
+         echo "    String string_$i = \"$_text\";"
+         echo "    char \$a$i[] = new char[ (string_$i).length() + 2];"
+         echo "         for (index=0; index < \$a$i.length - 2; index++ ) {"
+         echo "           \$a$i[index] = (string_$i).charAt(index);"
+         echo "         }"
+         echo "         \$a$i[index+1] = '\7' ; // the Alert character"
+         ;;
+    esac
+  done
+
+echo    ""
+echo -n "    int \$v0 = "     #modify this based upon return type
+  echo -n "${SUB_NAME}("
+  for ((i=0; i < ${#SUB_ARGS_TEXT[@]}; i++)) ; do
+    echo -n "\$a$i"
+    if (( i != ${#SUB_ARGS_TEXT[@]} -1 )) ; then
+      echo -n ", "
+    fi
+  done
+  echo ");"   
+
+cat <<-EOF
+
+    // Augment this code based upon desired output type
+
+    mips.print_ci('\n');   // Print extra '\n' in case the users
+                           // last line does not include the 
+                           // proforma '\n'.
+    mips.print_d(\$v0);
+    mips.print_ci('\n');
+    return;
+  }
+}
+EOF
+
+} > ${BOOTSTRAP_JAVA_FILE}
 
 
 ###########################################################################
 # The following functions are used to prepare to MIPS bootstrapping code
 
-function build_data_segment () {
+function build_mips_data_segment () {
   echo "${SPACE15} .data"
   echo ""
   echo ""
@@ -444,7 +551,7 @@ function set_registers () {
   echo "${SPACE15} sw \$sp, saved_sp"
 }
 
-function build_boot_file () {
+function build_mips_boot_file () {
   ## Steps to build the boot file.
   #
   #  1. Build the Data Segment 
@@ -457,7 +564,7 @@ function build_boot_file () {
   #     1. Call the "SUB_NAME"  
   #     1. Exit the value of $v0
 
-  build_data_segment
+  build_mips_data_segment
 
   # Build the Text Segment
   cat <<-EOF
@@ -568,7 +675,7 @@ EOF
 
 EOF
 
-} > ${BOOT_FILE}
+} > ${BOOTSTRAP_FILE}
 
 
 ###########################################################################
@@ -610,13 +717,63 @@ function pretty_print_output () {
 
 }
 
-function post_process () {
-  error_status="$1"
+#.java_subroutine.bootstrap/bootstrap.java:7: error: ';' expected
+function fix_error_messages () {
+  # modify the error message to reflect a clean output
+  # Make the file name relative
+  # revised the line number
+   sed -e "s|${BOOTSTRAP_JAVA_FILE}/||"  -e "s|${BOOTSTRAP_DIR}/||" \
+       -e "s/bootstrap.java/${SUB_NAME}.j/"  -e "s|${PWD_STRING}/||" |
+    while IFS= read _line ; do    #handle the shift in the line numbers
+      _number=$(sed -n "/error:/s|^.*${SUB_NAME}.j:\([0-9][0-9]*\):.*$|\1|p" <<< $_line)
+      if [[ -n "$_number" ]] ; then 
+        (( _number = _number - 3 ))
+        _line=$(sed "s|${SUB_NAME}.j:[0-9][0-9]*:|${SUB_NAME}.j:$_number:|" <<< $_line)
+      fi
+      echo "$_line"
+    done |
+  cat
+}
+
+execute_java () {
+  # Execute java with boot file
+  #  - Possible issue with infinite loops
+
+  #cp -f ${MIPS_OS_INTERFACE}.java ${BOOTSTRAP_DIR}
+  cp -f ${MIPS_OS_INTERFACE}.class ${BOOTSTRAP_DIR}
+  {   
+    javac -classpath ${BOOTSTRAP_DIR} -d ${BOOTSTRAP_DIR} ${BOOTSTRAP_JAVA_FILE} &&
+    java  -cp ${BOOTSTRAP_DIR} ${SUB_NAME} 
+  } > ${OUTPUT_FILE} 2>&1
+
+  # .java_subroutine.bootstrap/bootstrap.java:7: error: ';' expected
   
+  return $?
+  # Need to address error messages
+  # 1. the path is BOOTSTRAP_DIR
+  # 1. line numbers will be off.
+
+}
+
+execute_mips () {
+  # Execute Mars with boot file
+  #  - 10000: max instructions to execute to prevent infinite loops
+  #  - nc: remove copyright message
+  #  - sm: start with global main
+  #  - se1: simulation run: error 1, if linkage error.
+  #  - ae2: assemble run: error 1, if syntax error.
+  ${MARS} 10000 nc sm se1 ae1 ${DUMP_REGISTERS} \
+       ${BOOTSTRAP_FILE} ${SUB_NAME_FILE} > ${OUTPUT_FILE} 2>&1
+
+  return $?
+}
+
+
+function print_user_output () { 
   # The output is structured as follows:
   # ---
   #  <user output>              : {calculated} lines
-  #  <extra \n>                 : 1 line, but if a not a empty line then, user forgot '\n'
+  #  <extra \n>                 : 1 line, but if a not an empty line then, user forgot '\n'
   #  return value               : 1 line
   #  user requested registers   : {calculated} lines
   #  system requested registers : {calculated} lines
@@ -637,15 +794,11 @@ function post_process () {
 
   # Send out the the normal user output
   if [[ ${num_user_lines} > 0 ]]; then 
-    head -n ${num_user_lines} ${OUTPUT_FILE} | sed "s|$PWD/||"
+    head -n ${num_user_lines} ${OUTPUT_FILE}
   fi
   if [[ ${last_output_line} != "" ]] ; then
      # User forgot to provide the final '\n', so print out the line
-     echo "${last_output_line}" | sed "s|$PWD/||"
-  fi
-
-  if [[ ${error_status} != 0 ]] ; then
-     exit 1
+     echo "${last_output_line}" 
   fi
 
   if [[ num_user_lines > 0 || ${last_output_line} != "" ]] ; then
@@ -660,6 +813,9 @@ function post_process () {
     echo
   fi
 
+}
+
+function post_process () {
   # Grab the SUB_RETURN_LINE
   if [[ ${SUB_RETURN_TYPE} != "null" ]] ; then 
     SUB_RETURN_LINE="${return_line}"
@@ -677,7 +833,7 @@ function post_process () {
   # Generate a warning file if needed
   { 
     # 1. create a file with just the X register without a value of 0xdeadbeaf
-    REGISTER_OUTPUT=.${SUB_NAME}.registers
+    REGISTER_OUTPUT=${BOOTSTRAP_DIR}/${SUB_NAME}.registers
       tail -n $num_system_regs ${OUTPUT_FILE} | grep -v "0xdeadbeef" > ${REGISTER_OUTPUT}
   
     # 1. if "s*" is present, "Warning: One or more of the S registers were not restored."
@@ -792,101 +948,114 @@ shift ${OPTIND}
 
 # # Note that you must run the command in the current working directory of the files
 #
-SUB_NAME_FILE="${SUB_NAME}.s"
+SUB_NAME_FILE="${SUB_NAME}.${LANG_EXT}"
 SUB_NAME=$(basename ${SUB_NAME})
 
 # Command line related error checking
-[ $SUB_NAME != "main" ] || 
-     { echo "File name cannot be \"main.s\"." ; exit 1; }
+[ ${SUB_NAME} != "main" ] || 
+     { echo "File name cannot be \"main.${LANG_EXT}\"." ; exit 1; }
 
 [ -f ${SUB_NAME_FILE} ] || 
      { echo "File \"${SUB_NAME_FILE}\" does not exist." ; exit 1 ; }
 
-grep -q "${SUB_NAME}:" ${SUB_NAME_FILE}  || 
-     { echo "Subroutine $SUB_NAME not defined." ; exit 1; }
-
-
-
-SUB_ARGS_TEXT=( "$@" )
-
-
-# Determine the text, value, and type of each subroutine
-# argument, and convert the string to the appropriate value
-for ((i=0; i < ${#SUB_ARGS_TEXT[@]}; i++)) ; do
-  _type="string"
-  _value=${SUB_ARGS_TEXT[$i]}
-
-  # Handles ASCII chars
-  egrep -q "^.$" <<< ${SUB_ARGS_TEXT[$i]} &&
-        _type="char"
-  egrep -q "^\\.$" <<< ${SUB_ARGS_TEXT[$i]} &&
-        _type="char"
-
-  egrep -q "^[+-]?[0-9]+\.[0-9]+$" <<< ${SUB_ARGS_TEXT[$i]} &&
-        _type="double"
-
-  # Handles based numbers
-  egrep -q "^[+-]?[2-9][0-9]*#[ 0-9]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
-         _type="integer" 
-         _value=$(( $(sed -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
-  }
-
-  # Handles binary
-  egrep -q "^[+-]?0[bB][ 01]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
-         _type="integer" 
-         _value=$(( $(sed -e 's/0[bB]/2#/' -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
-  }
-
-
-  # Handles decimal.
-  egrep -q "^[+-]?[0-9][ 0-9]*$" <<< ${SUB_ARGS_TEXT[$i]} && {
-         _type="integer" 
-         _value=$(( $(sed -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
-  }
-
-  # Handles octal .
-  egrep -q "^[+-]?0[o]?[ 0-7]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
-         _type="integer" 
-         _octal_value=$(sed -e 's/[oO]//' -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} )
-         _value=$(( _octal_value ))
-  }
-
-  # Handles hexadecimal
-  egrep -q "^[+-]?0[xX]?[ 0-9A-Fa-f]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
-         _type="integer" 
-         _value=$(( $(sed -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
-  }
-
-  SUB_ARGS_TYPES[${i}]=$_type
-  SUB_ARGS_VALUES[${i}]=$_value
-done
-SUB_CALL=$(sub_routine_call)
-
-
-
-
-# MARS is the execution hog... 
-# No value in checking for assembly before building the boot file
-## #  1. Assemble ${SUB_NAME}.s, stop if there are errors
-## ${MARS} nc a ae1 p ${SUB_NAME}.s  > ${ASSEMBLER_FILE}
-## if [[ $? == 1 ]] ; then 
-##    sed "s|$PWD/||" ${ASSEMBLER_FILE}
-##    exit 1; 
-## fi
-
-#  1. Built the boot file
-build_boot_file
-
-#  1. Execute Mars with boot file
-#  ae1 is needed in the case there is a linkage error.
-#  10000 is the max number of instructions to execute to prevent infinite loops
-${MARS} 10000 nc sm ae2 se1 p ${DUMP_REGISTERS} \
-     ${BOOT_FILE} ${SUB_NAME_FILE} > ${OUTPUT_FILE} 2>/dev/null
-if [[ $? == 2 ]] ; then 
-   sed "s|$PWD/||" ${OUTPUT_FILE}
-   exit 1; 
+if [[ ${VERSION} == "mips" ]] ; then 
+  grep -q "${SUB_NAME}:" ${SUB_NAME_FILE}  || 
+       { echo "Subroutine $SUB_NAME not defined" ; exit 1; }
+  grep -q "\.globl *${SUB_NAME}" ${SUB_NAME_FILE}  || 
+       { echo "Subroutine $SUB_NAME not defined .globl" ; exit 1; }
 fi
 
-# 1. Post process output (0 is good, 1 is bad)
-post_process "$?"
+if [[ ${VERSION} == "java" ]] ; then 
+  grep -q "public  *static  *int  *${SUB_NAME} *(" ${SUB_NAME_FILE}  || 
+       { echo "Subroutine $SUB_NAME not declared \"public static int\"." ; exit 1; }
+fi
+
+if [[ ${VERSION} == "c" ]] ; then 
+  grep -q "${SUB_NAME}:" ${SUB_NAME_FILE}  || 
+       { echo "Subroutine $SUB_NAME not defined." ; exit 1; }
+fi
+
+
+function process_subcommand_args () {
+
+  SUB_ARGS_TEXT=( "$@" )
+
+  # Determine the text, value, and type of each subroutine
+  # argument, and convert the string to the appropriate value
+  for ((i=0; i < ${#SUB_ARGS_TEXT[@]}; i++)) ; do
+    _type="string"
+    _value=${SUB_ARGS_TEXT[$i]}
+
+    # Handles ASCII chars
+    egrep -q "^.$" <<< ${SUB_ARGS_TEXT[$i]} &&
+          _type="char"
+    egrep -q "^\\.$" <<< ${SUB_ARGS_TEXT[$i]} &&
+          _type="char"
+
+    egrep -q "^[+-]?[0-9]+\.[0-9]+$" <<< ${SUB_ARGS_TEXT[$i]} &&
+          _type="double"
+
+    # Handles based numbers
+    egrep -q "^[+-]?[1-9][0-9]*#[ 0-9]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
+           # Note: does not prevent 1#, nor prevent digits outside the range
+           _type="integer" 
+           _value=$(( $(sed -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
+    }
+
+    # Handles binary
+    egrep -q "^[+-]?0[bB][ 01]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
+           _type="integer" 
+           _value=$(( $(sed -e 's/0[bB]/2#/' -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
+    }
+
+
+    # Handles decimal.
+    egrep -q "^[+-]?[0-9][ 0-9]*$" <<< ${SUB_ARGS_TEXT[$i]} && {
+           _type="integer" 
+           _value=$(( $(sed -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
+    }
+
+    # Handles octal .
+    egrep -q "^[+-]?0[o]?[ 0-7]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
+           _type="integer" 
+           _octal_value=$(sed -e 's/[oO]//' -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} )
+           _value=$(( _octal_value ))
+    }
+
+    # Handles hexadecimal
+    egrep -q "^[+-]?0[xX]?[ 0-9A-Fa-f]+$" <<< ${SUB_ARGS_TEXT[$i]} && {
+           _type="integer" 
+           _value=$(( $(sed -e 's/ //g' <<< ${SUB_ARGS_TEXT[$i]} ) ))
+    }
+
+    SUB_ARGS_TYPES[${i}]=$_type
+    SUB_ARGS_VALUES[${i}]=$_value
+  done
+  SUB_CALL="$(sub_routine_call)"
+}
+
+
+process_subcommand_args "$@" 
+
+if [[ $VERSION == "mips" ]] ; then 
+  build_mips_boot_file
+  execute_mips
+  execution_error="$?"
+fi
+
+if [[ $VERSION == "java" ]] ; then 
+  build_java_source
+  execute_java
+  execution_error="$?"
+fi
+
+if [[ ${execution_error} == 0 ]] ; then 
+  print_user_output
+  post_process
+else
+  cat ${OUTPUT_FILE} |  fix_error_messages
+fi
+
+
+
 
