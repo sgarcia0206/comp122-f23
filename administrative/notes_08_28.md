@@ -2,9 +2,20 @@
 
 ## Announcements
    1. Greetings / Attendance
+
+   1. The Topic of This Class:  "Computer Architecture and Assembly Language"
+      - We will be focusing on the MIPS Architecture -- Alternatives x86, ARM, ...
+      - Will you program in MIPS in the future?
+      - Consider:  Telsa uses 1000 - 2000 computer chips in their vehicals
+        - The have a multitude of sensers to monitor the environment
+          * pedestrian steps in front of the car
+          * traffic lights have change
+          * etc. 
+
    1. Adding the Class & Permission Numbers
    1. No class on Monday September 4, 2023
 
+   
    1. Feedback System
       - Fall_2023: https://www.csun.edu/~steve/classes/feedback/ 
       - Spring_2023: https://www.csun.edu/~steve/classes/feedback_s23/
