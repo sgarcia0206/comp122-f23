@@ -8,17 +8,9 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-     1.
-     1. 
-
-   * M/W @ 2:00 pm
-     1.
 
    * T/R @ 9:00 am
-     1.
 
-   * T/R @ 2:00 pm
-     1.
 
 ## Review from Last-time:
   

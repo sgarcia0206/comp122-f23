@@ -124,6 +124,12 @@
 
 ---
   1. Overview Tools and Resources
+     1. Slack
+        - actionable
+        - images versus snippets
+        - threads
+        - editing
+        - pins
 
   1. Class Material Walk Through:  README.md
 
