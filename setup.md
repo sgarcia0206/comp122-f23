@@ -82,7 +82,7 @@
         ```
         git config --global user.name "John Doe"
         git config --global user.email johndoe@my.csun.edu
-        git config pull.rebase false 
+        git config --global pull.rebase false 
         ```
 
      1. Clone a copy of this repository:
