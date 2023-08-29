@@ -103,9 +103,9 @@ EOF
 #    MARS_JAR:  The location of the MARS jar file
 ###########################################################################
 
-: ${JAVAC:=$(which JAVAC)}
-: ${JAVA:=$(which JAVA)}
-: ${MARS:=$(which MARS)}
+: ${JAVAC:=$(which javac)}
+: ${JAVA:=$(which java)}
+: ${MARS:=$(which mars)}
 
 [[ -n "${JAVA}" ]] || { echo "java command not found!"; exit 1; }
 
