@@ -38,11 +38,13 @@ esac
 function comp122-keygen () {
    
    mkdir -m 700 -p ~/.ssh
-   ssh-keygen -t ed25519 -f "${COMP122_KEY}" -C "comp122 git@github.com" 2>/dev/null
+   ssh-keygen -t ed25519 -C "comp122 git@github.com" 2>/dev/null
+   COMP122_KEY=~/.ssh/id_ed25519
 
    if [[ $? != 0 ]] ; then 
      # Note if the ed25519 type is not recognized then use RSA with 4096 bits
-     ssh-keygen -t rsa -b 4096 -f "${COMP122_KEY}" -C "comp122 git@github.com" 
+     ssh-keygen -t rsa -b 4096 -C "comp122 git@github.com"
+     COMP122_KEY=~/.ssh/id_rsa
    fi
 
    if [[ $? == 0 ]] ; then 
