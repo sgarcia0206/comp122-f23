@@ -93,8 +93,9 @@
        1. Accept what is expected to change: Improvise, Adapt, Overcome!
 
 
-  1. Class Notes:
+   1. Class Notes:
      - `notes_[01][0-9]_[0-3][0-9].md`
+       - +1 ([0-9]{3}) [0-9]{3} - [0-9]{4}
      - Markdown verses Markup
        - reference/markdown-cheat-sheet.md
      - Sublime Text
@@ -135,6 +136,8 @@
 
   1. Syllabus
 
+-- 
+Stopped here
   1. Comp122 Landscape
 
   1. Lab: Walk Through
