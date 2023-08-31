@@ -17,6 +17,15 @@
      - Install the Windows Subsystem (WSL) for Linux: https://learn.microsoft.com/en-us/windows/wsl/about <br>
      Note that this is the first semester in which I have required students to use WSL.  Hence, be on the lookout for issues that might arise due to the particular setup of your computer.
 
+     - Use the default OS, which is ubuntu
+
+     - After you have ubuntu working, perform the install:
+       1. launch an terminal via ubuntu
+       1. run the command:  `sudo apt-get update`
+       1. run the command:  `sudo apt-get upgrade`
+       1. run the command:  `sudo apt-get install build-essential`
+       1. run the command:  `sudo apt install openjdk-19-jre-headless` 
+
 
   1. Establish Accounts:
      - https://slack.com: 
@@ -28,7 +37,7 @@
        - Your account needs to be associated with your @my.csun.edu address.
        - All deliverables are submitted via GitHub Classrooms.
 
-  1. Install Software on your personal computer:
+  1. Install Software on your personal computer environment:
      - Sublime Text Editor: https://www.sublimetext.com
        - MacOS User: Move the `Sublime Text` application from the Downloads folder to the Applications folder.
      - A Markdown View: (for example)
@@ -37,6 +46,10 @@
      - Slack: https://slack.com  <br />   
        * Consider installing the mobile application as well
      - Java JDK: https://www.oracle.com/java/technologies/downloads/
+
+
+  1. If you are a Windows User, install the following software into your Ubuntu environment
+     - Sublime Text Editor: https://www.sublimetext.com
 
 
   1. Join the Slack COMP122 work space:
