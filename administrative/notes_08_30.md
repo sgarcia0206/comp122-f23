@@ -20,6 +20,10 @@
 
 ---
 # Today's Material
+  1. Comp122 Landscape
+
+  1. Lab: Walk Through
+
   1. Git
      - A version control system (VCS) that utilizes a repository
        - repository: a complete copy of an entire project _throughout_ its lifetime  

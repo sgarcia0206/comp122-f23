@@ -13,7 +13,7 @@
        Linux: Ubuntu 20.04.6 LTS
        ```
 
-  1. Windows Users:
+  1. For Windows Users:
      - Install the Windows Subsystem (WSL) for Linux: https://learn.microsoft.com/en-us/windows/wsl/about <br>
      Note that this is the first semester in which I have required students to use WSL.  Hence, be on the lookout for issues that might arise due to the particular setup of your computer.
 
@@ -39,7 +39,6 @@
 
   1. Install Software on your personal computer environment:
      - Sublime Text Editor: https://www.sublimetext.com
-       - MacOS User: Move the `Sublime Text` application from the Downloads folder to the Applications folder.
      - A Markdown View: (for example)
        - https://apps.microsoft.com/store/detail/markdown-view/9PJ021LR0M3G
        - https://apps.apple.com/us/app/one-markdown/id1507139439
@@ -47,9 +46,6 @@
        * Consider installing the mobile application as well
      - Java JDK: https://www.oracle.com/java/technologies/downloads/
 
-
-  1. If you are a Windows User, install the following software into your Ubuntu environment
-     - Sublime Text Editor: https://www.sublimetext.com
 
 
   1. Join the Slack COMP122 work space:
@@ -112,21 +108,34 @@
         source .profile
         ```
 
+  1. Quick Access Setup
+     *  For Windows Users:
+        1. Open File Explorer
+        1. Navigate to the file:  `Linux/users/{username}/classes/`
+        1. Pin the folder `comp122` to Quick Access
+           - Right-click on the comp122 folder
+           - Select `Pin to Quick access`
+           - See: https://www.guidingtech.com/how-to-use-quick-access-in-windows-11/
+        1. Reposition comp122 in the Quick Access folder to match your preference
+      * For Mac Users:
+        1. Open Finder
+        1. Navigate to the file:  /{username}/classes/`
+        1. Drag the comp122 folder to the Favorites part of the Finder menu
+
 ### Test Your Local Environment
 
-  1. Validate Mars_4_5 is appropriately registered. <br/>
-  For System Security reasons, you may need to register the MARS IDE with the Operating System.
-     - Open up File Explorer (Windows) or Finder (Mac)
-     - Navigate to the COMP122 bin directory: \~/classes/comp122/bin/
-     - First double-click the Mars4_5.jar icon
-     - If you receive the following message, 
-       ```
+  1. Reposition the Mars_4_5 for easy access.
+     - Open File Explorer or Finder
+     - Navigate to `comp122/bin/`
+     - Copy the Mars_4_5.jar and then Paste it to your Desktop
+     - Double-click the Mars4_5.jar icon
+       - If you receive the following message, 
+         ```
          "Mars4_5.jar” cannot be opened because it is from an unidentified developer.
-       ```
-       1. Control-click the Mars4_5.jar icon
-       1. Choose Open from the shortcut menu
-       1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
-
+         ```
+         1. Control-click the Mars4_5.jar icon
+         1. Choose Open from the shortcut menu
+         1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
 
 
   1. Validate CLI tools for COMP122.<br/>  
