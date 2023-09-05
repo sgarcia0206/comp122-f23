@@ -33,7 +33,7 @@
      git log
      git push
      git status
-     git branch
+     git branchs
      git checkout
      ls
      mars
@@ -49,6 +49,9 @@
      touch, rm
      ```
 
+
+     <!-- PROMPT_COMMAND='(( $? == 0 )) && echo success'  -->
+
 ---
 # Today's Lecture Material
   1. Updates to support Ubuntu within Windows/WSL
@@ -61,13 +64,19 @@
 
 # Today's Lab Material
   1. Install MIPS syntax package into sublime
-    - "Install Package Control"
-       * cmd+shift+p  or Windows+shift+p or Ctrl+shift+p
-       * Install Package Control
-     - Install mips syntax
-       * cmd+shift+p or Windows+shift+p
-       * Package Control: Install Package 
-       * mips-syntax
+     - "Install Package Control"
+        * cmd+shift+p  or Windows+shift+p or Ctrl+shift+p
+        * Install Package Control
+      - Install mips syntax
+        * cmd+shift+p or Windows+shift+p
+        * Package Control: Install Package 
+        * mips-syntax
+      - Associate Java Syntax with all .j files within Sublime Text
+        * New File (%N)
+        * Save as `equation.j`
+        * bottom-right-hand corner -- select desired syntax
+          - Open all with current extention as...
+          - Select 'java'
 
 
   1. PEMDAS and Three Address code
@@ -79,9 +88,9 @@
             2 * b
         ```
      1. Rewrite into a single linear expression
-     1. Rewrite into a single linear equation that contains the operators: () * / + -
-     1. Define a linear equation of the form $v0 = linear expression
-     1. Rewrite into a linear equation into a series of equations 
+     1. Rewrite into a single linear equation that contains only the operators: () * / + -
+     1. Define a linear equation of the form `$v0 = expression;`
+     1. Rewrite into a series of linear equation
         - Each equation must for of one of the following forms:
           *  temp = constant;
           *  temp = variable;
@@ -94,35 +103,35 @@
        - place the final value into $v0
 
      1. Write a java subroutine using the following template to compute the value of $v0
-
-     ```java
-
-     public static int equation(int a, int b) {
-        int $v0;
-        int $t0;
-        int $t1;
-        int $t2;
-        int $t3;
-        int $t4;
-        int $t5;
-        int $t6;
-        int $t7;
-
-        // Insert your series of equations that define $v0 after this line
-
-        // 
-        return $v0;
-     }
-     ```
+        - Please this subroutine in the file named equation.j
+          ```java
+     
+          public static int equation(int a, int b) {
+             int $v0;
+             int $t0;
+             int $t1;
+             int $t2;
+             int $t3;
+             int $t4;
+             int $t5;
+             int $t6;
+             int $t7;
+     
+             // Insert your series of equations that define $v0 after this line
+     
+             // 
+             return $v0;
+          }
+          ```
 
        * Requirements
          - delete all unnecessary lines
          - ensure proper formating
-         - ensure your code complies with `j-subroutine`
+         - ensure your code complies with `java_subroutine`
 
     1. Use `java_subroutine to fill in the following table`
 
-       | a     | b    |  $v0 |
+       |  a    |  b   |  $v0 |
        |-------|------|------|
        |   0   |  0   |      |   `j_subroutine equation 0 0`
        |   0   |  1   |      |   `j_subroutine equation 0 1`
@@ -137,6 +146,9 @@
 
 ---
 ## Resources
+   * reference/git-cheatsheet.png
+   * tidbits/git-notes.md
+   * tidbits/tidbit-git-merge.md 
    * bin/j_subroutine: a tool used to perform unit testing on a "j" subroutine
 
 ---
