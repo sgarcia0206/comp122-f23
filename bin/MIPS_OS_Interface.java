@@ -1,34 +1,3 @@
-// Routines provided:
-//
-// System Calls:
-//  public static void exit(int register) {
-//  public static void exiti(int immediate) {
-//
-// Input: 
-//
-// Output:
-//  public static void print_d(int register) {
-//  public static void print_di(int immediate  ) {
-//  public static void print_c(char register) {
-//  public static void print_ci(char immediate) {
-//  public static void print_s(String register) {
-//  public static void print_t(int register) {
-//  public static void print_ti(int immediate) {
-//
-// Conversions:
-//  public static int u_byte(byte value) {
-//  public static int s_byte(byte value) {
-//  public static int u_half(short value) {
-//  public static int s_half(short value) {
-//  public static int pos_msb(int $a0){
-//
-// Utilities:
-//   public static int pos_msb(int $a0){
-//
-// Stack:
-//    public static void push(int register) {
-//    public static int pop() {
-//
 
 class MIPS_OS_Interface {
 
@@ -36,20 +5,20 @@ class MIPS_OS_Interface {
   static int[] stack= new int[256];
 
 
-  public static void push(int register) {
+  public void push(int register) {
     $sp = $sp + 1;
     stack[$sp] = register;
   }
-  public static int pop() {
+  public int pop() {
     int x = stack[$sp];
     $sp = $sp - 1; 
     return x;
   }
-  public static void print_d(int register) {
+  public void print_d(int register) {
     System.out.printf("%d", register);
     return;
   }
-  public static void print_di(int immediate) {
+  public void print_di(int immediate  ) {
     System.out.printf("%d", immediate);
     return;
   }
@@ -117,7 +86,7 @@ class MIPS_OS_Interface {
     return value;
   }
 
-  public static int pos_msb(int $a0) {
+ static int pos_msb(int $a0){
             // $a0 : original_number
             int $v0; // : return value
 

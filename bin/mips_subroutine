@@ -42,7 +42,7 @@ PWD_STRING=$(pwd)
 
 
 
-MIPS_OS_INTERFACE="$HOME/repositories/mips_subroutine/java/MIPS_OS_Interface"
+MIPS_OS_INTERFACE="$COMP122_HOME/bin/MIPS_OS_Interface"
 
 cleanup () {
   #  call on a trap on exit
