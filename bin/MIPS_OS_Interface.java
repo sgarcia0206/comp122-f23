@@ -89,6 +89,7 @@ class MIPS_OS_Interface {
  static int pos_msb(int $a0){
             // $a0 : original_number
             int $v0; // : return value
+            int $zero = 0;
 
             int counter;
             int number;
