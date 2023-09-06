@@ -740,6 +740,7 @@ execute_java () {
   #  - Possible issue with infinite loops
 
   #cp -f ${MIPS_OS_INTERFACE}.java ${BOOTSTRAP_DIR}
+  rebuild_MIPS_OS_Interface
   cp -f ${MIPS_OS_INTERFACE}.class ${BOOTSTRAP_DIR}
   {   
     javac -classpath ${BOOTSTRAP_DIR} -d ${BOOTSTRAP_DIR} ${BOOTSTRAP_JAVA_FILE} &&
