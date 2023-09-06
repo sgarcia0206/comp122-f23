@@ -50,9 +50,10 @@
      git status
      git branch
      git checkout
-     ls
+     ls -l -t -a
      mars
      mips_subroutine
+     java_subroutine
      mkdir, rmdir, rm -r
      open                   # start
      pbcopy                 # clip
@@ -126,11 +127,6 @@
              int $t0;
              int $t1;
              int $t2;
-             int $t3;
-             int $t4;
-             int $t5;
-             int $t6;
-             int $t7;
      
              // Insert your series of equations that define $v0 after this line
      

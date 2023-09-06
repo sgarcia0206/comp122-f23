@@ -52,6 +52,13 @@ cleanup () {
   rm -f ${ERROR_FILE}
 }
 
+
+function rebuild_MIPS_OS_Interface () {
+  ( cd $COMP122_BIN
+    javac MIPS_OS_Interface.java 
+  )
+}
+
 ###########################################################################
 # The purpose of this script is to execute a single MIPS subroutine.
 # The two primary uses of this script is
