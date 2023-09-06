@@ -34,6 +34,11 @@ case "${_OS}" in
      ;;
 esac
 
+function rebuild_MIPS_OS_Interface () {
+  ( cd $COMP122_BIN
+    javac MIPS_OS_Interface.java 
+  )
+}
 
 function comp122-keygen () {
    

@@ -39,6 +39,8 @@
 
   1. Install Software on your personal computer environment:
      - Sublime Text Editor: https://www.sublimetext.com
+       - MacOS User: Move the `Sublime Text` application from the Downloads folder to the Applications folder.
+
      - A Markdown View: (for example)
        - https://apps.microsoft.com/store/detail/markdown-view/9PJ021LR0M3G
        - https://apps.apple.com/us/app/one-markdown/id1507139439

@@ -42,7 +42,7 @@ PWD_STRING=$(pwd)
 
 
 
-MIPS_OS_INTERFACE="$HOME/repositories/mips_subroutine/java/MIPS_OS_Interface"
+MIPS_OS_INTERFACE="$COMP122_HOME/bin/MIPS_OS_Interface"
 
 cleanup () {
   #  call on a trap on exit
@@ -740,6 +740,7 @@ execute_java () {
   #  - Possible issue with infinite loops
 
   #cp -f ${MIPS_OS_INTERFACE}.java ${BOOTSTRAP_DIR}
+  rebuild_MIPS_OS_Interface
   cp -f ${MIPS_OS_INTERFACE}.class ${BOOTSTRAP_DIR}
   {   
     javac -classpath ${BOOTSTRAP_DIR} -d ${BOOTSTRAP_DIR} ${BOOTSTRAP_JAVA_FILE} &&
