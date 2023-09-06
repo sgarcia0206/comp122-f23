@@ -137,6 +137,12 @@
          1. Choose Open from the shortcut menu
          1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
 
+  1. Create a short-cut on your Desktop for Comp122 for easy access
+     - Open File Explorer or Finder
+     - Navigate to `classess` folder
+     - Copy the comp122 folder
+     - Paste the path to the Desktop # to make a shortcut
+
 
   1. Validate CLI tools for COMP122.<br/>  
      First open a new terminal and execute the following commands:
