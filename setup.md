@@ -24,7 +24,7 @@
        1. run the command:  `sudo apt-get update`
        1. run the command:  `sudo apt-get upgrade`
        1. run the command:  `sudo apt-get install build-essential`
-       1. run the command:  `sudo apt install openjdk-19-jre-headless` 
+       1. run the command:  `sudo apt install openjdk-19-jre` 
 
 
   1. Establish Accounts:
@@ -138,13 +138,16 @@
          1. Control-click the Mars4_5.jar icon
          1. Choose Open from the shortcut menu
          1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
+         <!-- But sigh this does not work on Windows /WSL  -->
+         <!-- But reports of not using 'headless' when install the jdk fixes the issue -->
+
 
   1. Create a short-cut on your Desktop for Comp122 for easy access
      - Open File Explorer or Finder
      - Navigate to `classess` folder
      - Copy the comp122 folder
      - Paste the path to the Desktop # to make a shortcut
-
+       <!-- But sigh this does not work on Windows /WSL  -->
 
   1. Validate CLI tools for COMP122.<br/>  
      First open a new terminal and execute the following commands:
