@@ -144,7 +144,7 @@
 
        |  a    |  b   |  $v0 |
        |-------|------|------|
-       |   0   |  0   |   error   |   `java_subroutine equation 0 0`
+       |   0   |  0   |   2   |   `java_subroutine equation 0 0`
        |   0   |  1   |      |   `java_subroutine equation 0 1`
        |   0   |  2   |      |   `java_subroutine equation 0 2`
        |   1   |  0   |      |   `java_subroutine equation 1 0`
@@ -167,5 +167,4 @@
 <!-- This section is for students to place their notes -->
 
 
-
-
+this is my students
