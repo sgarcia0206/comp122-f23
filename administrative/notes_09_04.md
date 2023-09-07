@@ -144,15 +144,15 @@
 
        |  a    |  b   |  $v0 |
        |-------|------|------|
-       |   0   |  0   |      |   `j_subroutine equation 0 0`
-       |   0   |  1   |      |   `j_subroutine equation 0 1`
-       |   0   |  2   |      |   `j_subroutine equation 0 2`
-       |   1   |  0   |      |   `j_subroutine equation 1 0`
-       |   1   |  1   |      |   `j_subroutine equation 1 1`
-       |   1   |  2   |   2  |   `j_subroutine equation 1 2`
-       |   2   |  0   |      |   `j_subroutine equation 2 0`
-       |   2   |  1   |      |   `j_subroutine equation 2 1`
-       |   2   |  2   |      |   `j_subroutine equation 2 2`
+       |   0   |  0   |      |   `java_subroutine equation 0 0`
+       |   0   |  1   |      |   `java_subroutine equation 0 1`
+       |   0   |  2   |      |   `java_subroutine equation 0 2`
+       |   1   |  0   |      |   `java_subroutine equation 1 0`
+       |   1   |  1   |      |   `java_subroutine equation 1 1`
+       |   1   |  2   |   2  |   `java_subroutine equation 1 2`
+       |   2   |  0   |      |   `java_subroutine equation 2 0`
+       |   2   |  1   |      |   `java_subroutine equation 2 1`
+       |   2   |  2   |      |   `java_subroutine equation 2 2`
       
 
 ---
@@ -165,5 +165,7 @@
 ---
 ## Notes
 <!-- This section is for students to place their notes -->
+
+
 
 
