@@ -121,17 +121,17 @@
      1. Write a java subroutine using the following template to compute the value of $v0
         - Place this subroutine in the file named equation.j
           ```java
-     
+   
           public static int equation(int a, int b) {
-             int $v0;
-             int $t0;
-             int $t1;
-             int $t2;
-     
-             // Insert your series of equations that define $v0 after this line
-     
-             // 
-             return $v0;
+            int $v0;
+            int $t0;
+            int $t1;
+            int $t2;
+   
+            // Insert your series of equations that define $v0 after this line
+   
+            // 
+            return $v0;
           }
           ```
 
@@ -144,11 +144,11 @@
 
        |  a    |  b   |  $v0 |
        |-------|------|------|
-       |   0   |  0   |      |   `java_subroutine equation 0 0`
+       |   0   |  0   |   error   |   `java_subroutine equation 0 0`
        |   0   |  1   |      |   `java_subroutine equation 0 1`
        |   0   |  2   |      |   `java_subroutine equation 0 2`
        |   1   |  0   |      |   `java_subroutine equation 1 0`
-       |   1   |  1   |      |   `java_subroutine equation 1 1`
+       |   1   |  1   |   0   |   `java_subroutine equation 1 1`
        |   1   |  2   |   2  |   `java_subroutine equation 1 2`
        |   2   |  0   |      |   `java_subroutine equation 2 0`
        |   2   |  1   |      |   `java_subroutine equation 2 1`
