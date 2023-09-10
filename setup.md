@@ -15,16 +15,22 @@
 
   1. For Windows Users:
      - Install the Windows Subsystem (WSL) for Linux: https://learn.microsoft.com/en-us/windows/wsl/about <br>
+        - Use the default OS, which is Ubuntu
+
+
      Note that this is the first semester in which I have required students to use WSL.  Hence, be on the lookout for issues that might arise due to the particular setup of your computer.
 
-     - Use the default OS, which is ubuntu
+     - Ensure you set things up to allow for gui-apps
+       - https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
+      
 
-     - After you have ubuntu working, perform the install:
+     - After you have Ubuntu working, perform the install:
        1. launch an terminal via ubuntu
        1. run the command:  `sudo apt-get update`
        1. run the command:  `sudo apt-get upgrade`
        1. run the command:  `sudo apt-get install build-essential`
-       1. run the command:  `sudo apt install openjdk-19-jre-headless` 
+       1. run the command:  `sudo apt install openjdk-19-jdk`
+          <!-- the command was previously: sudo apt install openjdk-19-jre-headless` -->
 
 
   1. Establish Accounts:
@@ -40,12 +46,15 @@
   1. Install Software on your personal computer environment:
      - Sublime Text Editor: https://www.sublimetext.com
        - MacOS User: Move the `Sublime Text` application from the Downloads folder to the Applications folder.
+       - Windows Users: You can install this software on your Windows side.  Via the instructions above it has already been installed on you Ubuntu side
 
      - A Markdown View: (for example)
        - https://apps.microsoft.com/store/detail/markdown-view/9PJ021LR0M3G
        - https://apps.apple.com/us/app/one-markdown/id1507139439
+
      - Slack: https://slack.com  <br />   
        * Consider installing the mobile application as well
+
      - Java JDK: https://www.oracle.com/java/technologies/downloads/
 
 
@@ -126,19 +135,19 @@
 
 ### Test Your Local Environment
 
-  1. Reposition the Mars_4_5 for easy access.
-     - Open File Explorer or Finder
-     - Navigate to `comp122/bin/`
-     - Copy the Mars_4_5.jar and then Paste it to your Desktop
-     - Double-click the Mars4_5.jar icon
-       - If you receive the following message, 
-         ```
-         "Mars4_5.jar” cannot be opened because it is from an unidentified developer.
-         ```
-         1. Control-click the Mars4_5.jar icon
-         1. Choose Open from the shortcut menu
-         1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
+   1. Validate Mars_4_5 is appropriately registered. For System Security reasons, you may need to register the MARS IDE with the Operating System.
 
+      - Open up File Explorer (Windows) or Finder (Mac)
+      - Navigate to the COMP122 bin directory: ~/classes/comp122/bin/
+      - First double-click the Mars4_5.jar icon
+      - If you receive the following message,
+        ```
+        "Mars4_5.jar” cannot be opened because it is from an unidentified developer.
+        ```
+
+        1. Control-click the Mars4_5.jar icon
+        1. Choose Open from the shortcut menu
+        1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
 
   1. Validate CLI tools for COMP122.<br/>  
      First open a new terminal and execute the following commands:
