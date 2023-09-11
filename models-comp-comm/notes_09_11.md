@@ -6,6 +6,13 @@
       - deliverables/01-\*/grade.report
       - bin/grade_guesstimator
 
+
+   1. Assignment: Mathematical Review (Credit/No Credit)
+      - Status: assigned
+      - Deliverable ID: 02
+      - Invitation URL: https://classroom.github.com/a/6Q0OrY44
+      - Due Date: Sep 14 23:59:59
+
    1. Starting New Section:  
       - Models of Communication and Computation
 
