@@ -1,15 +1,22 @@
 # COMP122 Lecture Notes: September 4, 2023
 
 ## Announcements:
+   1. Assignment 01- 
+      - Unlinked Accounts
+      - deliverables/01-\*/grade.report
+      - bin/grade_guesstimator
+
    1. Starting New Section:  
       - Models of Communication and Computation
 
+   1. Starting New Section:  
+      - Assemble Language
+
 
 ## Today's Agenda:
-   1. Slides:  Models.pdf
-   1. 
-      - List of CLI Commands
-   1. Models of Computation and Communication
+   1. Lecture:  models-comp-comm/slide*/models.pdf
+   1. Lab: assembly-language/slide*/
+      -
 
 
 ## Questions from Last Lecture/Lab, etc.:
@@ -21,14 +28,11 @@
 ## Review from Last-time:
 
    1. 
+
 ---
 # Today's Lecture Material
-  1. Updates to support Ubuntu within Windows/WSL
-     - see revised setup.md file
-  1. Made sure everyone is up-to-speed
-     - The command line
-     - Your comp122 environment
-     - Walking through the logistics of git & assignments
+
+  1. See Slides
 
 
 # Today's Lab Material
@@ -42,9 +46,11 @@
         - `sudo apt install openjdk-19-jdk`
         - ~sudo apt install openjdk-19-jre-headless~
 
-  1. Slides: MIPS Architecture Overview
+  1. See Slides: Introduction to MIPS Architecture
 
   1. Mars Walk through
+     - tidbits/mars.md
+     - reference/mars
 
 ---
 ## Resources
