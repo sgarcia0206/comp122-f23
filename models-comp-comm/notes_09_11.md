@@ -22,7 +22,7 @@
 
 ## Today's Agenda:
    1. Lecture:  models-comp-comm/slide*/models.pdf
-   1. Lab: assembly-language/slide*/
+   1. Lab: assembly-programming/slide*/intro*.pdf
       -
 
 
