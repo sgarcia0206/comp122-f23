@@ -136,7 +136,6 @@
 ### Test Your Local Environment
 
    1. Validate Mars_4_5 is appropriately registered. For System Security reasons, you may need to register the MARS IDE with the Operating System.
-
       - Open up File Explorer (Windows) or Finder (Mac)
       - Navigate to the COMP122 bin directory: ~/classes/comp122/bin/
       - First double-click the Mars4_5.jar icon
@@ -148,6 +147,13 @@
         1. Control-click the Mars4_5.jar icon
         1. Choose Open from the shortcut menu
         1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
+
+  1. Create a short-cut on your Desktop for Comp122 for easy access
+     - Open File Explorer or Finder
+     - Navigate to `classess` folder
+     - Copy the comp122 folder
+     - Paste the path to the Desktop # to make a shortcut
+       <!-- But sigh this does not work on Windows /WSL  -->
 
   1. Validate CLI tools for COMP122.<br/>  
      First open a new terminal and execute the following commands:

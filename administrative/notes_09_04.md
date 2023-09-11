@@ -12,8 +12,23 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - when do I do a git commit?
+     - what is git diff?
+     - are there update command for WSL / Ubuntu / Sublime
+     - if I use native Ubuntu is the anything significantly different on the CLI?
 
    * T/R @ 9:00 am
+     - How do I know what I did wrong?
+     - Open versus Start -- Open is a Mac command, Start is a Windows command
+         * Ubuntu -- it is the open command -- but you need to install it.
+           * `sudo apt get install <package name>`
+           * `sudo apt search sublime-text`
+     - Note being able run ~Sublime~ `subl`
+     - Nomenclature for symbols
+     - What is a makefile? 
+     - Grade reports because the prof refuses to use Canvas!
+     - How are assignments given?
+
 
 
 ## Review from Last-time:
@@ -22,7 +37,7 @@
      ```bash
      cd
      chsh
-     cp, mv    # cp A /tmp/B
+     cp, mv    # cp A /tmp/
      echo
      git
      git add
@@ -33,11 +48,12 @@
      git log
      git push
      git status
-     git branchs
+     git branch
      git checkout
-     ls
+     ls -l -t -a
      mars
      mips_subroutine
+     java_subroutine
      mkdir, rmdir, rm -r
      open                   # start
      pbcopy                 # clip
@@ -75,7 +91,7 @@
         * New File (%N)
         * Save as `equation.j`
         * bottom-right-hand corner -- select desired syntax
-          - Open all with current extention as...
+          - Open all with current extension as...
           - Select 'java'
 
 
@@ -98,50 +114,45 @@
           *  temp = variable - variable;
           *  $v0 = temp;
 
-       - you are given a set of local variabes:  $t1, $t2, $t3, .. $t9, $v0
+       - you are given a set of local variables:  $t1, $t2, $t3, .. $t9, $v0
        - each variable can can be defined once
        - place the final value into $v0
 
      1. Write a java subroutine using the following template to compute the value of $v0
-        - Please this subroutine in the file named equation.j
+        - Place this subroutine in the file named equation.j
           ```java
-     
+   
           public static int equation(int a, int b) {
-             int $v0;
-             int $t0;
-             int $t1;
-             int $t2;
-             int $t3;
-             int $t4;
-             int $t5;
-             int $t6;
-             int $t7;
-     
-             // Insert your series of equations that define $v0 after this line
-     
-             // 
-             return $v0;
+            int $v0;
+            int $t0;
+            int $t1;
+            int $t2;
+   
+            // Insert your series of equations that define $v0 after this line
+   
+            // 
+            return $v0;
           }
           ```
 
        * Requirements
          - delete all unnecessary lines
-         - ensure proper formating
+         - ensure proper formatting
          - ensure your code complies with `java_subroutine`
 
     1. Use `java_subroutine to fill in the following table`
 
        |  a    |  b   |  $v0 |
        |-------|------|------|
-       |   0   |  0   |      |   `j_subroutine equation 0 0`
-       |   0   |  1   |      |   `j_subroutine equation 0 1`
-       |   0   |  2   |      |   `j_subroutine equation 0 2`
-       |   1   |  0   |      |   `j_subroutine equation 1 0`
-       |   1   |  1   |      |   `j_subroutine equation 1 1`
-       |   1   |  2   |      |   `j_subroutine equation 1 2`
-       |   2   |  0   |      |   `j_subroutine equation 2 0`
-       |   2   |  1   |      |   `j_subroutine equation 2 1`
-       |   2   |  2   |      |   `j_subroutine equation 2 2`
+       |   0   |  0   |   2   |   `java_subroutine equation 0 0`
+       |   0   |  1   |      |   `java_subroutine equation 0 1`
+       |   0   |  2   |      |   `java_subroutine equation 0 2`
+       |   1   |  0   |      |   `java_subroutine equation 1 0`
+       |   1   |  1   |   0   |   `java_subroutine equation 1 1`
+       |   1   |  2   |   2  |   `java_subroutine equation 1 2`
+       |   2   |  0   |      |   `java_subroutine equation 2 0`
+       |   2   |  1   |      |   `java_subroutine equation 2 1`
+       |   2   |  2   |      |   `java_subroutine equation 2 2`
       
 
 ---
@@ -156,3 +167,4 @@
 <!-- This section is for students to place their notes -->
 
 
+this is my students
