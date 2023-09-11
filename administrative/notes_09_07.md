@@ -11,6 +11,10 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * T/R @ 9:00 am
+     - TAC: 
+     - How do I save my own notes
+
+
 
 # Today's Lecture Material
   1. Review Questions

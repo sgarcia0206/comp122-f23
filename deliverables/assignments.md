@@ -65,7 +65,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Deliverable ID: 01
    - Public_URL: https://github.com/COMP122/first-assignment
    - Invitation URL: https://classroom.github.com/a/3Oe57wgq
-   - Due Date: Wednesday, Sept 6 @ 23:59:59 
+   - Due Date: Wednesday, Sep 6 23:59:59 
 
 1. Mathematical Review (Credit/No Credit)
    - Status: 
