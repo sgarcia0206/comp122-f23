@@ -28,6 +28,8 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Am I going to pre-review lab assignments?  No.
+     - Do notes have to be committed prior to a merge?  Yes.
 
    * T/R @ 9:00 am
 
@@ -40,6 +42,7 @@
 # Today's Lecture Material
 
   1. See Slides
+     - left off on slide 10
 
 
 # Today's Lab Material
