@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: September 4, 2023
+# COMP122 Lecture Notes: September 11, 2023
 
 ## Announcements:
    1. Assignment 01- 
