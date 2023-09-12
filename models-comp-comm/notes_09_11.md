@@ -2,6 +2,7 @@
 
 ## Announcements:
    1. Assignment 01- 
+      - graded
       - Unlinked Accounts
       - deliverables/01-\*/grade.report
       - bin/grade_guesstimator
@@ -32,6 +33,8 @@
      - Do notes have to be committed prior to a merge?  Yes.
 
    * T/R @ 9:00 am
+     - Reviewed a bunch of git stuff, tagging, 
+     - Provided individual support to students
 
 
 ## Review from Last-time:
