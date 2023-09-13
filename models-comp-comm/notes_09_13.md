@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: September 11, 2023
+# COMP122 Lecture Notes: September 13, 2023
 
 ## Announcements:
    1. Assignment: Mathematical Review (Credit/No Credit)
@@ -67,9 +67,9 @@
       | TAC Equations                 | MIPS Instructions         |   
       |-------------------------------|---------------------------|
       | `return a`                    | `move $v0, a`             |
-      |  
+      |                               | `jr $ra`                  |
 
-      
+
       | TAC Equations                 | MIPS Instructions         |
       |-------------------------------|---------------------------|
       | `;`                           | `nop`                     |
