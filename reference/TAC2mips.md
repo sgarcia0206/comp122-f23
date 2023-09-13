@@ -1,12 +1,12 @@
 # Java TAC to MIPS Transliteration
 
-Once you have rewritten your JAVA method into the JAVA TAC style, you can use the information in this documement to transliterate your method into a MIPS subroutine.
+Once you have rewritten your JAVA method into the JAVA TAC style, you can use the information in this document to transliterate your method into a MIPS subroutine.
 
 Note that sometimes there is not a 100% direct correlation between your JAVA TAC instruction and a set of MIPS instruction. Hence, some thinking is necessary when performing the transliteration.
 
 ## Other Resources
 
-  - MIPS Cheatsheet: ~/classes/comp122/reference/MIPS-cheatsheet.pdf
+  - MIPS Cheat-sheet: ~/classes/comp122/reference/MIPS-cheatsheet.pdf
   - Java to Java TAC transformation: (under development)
 
 ## Notation:
@@ -16,14 +16,14 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
   - Registers:  a word prefix with a dollar, e.g., $zero
   - Metasymbol: a word enclosed in braces, e.g., {loop}
 
-### Mathematica Equations and the Null Statement
+### Mathematical Equations and the Null Statement
 
   * Notation: TAC Instructions and Corresponding MIPS Instructions
     - Patterns
       1. Java Instructions with one literal:  `x = a <op_i> 2;`
          - `MIPS <op_i>  <- Java operator`
            * addi: +, subi: -, ori: |, andi: &, xori: ^
-      1. Java Instructions with two varialbes: `x = a <op> b;`
+      1. Java Instructions with two variables: `x = a <op> b;`
          - `MIPS <op>  <- Java operator`
            * add: +, sub: -, or: |, and: &, xor: ^,
 
