@@ -5,7 +5,7 @@
       - Invitation URL: https://classroom.github.com/a/6Q0OrY44
       - Due Date: Sep 14 23:59:59
 
-   1. Assignment: PEMDAS and MIPS
+   1. Assignment: PEMDAS and TAC
       - Status: assigned
       - Deliverable ID: 41
       - Invitation URL: https://classroom.github.com/a/aHiTCHuq

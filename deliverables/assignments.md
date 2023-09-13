@@ -125,9 +125,9 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 ---
 <h3 id="mips">MIPS Programming (Section 4)</h3>
 
-1. Name: 
-   - Status: 
-   - Deliverable ID: 41
-   - Invitation URL: 
-   - Due Date: 
+   1. Assignment: PEMDAS and TAC
+      - Status: assigned
+      - Deliverable ID: 41
+      - Invitation URL: https://classroom.github.com/a/aHiTCHuq
+      - Due Date: Sep 19 23:59:59  (Tuesday)
 
