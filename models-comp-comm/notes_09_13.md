@@ -12,25 +12,28 @@
       - Due Date: Sep 19 23:59:59  (Tuesday)
 
 ## Today's Agenda:
-   1. Lecture:  Complete slides on Modes
+   1. Lecture:  Complete slides on Models
       - models-comp-comm/slide*/models.pdf
 
    1. Lab: 
-      - review intro to MIPS slides
+      - review Intro to MIPS slides
         * assembly-programming/slide*/intro*.pdf
       - MARS walk through
-      - Review PEMDAS and then MIPS translation
+      - Review PEMDAS and then MIPS transliteration
 
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - 9's compliment 
+     - hexidecimal digits
 
    * T/R @ 9:00 am
 
 
 ## Review from Last-time:
 
-   1. 
+   1. No input from Wednday class.
+
 
 ---
 # Today's Lecture Material
@@ -61,11 +64,17 @@
 ## Resources
   1. reference/TAC2mips.md   (Here is a subset)
 
+      | TAC Equations                 | MIPS Instructions         |   
+      |-------------------------------|---------------------------|
+      | `return a`                    | `move $v0, a`             |
+      |  
+
+      
       | TAC Equations                 | MIPS Instructions         |
       |-------------------------------|---------------------------|
       | `;`                           | `nop`                     |
       | `x = imm;`                    | `li x, imm`               |
-      | `x = - a`                     | `sub  x, $zero, a`        |
+      | `x = - a;`                    | `sub  x, $zero, a`        |
       | `x = a;`                      | `move x, a`               |
       | `x = a <op> b;`               | `<op> x, a, b`            |
       | `x = ~ a`                     | `nor x, a, $zero`         |
