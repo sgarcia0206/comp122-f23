@@ -24,15 +24,15 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-     - 9's compliment 
-     - hexidecimal digits
+     - 9's complement 
+     - hexadecimal digits
 
    * T/R @ 9:00 am
 
 
 ## Review from Last-time:
 
-   1. No input from Wednday class.
+   1. No input from Wednesday class.
 
 
 ---
