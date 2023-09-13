@@ -32,12 +32,12 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       |-------------------------------|---------------------------|
       | `;`                           | `nop`                     |
       | `x = imm;`                    | `li x, imm`               |
-      | `x = - imm`                   | `subi x, $zero, imm`      |
-      | `x = - a`                     | `sub  x, $zero, a`        |
+      | `x = - imm;`                  | `subi x, $zero, imm`      |
+      | `x = - a;`                    | `sub  x, $zero, a`        |
       | `x = a;`                      | `move x, a`               |
       | `x = a <op_i> imm; `          | `<op_i> x, a, imm`        |
       | `x = a <op> b;`               | `<op> x, a, b`            |
-      | `x = ~ a`                     | `nor x, a, $zero`         |
+      | `x = ~ a;`                    | `nor x, a, $zero`         |
       | `x = a >>> imm;`              | `srl x, a, imm`           |
       | `x = a >> imm;`               | `sra x, a, imm`           |
       | `x = a << imm;`               | `sll x, a, imm`           |
