@@ -28,11 +28,13 @@
      - hexadecimal digits
 
    * T/R @ 9:00 am
+     - no questions
 
 
 ## Review from Last-time:
 
    1. No input from Wednesday class.
+   
 
 
 ---
