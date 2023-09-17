@@ -17,13 +17,16 @@
       - You must use your notes, my notes, and my slides during the quiz
 
       1. Review: Walk through on how to do a paper-like assignment
-         - accept invitiation
+         - accept invitation
+           * assignments.md
+           * pinned in slack
+           * in the announcement section of the class notes
          - copy your repository's URL
-           * git@github.com/COMP122/{id}-{name}-{account}.git
-           * git@github.com/COMP122/01-first-assignment-smf-steve
+           * git@github.com/COMP122/{id}-{assignment}-{account}.git
+           * git@github.com/COMP122/02-mathematical-review-smf-steve -- as an example!
          - clone your repository
            * cd ~/classes/comp122/deliverables
-           * git clone git@github.com/COMP122/{id}-{name}-{account}.git
+           * git clone git@github.com/COMP122/{id}-{assignment}-{account}.git
          - start the assignment
            * cd {id}-{name}-{account}
            * cp assignment.md submission.md
@@ -37,13 +40,14 @@
 
 
 
+
 ## Today's Agenda:
    1. Lecture:  Complete slides on Models
       - models-comp-comm/slide*/instruction-set-architecture.pdf
       - models-comp-comm/slide*/processes.pdf
 
    1. Lab: 
-      - PEMDAS and TAC Labortory Assignment
+      - PEMDAS and TAC Laboratory Assignment
 
 
 
