@@ -35,7 +35,7 @@
          - work on the assignment
            * subl submission.md
            * git commit -a -m 'updated message'
-           * git push
+           * git pull ; git push
            * REPEAT
 
 
@@ -53,7 +53,10 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-
+     - Universal Computer ?
+     - Layers differances between OSI  & TCP/IP models
+     - Why OS is different from the User code in Universal Computer
+     
    * T/R @ 9:00 am
 
 
