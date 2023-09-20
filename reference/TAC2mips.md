@@ -93,28 +93,32 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       * {body}: the body of a loop
       * {done}: the statement after a control-flow statement
 
-      | TAC Control Flow                | MIPS Instruction          |
-      |---------------------------------|---------------------------|
-      | `label: ;`                      | `label: nop`              |
-      | `if (a <cond> b) {`             | `b<! cond> a, b, {alt}`   |
-
-      | `if (a <cond> b) {`             | `b<cond> a, b, {cons}`    |
-      |                                 | `b {alt}`                 |
-
-
-      | `} else {`                      | `# end of block`          |
-      | `test:  for(; a <cond> b ;) {`  | `b<! cond> a, b, {done}`  |
-
-      | `for(; a <cond> b ;) {`       | `b<cond> a, b, {body}`    |
-      |                               | `b {done}`                |
-
-      | `while(a <cond> b) {`         | `b<! cond> a, b, {done}`  |
-      | `continue label;`             | `b label`                 |
-      | `// break;`                   | `b {done}`                |
-      | `break;`                      | `b {done}`                |
-      | `}`                           | `# end of block`          |
-      |                               |                           |
-      | `if (a <cond> b) break;`      | `b<cond> a, b, {done}`    |
+      | TAC Control Flow                  | MIPS Instruction           |
+      |-----------------------------------|----------------------------|
+      | `label: ;`                        | `label: nop`               |
+      | `// goto label;`                  | `b label`                  |
+      | `continue label;`                 | `b label`                  |
+      | `break;`                          | `b {done}`                 |
+      | `{`                               | ``                         |
+      | `}`                               | ``                         |
+      |                                   |                            |
+      | `if (a <cond> b) {`               | `b<! cond> a, b, {alt}`    |
+      |                                   |                            |        
+      | `if (a <cond> b) {`               | `b<cond> a, b, {cons}`     |
+      |                                   | `b {alt}`                  |
+      |                                   |                            |
+      | `if (a <cond> b) break;`          | `b<cond> a, b, {done}`     |
+      |                                   |                            |
+      | `} else {`                        | ``                         |
+      | `}`                               | ``                         |
+      |                                   |                            |
+      | `for(; a <cond> b ;) {`           | `b<! cond> a, b, {done}`   |
+      |                                   |                            |
+      | `for(; a <cond> b ;) {`           | `b<cond> a, b, {body}`     |
+      |                                   | `b {done}`                 |
+      |                                   |                            |
+      | `while(a <cond> b) {`             | `b<! cond> a, b, {done}`   |
+      |                                   |                            |
 
 
       | `TAC <cond>` | `MIPS <cond>` | `MIPS <! cond>` |`TAC <! cond>` |
@@ -133,4 +137,4 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       | `mips.print_ti(imm);`         | `print_ti(imm)`           |
       | `mips.print_c(a);`            | `print_c(a)`              |
       | `mips.print_ci(imm);`         | `print_ci(imm)`           |
-      |  See printf:                  | etc., etc., etc.,         |
+      |  See print_routines.md        | etc., etc., etc.,         |

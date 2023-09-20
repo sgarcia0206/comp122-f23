@@ -84,7 +84,12 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 <h3 id="models">Models of Computation and Communication (Section 1)</h3>
 
-1. Name:  No assignments
+1. Assignment: practice-quiz-models
+   - Status: assigned
+   - Deliverable ID: 11
+   - Invitation URL: https://classroom.github.com/a/OJbdrx3r
+   - Due Date: Sep 24 23:59:59  (Sunday)
+   - It's a practice quiz -- time yourself
 
 
 <h3 id="format">Format and Encoding (Section 2)</h3>

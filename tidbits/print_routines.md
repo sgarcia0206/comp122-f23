@@ -14,9 +14,9 @@ Java has the following three methods to print information.
 | Data Type | Encoding    	| Spec  | Example              |
 |-----------|---------------|-------|----------------------|
 | int       | decimal		    | %d    | printf("%d\n", num); |
-| int       | decimal		    | %x  	| printf("%x\n", num); |
-| int       | decimal		    | %o	  | printf("%o\n", num); |
-| int       | decimal		    | %u	  | printf("%u\n", num); |
+| int       | hexidecimal   | %x  	| printf("%x\n", num); |
+| int       | octal		      | %o	  | printf("%o\n", num); |
+| int       | unsigned dec. | %u	  | printf("%u\n", num); |
 | char      | char			    | %c	  | printf("%c\n", c);   |
 | string    | string        | %s	  | printf("%s\n", str); |
 
