@@ -21,13 +21,17 @@
       - assembly/slide*/intro_control_flow.pdf
 
 
-
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - can I submit multiple times: yes
+     - starting of timing: upon accepting invitation
+     - can I commit after the deadline: 
+       * yes, but I am not _required_ to grade that version
+     - how long to time for the practice quiz
+       * the same amount of time as the real quiz: 1 hour
+
 
    * T/R @ 9:00 am
-
-
 
 
 
@@ -36,7 +40,7 @@
 
   1. Processes
      - Files
-       - Output redirection:  0<, 1>, 1>>, 2>, 2>>
+       - Output redirection:  1>, 1>>, 2>, 2>>
          * ls > output 
          * ls >> output
        - Input redirection:   0<, 0<<, 0<<< 
@@ -57,7 +61,7 @@
      - Command line execution
        - Sequential:  ;
          * git pull ; date ; git push ; date
-       - Parallel:    &
+       - Concurrently:    &
          * git pull & date & git push & date
        - Conditional:  &&, ||, 
          * git commit -m 'update' && echo success
@@ -78,6 +82,7 @@
      - format:  `b<test> rs, rt, label`
      - tests: (see table below)
   1. Practicum on Macros and IF Statements
+     - area of something -- review
      - min
      - max
      - abs
