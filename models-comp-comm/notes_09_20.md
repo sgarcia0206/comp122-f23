@@ -15,7 +15,7 @@
 
 ## Today's Agenda:
    1. Lecture:  Processes
-      - models-comp-comm/slide*/processes.pdf
+      - models-comp-comm/slide*/process.pdf
 
    1. Lab: 
       - assembly/slide*/intro_control_flow.pdf
@@ -32,6 +32,7 @@
 
 
    * T/R @ 9:00 am
+     - what is the ALU? arithmetic, logic, unit 
 
 
 
