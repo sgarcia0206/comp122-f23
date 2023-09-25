@@ -7,10 +7,11 @@
         - You are going to procrastinate!
 
   1. Assignment: practice-quiz-models
-      - Status: past due
-      - Due Date: Sep 24 23:59:59  (Sunday)
+     - Status: past due
+     - Due Date: Sep 24 23:59:59  (Sunday)
 
-
+  1. Assignment: PEMDAS and 
+     - Status:  almost graded
 
 ## Today's Agenda:
    1. New Section:  Formats and Encodings
@@ -22,7 +23,13 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-     -
+     - Can we get more information on a hub and switch?
+     - Order of computational power of theoretical machines?
+     - Difference between combinational and sequential circuits?
+     - Difference between OS and kernel?
+     - Can we use addi on the quiz?
+     - Difference between mul & mult?
+
 
    * T/R @ 9:00 am
      -
@@ -35,6 +42,7 @@
      - format_encodings/lecture_ordering.md
 
   1. Introduction to Encodings: introduction-to-encodings.pptx
+     - Up to ASCII characters 
 
 
 
