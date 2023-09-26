@@ -50,7 +50,11 @@
   1. Control Flow -- Quick Review
   1. Branch Instructions:
      - format:  `b<test> rs, rt, label`
+       
+       beq $t1, $t2, cons
+
      - tests: (see table below)
+
   1. Practicum on Macros and IF Statements
      - area of something -- review
      - min
@@ -72,21 +76,25 @@
      ```
 
      ```java tac
-      if ( a <= b ) {
-        cons: a = a + 1;
-        // goto next
-      } else {
-        alt: b = b - a;
-        // goto next
-      }
+            if ( a <= b ) {
+     cons:    ;
+              a = a + 1;
+              // goto next
+            } else {
+     alt:     ;
+              b = b - a;
+              // goto next
+            }
      next:  ; 
      ```
+
+blt  "b"ranch "l"ess "t"han
 
      ```mips
              # a0: a
              # a1: b
 
-             blt $a0, $a1, alt        #  if ( a <= b ) {
+             bgt $a0, $a1, alt        #  if ( a <= b ) {
      cons:     addi $a0, $a0, 1       #     cons: a = a + 1;
                b next                 #     // goto next
                                       #   } else {

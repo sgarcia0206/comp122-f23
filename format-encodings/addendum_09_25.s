@@ -6,6 +6,62 @@
 #      - diff (difference)
 # 
 
+   
+         .macro abs ( %rd, %rs )
+            # abs $v0, $a0
+
+               bge %rs, $zero, alt             # if ( %rs < 0 ) {
+         cons:    nop                          #   ; 
+                  sub %rd, $zero, %rs          #   %rd = 0 - %rs
+                  b next                       #   // goto next;
+                                               # } else {
+         alt:     nop                          #   ;
+                  move %rd, %rs                #   %rd = %rs
+                  b next                       #   // goto next;
+                                               # }
+         next: nop                             # ; 
+
+
+         .end_macro
+
+
+
+           .macro max(%max, %a, %b)
+
+           ble %a, %b, alt         # if ( a > b ) {
+   cons:     nop                   #   ;            
+             move %max, %a         #   max = a;
+             b thanks              #   // goto thanks;
+                                   # } else {
+   alt:      nop                   #   ;               
+             move %max, %b         #   max = b;
+             b thanks              #   // goto thanks;
+                                   # }
+   thanks:   nop                   # ;
+             print_d(%max)         # mips.print_d(max);
+            
+         .end_macro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
          .macro min(%min, %a, %b)
          
                  bgt %a, %b, alt   # if ( a <= b ) {
