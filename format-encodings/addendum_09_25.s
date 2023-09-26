@@ -4,7 +4,52 @@
 #      - max
 #      - abs
 #      - diff (difference)
-# 
+#      - sign
+#      - ascending swap
+
+         .macro sign(%num)
+         #  sign ($t5)
+         #  $v0 holds the results
+
+         # v0: sign
+
+
+         #bge %num, $zero, cons      # if ( num >= 0 ) {
+         #b alt
+
+         blt %num, $zero, alt      # if ( num >= 0 ) {
+
+cons:      nop                      #   ;
+           li $v0, 0                #   sign = 0;
+           b done                   #   // goto done;
+                                    # } else {
+alt:       nop                      #   ;         
+           li $v0, 1                #   sign = 1;
+           b done                   #   // goto done;
+                                    # }
+done:    nop                        # ;
+
+         .end_macro
+
+
+          .macro aswap(%first, %second)
+
+          # at: temp
+
+          blt %first, %second, apple      # if (first >= second ) {
+   can:     nop                           #    null;
+            move $at, %first              #    temp = first;
+            move %first, %second          #    first = second;
+            move %second, $at             #    second = temp;
+            b thanks                      #    // goto thanks
+                                          # } else {
+  apple:    nop                           #    null;
+            b thanks                      #    // got thanks
+                                          # }
+  thanks: nop                             # ; 
+
+          .end_macro
+
 
    
          .macro abs ( %rd, %rs )

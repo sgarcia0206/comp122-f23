@@ -43,6 +43,7 @@
 
   1. Introduction to Encodings: introduction-to-encodings.pptx
      - Up to ASCII characters 
+     - Up to MIPS encoding
 
 
 
@@ -62,6 +63,7 @@
      - abs
      - diff (difference)
      - sign
+     - ascending swap
 
 ---
 ## Resources
@@ -80,11 +82,11 @@
             if ( a <= b ) {
      cons:    ;
               a = a + 1;
-              // goto next
+              // goto next;
             } else {
      alt:     ;
               b = b - a;
-              // goto next
+              // goto next;
             }
      next:  ; 
      ```
@@ -96,10 +98,12 @@ blt  "b"ranch "l"ess "t"han
              # a1: b
 
              bgt $a0, $a1, alt        #  if ( a <= b ) {
-     cons:     addi $a0, $a0, 1       #     cons: a = a + 1;
+     cons:     nop                    #     cons: ;
+               addi $a0, $a0, 1       #      a = a + 1;
                b next                 #     // goto next
                                       #   } else {
-     alt:      sub $a1, $a1, $a0      #     alt: b = b - a;
+     alt:      nop                    #     alt: ;
+               sub $a1, $a1, $a0      #     b = b - a;
                b next                 #     // goto next
                                       #   }
      next:     nop                    #  next:  ; 
