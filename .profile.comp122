@@ -32,6 +32,12 @@ case "${_OS}" in
      LAUNCH="open"
      CLIP_COPY="pbcopy"
      ;;
+   GNU/Linux ) # Ubuntu
+     #SUBLIME_BIN='/Applications/Sublime Text.app/Contents/SharedSupport/bin'  
+     SUBLIME='subl -w -n'
+     #LAUNCH="open"
+     #CLIP_COPY="pbcopy"
+     ;;
 esac
 
 function rebuild_MIPS_OS_Interface () {
