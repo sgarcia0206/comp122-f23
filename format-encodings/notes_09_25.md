@@ -98,11 +98,11 @@ blt  "b"ranch "l"ess "t"han
              # a1: b
 
              bgt $a0, $a1, alt        #  if ( a <= b ) {
-     cons:     nop                    #     cons: ;
-               addi $a0, $a0, 1       #      a = a + 1;
+     cons:     nop                    #     ;
+               addi $a0, $a0, 1       #     a = a + 1;
                b next                 #     // goto next
                                       #   } else {
-     alt:      nop                    #     alt: ;
+     alt:      nop                    #     ;
                sub $a1, $a1, $a0      #     b = b - a;
                b next                 #     // goto next
                                       #   }
@@ -132,8 +132,8 @@ blt  "b"ranch "l"ess "t"han
       |-----------------------------------|----------------------------|
       | `label: ;`                        | `label: nop`               |
       | `// goto label;`                  | `b label`                  |
-      | `{`                               | ``                         |
-      | `}`                               | ``                         |
+      | `{`                               |                            |
+      | `}`                               |                            |
       |                                   |                            |
       | `if (a <cond> b) {`               | `b<! cond> a, b, {alt}`    |
       |                                   |                            |        
@@ -142,8 +142,8 @@ blt  "b"ranch "l"ess "t"han
       |                                   |                            |
       | `if (a <cond> b) break;`          | `b<cond> a, b, {done}`     |
       |                                   |                            |
-      | `} else {`                        | ``                         |
-      | `}`                               | ``                         |
+      | `} else {`                        |                            |
+      | `}`                               |                            |
       |                                   |                            |
 
 

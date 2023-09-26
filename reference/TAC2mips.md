@@ -98,9 +98,9 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       | `label: ;`                        | `label: nop`               |
       | `// goto label;`                  | `b label`                  |
       | `continue label;`                 | `b label`                  |
-      | `break;`                          | `b {done}`                 |
-      | `{`                               | ``                         |
-      | `}`                               | ``                         |
+      | `break label;`                    | `b {done}`                 |
+      | `{`                               |                            |
+      | `}`                               |                            |
       |                                   |                            |
       | `if (a <cond> b) {`               | `b<! cond> a, b, {alt}`    |
       |                                   |                            |        
@@ -109,8 +109,8 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       |                                   |                            |
       | `if (a <cond> b) break;`          | `b<cond> a, b, {done}`     |
       |                                   |                            |
-      | `} else {`                        | ``                         |
-      | `}`                               | ``                         |
+      | `} else {`                        |                            |
+      | `}`                               |                            |
       |                                   |                            |
       | `for(; a <cond> b ;) {`           | `b<! cond> a, b, {done}`   |
       |                                   |                            |
