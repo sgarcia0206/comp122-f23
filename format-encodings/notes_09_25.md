@@ -24,15 +24,15 @@
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
      - Can we get more information on a hub and switch?
-     - Order of computational power of theoretical machines?
+     * Order of computational power of theoretical machines?
      - Difference between combinational and sequential circuits?
-     - Difference between OS and kernel?
+     * Difference between OS and kernel?
      - Can we use addi on the quiz?
-     - Difference between mul & mult?
+     * Difference between mul & mult?
 
 
    * T/R @ 9:00 am
-     -
+     - Difference between lval and rval?
 
 
 ---
@@ -61,6 +61,7 @@
      - max
      - abs
      - diff (difference)
+     - sign
 
 ---
 ## Resources
