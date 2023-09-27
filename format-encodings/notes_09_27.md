@@ -19,7 +19,10 @@
 
 
 ## Today's Agenda:
-   1. Complete: Introduction to Formating and Encodings
+   1. Lecture
+      1. Complete: Introduction to Formating and Encodings
+      1. Provide Examples of table lookup
+      1. Provide Examples of utf-8 encoding
 
    1. Lab: 
       - While Loop Transformation
@@ -39,10 +42,37 @@
      - introduction-to-encodings.pdf
        * ASCII characters 
        * MIPS encodings
+  1. Table Lookup Examples
+     * https://drive.google.com/drive/u/0/folders/1ZLRC2SE5znDr8orhsZveRKd45TQs0A_e
+     - MW
+       - binary string --> octal, hex, dec
+       - octal, hex, dec  --> binary string 
+
+       - binary string --> ASCII, base64
+       - ASCII, base64    --> binary string 
+
+       - binary string --> UTF-8
+       - UTF-8            --> binary string 
+
+     - TR
+       - binary string --> octal, hex, dec
+       - octal, hex, dec  --> binary string 
+
+       - binary string --> ASCII, base64
+       - ASCII, base64    --> binary string 
+
+       - binary string --> UTF-8
+       - UTF-8            --> binary string 
+
 
   1. Encoding and Decoding of UTF-8
      - encode_utf8.md
      - decode_utf8.md
+
+  1. UTF-8 examples
+     - MW
+     - TR
+
 
 # Today's Lab Material
   1. Algorithm If-then-else --> TAC Transformation
