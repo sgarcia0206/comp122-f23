@@ -45,24 +45,24 @@
   1. Table Lookup Examples
      * https://drive.google.com/drive/u/0/folders/1ZLRC2SE5znDr8orhsZveRKd45TQs0A_e
      - MW
-       - binary string --> octal, hex, dec
+       - binary string    --> octal, hex, dec
        - octal, hex, dec  --> binary string 
 
        - binary string --> ASCII, base64
-       - ASCII, base64    --> binary string 
+       - ASCII, base64 --> binary string 
 
        - binary string --> UTF-8
-       - UTF-8            --> binary string 
+       - UTF-8         --> binary string 
 
      - TR
-       - binary string --> octal, hex, dec
+       - binary string    --> octal, hex, dec
        - octal, hex, dec  --> binary string 
 
        - binary string --> ASCII, base64
-       - ASCII, base64    --> binary string 
+       - ASCII, base64 --> binary string 
 
        - binary string --> UTF-8
-       - UTF-8            --> binary string 
+       - UTF-8         --> binary string 
 
 
   1. Encoding and Decoding of UTF-8
