@@ -20,16 +20,21 @@
 
 ## Today's Agenda:
    1. Lecture
-      1. Complete: Introduction to Formating and Encodings
-      1. Provide Examples of table lookup
-      1. Provide Examples of utf-8 encoding
+      - Complete: Introduction to Formating and Encodings
 
    1. Lab: 
+      - Provide Examples of table lookup
+      - Provide Examples of utf-8 encoding
       - While Loop Transformation
 
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - general questions about exam and assignments
+     - binary addition?
+     - last question on question:
+       - the one with rval, lval, and the memory represention
+     - where in the three layers
 
 
    * T/R @ 9:00 am
@@ -42,7 +47,12 @@
      - introduction-to-encodings.pdf
        * ASCII characters 
        * MIPS encodings
-  1. Table Lookup Examples
+
+ 
+
+# Today's Lab Material
+
+ 1. Table Lookup Examples  (Did not get to!)
      * https://drive.google.com/drive/u/0/folders/1ZLRC2SE5znDr8orhsZveRKd45TQs0A_e
      - MW
        - binary string    --> octal, hex, dec
@@ -74,7 +84,7 @@
      - TR
 
 
-# Today's Lab Material
+
   1. Algorithm If-then-else --> TAC Transformation
      1. Identify the parts of the if-the-else statement
         * {test}: the boolean expression of the if-then-else
