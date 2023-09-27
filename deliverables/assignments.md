@@ -94,18 +94,21 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 <h3 id="format">Format and Encoding (Section 2)</h3>
 
-1. Name: Table Encodings
-   - Status: 
-   - Deliverable ID: 21
-   - Invitation URL: 
-   - Due Date: 
 
-1. Name: UTF-8 Encoding
-   - Status: 
-   - Deliverable ID: 22
-   - Invitation URL: 
-   - Due Date: 
- 
+   1. Name: Table Encodings
+      - Status: Assigned
+      - Deliverable ID: 21
+      - Invitation URL: https://classroom.github.com/a/79eoHK-K
+      - Due Date: Oct 03 23:59:59 (Tuesday)
+   
+   1. Name: UTF-8 Encoding
+      - Status: Assigned
+      - Deliverable ID: 22
+      - Invitation URL: https://classroom.github.com/a/GEC4DKyv
+      - Due Date: Oct 05 23:59:59 (Thursday)
+    
+
+
  1. Name: Base Conversion and Floating Point Representation
    - Status: 
    - Deliverable ID: 23
