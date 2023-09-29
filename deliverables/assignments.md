@@ -23,8 +23,8 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: 
    - Additional Information: 
    - Deliverable ID: 10
-   - Invitation URL: 
-   - Due Date: 
+   - Invitation URL: https://classroom.github.com/a/-3YZEYoh
+   - Due Date: Oct 01 23:59:59
  
 
 1. Exam 2: Formats and Encodings
@@ -69,7 +69,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Mathematical Review (Credit/No Credit)
-   - Status: graded
+   - Status: Graded
    - Deliverable ID: 02
    - Invitation URL: https://classroom.github.com/a/6Q0OrY44
    - Due Date: Sep 14 23:59:59

@@ -2,10 +2,8 @@
 
 ## Algorithm: Unicode to UTF-8 Encoding
 
-*  Prerequisite: Convert the Unicode character, e.g., U+00FE, into a binary string: 2# 0000 0000 1111 1110.
-
+*  Prerequisite: Convert the Unicode character, e.g., U+00FE, into a binary number: 2# 1111 1110.
 1. Determine the position of the most significant bit; let `p` be that value.
-
 2. Consult to following table to determine the value of `l` (length) and `b` (bytes)
 
    | Condition | l = length | b = bytes |
@@ -17,8 +15,7 @@
    
 
 3. Pad/Truncate the binary number to be of length `l`
-
-4. Based upon the value of `b`, chunk the binary string into the following sizes:
+4. Based upon the value of `b`, chunk the binary number into the following sizes:
    - 1: 7
    - 2: 5, 6
    - 3: 4, 6, 6
@@ -41,7 +38,7 @@
 ### 'LATIN SMALL LETTER THORN'
 ### https://www.fileformat.info/info/unicode/char/00FE/index.htm
 
-* Prerequisite: Convert the Unicode character into a binary string.
+* Prerequisite: Convert the Unicode character into a binary number.
   - 16# 00FE:  Hexadecimal value of U+00FE
   - 2#  0000 0000 1111 1110  
 
@@ -54,10 +51,10 @@
    |-----------|-----------:|----------:|
    | p <= 11   |       11   |      2    |
 
-3. Pad/Truncate the binary string to be of length `l`
+3. Pad/Truncate the binary number to be of length `l`
    - 2# 000 1111 1110 
 
-4. Based upon the value of `b`, chunk the binary string into the following sizes:
+4. Based upon the value of `b`, chunk the binary number into the following sizes:
    - 2: 5, 6
    - 2# 000 1111 1110 
    - 2# 00011 111110
@@ -81,7 +78,7 @@
 ### 'BLACK CLUB SUIT'
 ### https://www.fileformat.info/info/unicode/char/2663/index.htm
 
-* Prerequisite: Convert the Unicode character into a binary string.
+* Prerequisite: Convert the Unicode character into a binary number.
   - 16# 2663:  Hexadecimal value of U+2663
   - 2#  0010 0110 0110 0011
 
@@ -95,10 +92,10 @@
    | p <= 16   |       16   |      3    |
 
 
-3. Pad/Truncate the binary string to be of length `l`
+3. Pad/Truncate the binary number to be of length `l`
    - 2# 0010 0110 0110 0011
 
-4. Based upon the value of `b`, chunk the binary string into the following sizes:
+4. Based upon the value of `b`, chunk the binary number into the following sizes:
    - 3: 4, 6, 6
    - 2# 0010 0110 0110 0110
    - 2# 0010 011001 100011

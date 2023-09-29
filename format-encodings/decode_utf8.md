@@ -2,9 +2,8 @@
 
 ## Algorithm: UTF-8 Encoding to Unicode
 
-*  Prerequisite: Convert your UTF-8 string into a binary string.
+*  Prerequisite: Convert your UTF-8 string into a binary number.
 1. Chunk the string into bytes
-
 2. Based upon the first-byte's prefix, determine the total number of bytes ('b') used to encode the current UTF-8 character.
 
    | First Byte  | b   |
@@ -16,7 +15,6 @@
 
 
 3. Gather the number of bytes, 'b'.
-
 4. Validate that the following bytes are prefixed with '10'. <br>
    If they are not, the binary string is invalid.
 
@@ -31,7 +29,7 @@
 ### 'WHITE FOUR POINTED STAR'
 ### https://www.fileformat.info/info/unicode/char/2727/index.htm
 
-* Prerequisite: Convert your UTF-8 string into a binary string.
+* Prerequisite: Convert your UTF-8 string into a binary number.
   - 16# e29ca7
   - 2#  1110 0010 1001 1100 1010 0111
 
@@ -74,7 +72,7 @@
 
 ## Example 2: Invalid Binary String
 
-* Prerequisite: Convert your UTF-8 string into a binary string.
+* Prerequisite: Convert your UTF-8 string into a binary number.
   - 16# e2dca7
   - 2#  1110 0010 1101 1100 1010 0111
 
@@ -101,7 +99,7 @@
    - 2# 11 - 011100  ;  invalid!
    - 2# 10 - 100111
   
-* Example ended with identify the binary string as being malformed!
+* Example ended with identifying the binary string as being malformed!
 
 
 ----
