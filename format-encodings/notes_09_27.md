@@ -33,11 +33,13 @@
      - general questions about exam and assignments
      - binary addition?
      - last question on question:
-       - the one with rval, lval, and the memory represention
-     - where in the three layers
+       - the one with rval, lval, and the memory represention?
+     - where in the three layers is the user payload sent?
 
 
    * T/R @ 9:00 am
+     - SOF: Start of Frame: clarification
+     - Mapping and Functions slide: review
 
 
 ---
@@ -123,10 +125,49 @@
 
      - TR
        - binary string    --> octal, hex, bcd
+         * 111010110001
+           - 2# 111 010 110 001  --> 8# 7261  -> 2# 111 010 110 001
+           - 2# 1110 1011 0001   --> 16# EB1
+           - 2# 1110 1011 0001  --> BCD: NA NA 1
+
+         * 010111101011
+           - 2# 010 111 101 011  -->  
+             8#   2   7   5   3
+           - 2# 0101 1110 1011  -->  16# 5EB
+           - 2# 0101 1110 1011  -->  bcd: 5 NA NA   (error)
+
+         * Binary String: 10100100101101011
+           - 101 001 001 011 010 11 -> 8# 5 1 1 3 2 NA
+           - 1010 0100 1011 0101 1 -> 16# A 4 B 5 NA
+           - 10100100101101011 -> BCD: NA 4 NA 5 NA
+
+         * Binary Number: 00000000000000 10100100101101011
+           - 2# 010 100 100 101 101 011 -> 8# 2 4 4 5 5 3
+           - 2# 0001 0100 1001 0110 1011 -> 16# 1 4 9 6 A
+           - 2# 10100100101101011 -> BCD: 1 4 9 6 NA 
+
        - octal, hex, bcd  --> binary string 
 
        - binary string --> ASCII, base64
+         - 010001001001010111101010
+         - | 01 0001 | 00 1001 | 01 0111 | 10 1010 | -> BASE64: 
+         -         R         J         X         q
+
        - ASCII, base64 --> binary string 
+
+       * MIPS
+         - add $t1, $t2, $t3    
+         - Pattern:  func rd, rs, rt
+
+         - R-Format:  op, rs, rt, rd, sh, func
+          - op: 000 000 
+          - rs: 0 1010
+          - rt: 0 1011
+          - rd: 0 1001
+          - sh: 0 0000
+          - func: 100 000
+
+         - op: 00000001010010110100100000100000
 
 
 
