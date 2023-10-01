@@ -124,7 +124,7 @@ blt  "b"ranch "l"ess "t"han
   - Control flow labels
       * {cons}: the consequence for an if-then-else statement
       * {alt}:  the alternative for an if-then-else statement
-      * {test}: the conditional statement loop statement
+      * {test}: the conditional statement of the loop statement
       * {body}: the body of a loop
       * {done}: the statement after a control-flow statement
 

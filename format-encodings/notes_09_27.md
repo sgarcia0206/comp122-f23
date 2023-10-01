@@ -20,7 +20,7 @@
 
 ## Today's Agenda:
    1. Lecture
-      - Complete: Introduction to Formating and Encodings
+      - Complete: Introduction to Formatting and Encodings
 
    1. Lab: 
       - Provide Examples of table lookup
@@ -33,7 +33,7 @@
      - general questions about exam and assignments
      - binary addition?
      - last question on question:
-       - the one with rval, lval, and the memory represention?
+       - the one with rval, lval, and the memory representation?
      - where in the three layers is the user payload sent?
 
 
@@ -220,139 +220,8 @@
         - evaluate the righ-hand side into $r
           - move the eval of $r into the {init} block
         - replace the boolean expresion with a simple test:  `$l <cond> $r`
-          - yeilding:    `if ( $l <cond> $r ) {`
+          - yielding:    `if ( $l <cond> $r ) {`
 
-
-
-  1. Algorithm  For-loop (aka structured while-loop) --> TAC Transformation
-     1. Identify with labels the section of the loop
-        - {init}: the initialization arm of the for-loop
-        - {loop}: the line of code that contains `for( <init> ; <test> ; <next> ) {`
-        - {body}: the body of the for-loop
-        - {next}: the next arm of the for-loop
-        - {done}: the first line of code executed after the for-loop
-
-     1. Insert the {init} label, with a null statement, before the start of the for-loop
-     1. Associate the {loop} label with `for( init ; test ; next ) {`
-     1. Append the {done} label, with a null statement, after the end of the for-loop
-
-     1. Insert the {body} label, with a null statement, at the top of the {body}
-     1. Insert the {next} label, with a null statement, at the end of the {body}
-     1. Append 'continue {loop};' to the end of of the {next} block
-
-        * The resulting template before code movement
-
-          ```java tac
-          init:    ;
-          loop:    for( <init> ; <test> ; <next> ) {
-          body:       ;
-                      <body>
-
-          next:       ;
-
-                      continue loop;
-                   }
-          done:    ;
-          ```
-
-     1. Move the init arm to the {init} block
-
-     1. Simplify the boolean expression into three parts
-        - evaluate the left-hand side into $l
-          - move the eval of $l into the {init} block
-          - place a copy of the eval of $l into the {next} block
-        - evaluate the righ-hand side into $r
-          - move the eval of $r into the {init} block
-          - place a copy of the eval of $r into the {next} block
-        - replace the boolean expresion with a simple test:  `$l <cond> $r`
-          - yeilding:    `loop: for(;  $l <cond> $r ;)`
-
-     1. Move the next arm to the {next} block
-
-
-  1. Practicum on While Loops
-     - Count-down
-     - Summation
-     - Factorial
-
-
----
-## Resources
-
-  1. Example Mapping of an for-loop (a while loop in disguised)
-
-     ```java
-     top = 10;
-     for( i=top; i > 0 ; i -- ) {
-        mips.print_d(i);
-     }
-     ```
-
-     ```java tac
-             top = 10;
-
-             i=top;
-
-     loop:  for(; i > 0 ;) {
-     body:      null;
-                mips.print_d(i);
-
-     next:      null;
-                i --; 
-                continue loop;  
-             }
-     done:   null;
-     ```
-
-
-     ```mips
-
-     ```
-
-  1. reference/TAC2mips.md   (Here is a subset)
-
-     | JAVA: MIPS OS Interface       | MIPS Macro                |
-     |-------------------------------|---------------------------|
-     | `mips.print_t(a);`            | `print_t(a)`              |
-     | `mips.print_ti(imm);`         | `print_ti(imm)`           |
-     | `mips.print_c(a);`            | `print_c(a)`              |
-     | `mips.print_ci(imm);`         | `print_ci(imm)`           |
-     |  See print_routines.md        | etc., etc., etc.,         |
-
-  - Control flow labels
-      * {cons}: the consequence for an if-then-else statement
-      * {alt}:  the alternative for an if-then-else statement
-      * {test}: the conditional statement loop statement
-      * {body}: the body of a loop
-      * {done}: the statement after a control-flow statement
-
- 
-
-      | TAC Control Flow                  | MIPS Instruction           |
-      |-----------------------------------|----------------------------|
-      |                                   |                            |
-      | `continue label;`                 | `b label`                  |
-      | `break label;`                    | `b {done}`                 |
-      |                                   |                            |
-      | `for(; a <cond> b ;) {`           | `b<! cond> a, b, {done}`   |
-      |                                   |                            |
-      | `for(; a <cond> b ;) {`           | `b<cond> a, b, {body}`     |
-      |                                   | `b {done}`                 |
-      |                                   |                            |
-      | `while(a <cond> b) {`             | `b<! cond> a, b, {done}`   |
-      |                                   |                            |
-
-
-
-      | `TAC <cond>` | `MIPS <cond>` | `MIPS <! cond>` |`TAC <! cond>` |
-      |:------------:|:-------------:|:---------------:|:-------------:|
-      | `<`          | `lt`          | `ge`            |  `>=`         |
-      | `<=`         | `le`          | `gt`            |  `>`          |
-      | `!=`         | `ne`          | `eq`            |  `==`         |
-      | `==`         | `eq`          | `ne`            |  `!=`         |
-      | `>=`         | `ge`          | `lt`            |  `<`          |
-      | `>`          | `gt`          | `le`            |  `>=`         |
-   
 
 
 
