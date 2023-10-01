@@ -2,7 +2,7 @@
 
 ## Announcements:
    1. Quiz This Weekend.
-      - To be posted in Slack on Friday Night (post 5:00pm)
+      - To be posted in Slack on Friday Night (post 5:00PM)
 
    1. Name: Table Encodings
       - Status: Assigned
@@ -219,7 +219,7 @@
           - move the eval of $l into the {init} block
         - evaluate the righ-hand side into $r
           - move the eval of $r into the {init} block
-        - replace the boolean expresion with a simple test:  `$l <cond> $r`
+        - replace the boolean expression with a simple test:  `$l <cond> $r`
           - yielding:    `if ( $l <cond> $r ) {`
 
 
