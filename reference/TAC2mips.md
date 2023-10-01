@@ -138,3 +138,11 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       | `mips.print_c(a);`            | `print_c(a)`              |
       | `mips.print_ci(imm);`         | `print_ci(imm)`           |
       |  See print_routines.md        | etc., etc., etc.,         |
+
+      | JAVA: MIPS OS Interface       | MIPS Macro                |
+      |-------------------------------|---------------------------|
+      | `mips.read_d();`              | `read_d()`                |
+      | `mips.read(fd, buff, imm);`   | `read(fd, buff, imm)`     |
+      | `mips.sbrk(size)`             | `sbrk(size)`              |
+      | `mips.sbrki(imm)`             | `sbrki(imm)`              |
+      | `X = mips.retval();`          | `move X, $v0`             |
