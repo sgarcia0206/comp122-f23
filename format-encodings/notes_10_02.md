@@ -116,7 +116,8 @@
            <body>
          }
         ```
-
+        Is equivalent to:
+        
         ```java
         <init>               // <init>
         for(; <test> ;) {    // while( <test> ){
@@ -128,7 +129,8 @@
 
      1. Identify with labels the section of the loop
         - {init}: the initialization arm of the for-loop
-        - {loop}: the line of code that contains `for( <init> ; <test> ; <next> ) {`
+        - {loop}: the line of code that contains
+          `for( <init> ; <test> ; <next> ) {`
         - {body}: the body of the for-loop
         - {next}: the next arm of the for-loop
         - {done}: the first line of code executed after the for-loop
@@ -172,7 +174,7 @@
 
 
   1. Examples on For Loop 
-     - Count-down  (see Resources below)
+     - Count-down (see Resources below)
      - Summation
      - Factorial
 
