@@ -16,7 +16,7 @@
       ```
       cd ~/classes/comp122
       git rm bin/MIPS_OS_Interface.class
-      git commit -m 'removed .class file' bin/MIPS_OS_Interface.class
+      git commit -m 'removed .class file' 
       git pull
       ```
 
@@ -30,7 +30,7 @@
     
 ## Today's Agenda:
    1. Lecture
-      - Introductory to Numbering Systems
+      - Introduction to Numbering Systems
 
    1. Lab:
       1. Re-Review If-then-else --> TAC Transformation --> MIPS
@@ -47,6 +47,9 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Endian and it's affect
+     - Universal Computer and two programs: OS and users
+     - Markdown question on .png and then layout
 
    * T/R @ 9:00 am
 
