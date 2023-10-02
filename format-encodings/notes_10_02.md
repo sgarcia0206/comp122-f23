@@ -3,7 +3,7 @@
 ## Announcements:
    1. Git Merge Conflicts
       - Such conflicts are common
-        - changes you made versus changes made by others my induce conflicts
+        - changes you made versus changes made by others may induce conflicts
         - you are required to resolve conflicts as part of the development process
 
       - bin/MIPS_OS_Interface.class
@@ -14,7 +14,7 @@
 
       - to address this mismatch, you can do the following
       ```
-      cd classes/comp122
+      cd ~/classes/comp122
       git rm bin/MIPS_OS_Interface.class
       git commit -m 'removed .class file' bin/MIPS_OS_Interface.class
       git pull
