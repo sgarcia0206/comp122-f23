@@ -1,6 +1,25 @@
 # COMP122 Lecture Notes: September 25, 2023
 
 ## Announcements:
+   1. Git Merge Conflicts
+      - Such conflicts are common
+        - changes you made versus changes made by others my induce conflicts
+        - you are required to resolve conflicts as part of the development process
+
+      - bin/MIPS_OS_Interface.class
+        - I made updates to bin/MIPS_OS_Interface.java
+        - Some students are running a different version of Java
+        - If you have committed your version of bin/MIPS_OS_Interface.class, 
+          a merge conflict will occur
+
+      - to address this mismatch, you can do the following
+      ```
+      cd classes/comp122
+      git rm bin/MIPS_OS_Interface.class
+      git commit -m 'removed .class file' bin/MIPS_OS_Interface.class
+      git pull
+      ```
+
    1. Assignments:
       * Graded
         - 11-practice-quiz-models/
