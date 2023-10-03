@@ -35,7 +35,7 @@ case "${_OS}" in
    GNU/Linux ) # Ubuntu
      #SUBLIME_BIN='/Applications/Sublime Text.app/Contents/SharedSupport/bin'  
      SUBLIME='subl -w -n'
-     #LAUNCH="open"
+     LAUNCH="open"
      #CLIP_COPY="pbcopy"
      ;;
 esac
