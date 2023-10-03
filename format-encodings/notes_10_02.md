@@ -16,7 +16,7 @@
       ```
       cd ~/classes/comp122
       git rm bin/MIPS_OS_Interface.class
-      git commit -m 'removed .class file' bin/MIPS_OS_Interface.class
+      git commit -m 'removed .class file' 
       git pull
       ```
 
@@ -30,7 +30,7 @@
     
 ## Today's Agenda:
    1. Lecture
-      - Introductory to Numbering Systems
+      - Introduction to Numbering Systems
 
    1. Lab:
       1. Re-Review If-then-else --> TAC Transformation --> MIPS
@@ -47,6 +47,9 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Endian and it's affect
+     - Universal Computer and two programs: OS and users
+     - Markdown question on .png and then layout
 
    * T/R @ 9:00 am
 
@@ -179,17 +182,20 @@
 
      1. Move the init arm to the {init} block
 
+     1. Move the next arm to the end of the {next} block
+
      1. Simplify the boolean expression into three parts
         - evaluate the left-hand side into $l
           - move the eval of $l into the {init} block
-          - place a copy of the eval of $l into the {next} block
+          - place a copy of the eval of $l at the end of the {next} block
+            (but before the `continue {loop}`)
         - evaluate the righ-hand side into $r
           - move the eval of $r into the {init} block
-          - place a copy of the eval of $r into the {next} block
+          - place a copy of the eval of $r at the end of the {next} block
+            (but before the `continue {loop}`)
         - replace the boolean expression with a simple test:  `$l <cond> $r`
           - yielding:    `loop: for(;  $l <cond> $r ;)`
 
-     1. Move the next arm to the {next} block
 
 
   1. Examples on For Loop 

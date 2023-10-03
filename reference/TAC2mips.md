@@ -32,6 +32,8 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       |-------------------------------|---------------------------|
       | `return a;`                   | `move $v0, a`             |
       |                               | `jr $ra`                  |
+      | `return imm;`                 | `li $v0, imm`             |
+      |                               | `jr $ra`                  |
 
       | TAC Equations                 | MIPS Instructions         |
       |-------------------------------|---------------------------|
