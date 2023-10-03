@@ -26,11 +26,14 @@
 
      - After you have Ubuntu working, perform the install:
        1. launch an terminal via ubuntu
-       1. run the command:  `sudo apt-get update`
-       1. run the command:  `sudo apt-get upgrade`
-       1. run the command:  `sudo apt-get install build-essential`
-       1. run the command:  `sudo apt install openjdk-19-jdk`
-          <!-- the command was previously: sudo apt install openjdk-19-jre-headless` -->
+       1. update your Ubuntu environonment by running the following commands
+          ```
+          sudo apt-get update
+          sudo apt-get upgrade
+          sudo apt-get install build-essential    # provides essential tools for devs
+          sudo apt install retext -y              # provides the "open" command
+          sudo apt install openjdk-19-jdk         # provides the Java JDk
+          ```
 
 
   1. Establish Accounts:
