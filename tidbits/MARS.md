@@ -1,6 +1,6 @@
 # MARS: 
 
-During this semester, you will be learning about the MIPS assemble language. We will be using the MARS IDE. This file walks you through a serices of exercises to become familiar with the MARS IDE.
+During this semester, you will be learning about the MIPS assemble language. We will be using the MARS IDE. This file walks you through a services of exercises to become familiar with the MARS IDE.
 
 
 1. Review the files in the `~/classes/comp122/reference/mars`
@@ -19,7 +19,7 @@ During this semester, you will be learning about the MIPS assemble language. We 
     ```
     mars &
     ```
-    - the "&" at the end of the commands, runs mars in the backround
+    - the "&" at the end of the commands, runs mars in the background
     - running the command in the background will allow you to retain terminal control
 
 1. Complete the following exercises
@@ -35,7 +35,7 @@ During this semester, you will be learning about the MIPS assemble language. We 
      1. Click on the "Settings" tab in the tool bar:
      1. Review the options and make them match the settings in the following graphic
 
-     ![Defualt Mars settings](mars_default_settings.png)
+     ![Default Mars settings](mars_default_settings.png)
 
  
   1. Exercise #2: Load and execute the "empty" code
@@ -92,5 +92,5 @@ During this semester, you will be learning about the MIPS assemble language. We 
         1. Update the value of the $a0 register
            * Notice the value of the $a0 register is 4:  (1+2+3+4=10)
            * Modify the value of the $a0 register to be 5:  (1+2+3+4+5=15)
-        1. Hit the Play button to execute the reest of the program
+        1. Hit the Play button to execute the reset of the program
         1. Validate the return value is now 15.
