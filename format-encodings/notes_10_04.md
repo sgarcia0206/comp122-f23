@@ -16,14 +16,49 @@
 
       
 ## Today's Agenda:
-   1. Lecture
-      - Bitwise and/or Checksum  (see slides)
-
-   1. Lab:
+   1. Lecture --> Lab
       1. Review of the For-loop Transformation
          - Factorial
+      1. make and makefile
+      1. git tags
 
+      1. Revised Factorial
+
+         - Java
+         ```java
+         import java.util.Scanner;
+
+         //...
+
+         Scanner in = new Scanner(System.in);
+         int num = in.nextInt();
+         ```
+
+         - Java Tac
+         ```java tac
+         mips.read()
+         num = mips.retval()
+         ```
+
+         - Native MIPS
+         ```mips
+         .macro read_d()
+           nop                     # Reads from stdin, a decimal (%d) number
+           li $v0, 5
+           syscall                 
+           nop                     # The value is now in $v0
+        .end_macro
+
+        read_d()
+        move num, $v0
+        ```
+
+   1. Lab:
       1. Checksum Practicum
+         - slide_presentation/checksum.pdf
+      1. Lab description
+         - private template: https://github.com/COMP122/42-checksum
+         - Invitation link: https://classroom.github.com/a/BlKyKwkj
 
 
 ## Questions from Last Lecture/Lab, etc.:
