@@ -40,9 +40,6 @@
       1. Examples:
          1. Count down
          1. Summation
-         1. Factorial
-
-      1. Checksum Practicum
 
 
 ## Questions from Last Lecture/Lab, etc.:
@@ -52,6 +49,7 @@
      - Markdown question on .png and then layout
 
    * T/R @ 9:00 am
+     - How do ONE review the grade-report and use the grade_guessimator?
 
 
 ---
@@ -201,12 +199,9 @@
   1. Examples on For Loop 
      - Count-down (see Resources below)
      - Summation
-     - Factorial
-
-  1. Practicum: Checksum
-     - This is your lab!
-     - Take good notes!
-     - My notes will not be made available to you!
+ 
+     * See addendum_10_02_* directories for the examples done in class.
+     
 
 ---
 ## Resources
