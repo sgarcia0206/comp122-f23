@@ -36,7 +36,7 @@
 
          - Java Tac
          ```java tac
-         mips.read()
+         mips.read_d()
          num = mips.retval()
          ```
 
@@ -47,11 +47,11 @@
            li $v0, 5
            syscall                 
            nop                     # The value is now in $v0
-        .end_macro
+         .end_macro
 
-        read_d()
-        move num, $v0
-        ```
+         read_d()
+         move num, $v0
+         ```
 
    1. Lab:
       1. Checksum Practicum
@@ -63,6 +63,8 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Clarification on use of .include
+     - Can we do a double nested loop ?
 
    * T/R @ 9:00 am
 
