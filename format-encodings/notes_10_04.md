@@ -52,11 +52,11 @@
            li $v0, 5
            syscall                 
            nop                     # The value is now in $v0
-        .end_macro
+         .end_macro
 
-        read_d()
-        move num, $v0
-        ```
+         read_d()
+         move num, $v0
+         ```
 
    1. Lab:
       1. Checksum Practicum
