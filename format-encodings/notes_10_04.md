@@ -22,23 +22,28 @@
       1. make and makefile
       1. git tags
 
-      1. Revised Factorial
+      1. Revised Factorial:  N!
+         - read the value of N, from stdin
 
-         - Java
-         ```java
-         import java.util.Scanner;
+         - Java for COMP110, COMP182, COMP282
 
-         //...
+           * The following code is how you would typical read a value from stdin 
+             ```java  
+             import java.util.Scanner;
 
-         Scanner in = new Scanner(System.in);
-         int num = in.nextInt();
-         ```
+             //...
 
-         - Java Tac
-         ```java tac
-         mips.read()
-         num = mips.retval()
-         ```
+             Scanner stdin = new Scanner(System.in);
+             int num = stdin.nextInt();
+             ```
+
+         - Java for COMP122
+           * java_subroutine includes a class (mips) to make things easier for COMP122
+           * The following code is how you do it in COMP122
+              ```java
+              mips.read()
+              num = mips.retval()
+              ```
 
          - Native MIPS
          ```mips
