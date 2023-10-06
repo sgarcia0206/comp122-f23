@@ -69,6 +69,21 @@ class MIPS_OS_Interface {
     $v0 = stdin.nextInt();
   }
 
+  public static void read_c() {
+    $v0 = (int) stdin.nextByte();
+  }
+
+  public static void read_x() {
+    $v0 = stdin.nextInt(16);
+  }
+
+  public static void read_o() {
+    $v0 = stdin.nextInt(8);
+  }
+
+  public static void read_t() {
+    $v0 = stdin.nextInt(2);
+  }
 
   public static void print_d(int register) {
     System.out.printf("%d", register);
