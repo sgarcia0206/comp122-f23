@@ -44,7 +44,7 @@
               mips.read()
               num = mips.retval()
               ```
-
+              
          - Native MIPS
          ```mips
          .macro read_d()
@@ -68,8 +68,11 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Clarification on use of .include
+     - Can we do a double nested loop ?
 
    * T/R @ 9:00 am
+     - none
 
 
 
