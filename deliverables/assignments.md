@@ -14,7 +14,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 1. Name: Final Participation Score
    - Status: On Going -- Score determined at the end of the semester
-   - Deliverable ID: 00
+   - Deliverable ID: 00-
    - Invitation URL: NA
    - Due Date: NA
 
@@ -22,7 +22,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 1. Quiz 1: Models of Communication and Computation
    - Status: 
    - Additional Information: 
-   - Deliverable ID: 10
+   - Deliverable ID: 10-
    - Invitation URL: https://classroom.github.com/a/-3YZEYoh
    - Due Date: Oct 01 23:59:59
  
@@ -30,21 +30,21 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 1. Exam 2: Formats and Encodings
    - Status: 
    - Additional Information: 
-   - Deliverable ID: 20
+   - Deliverable ID: 20-
    - Invitation URL:
    - Due Date: 
 
 1. Quiz 3: Digital Logic
    - Status: 
    - Additional Information: 
-   - Deliverable ID: 30
+   - Deliverable ID: 30-
    - Invitation URL: 
    - Due Date: 
 
 1. Exam 4: MIPS Assembly Language
    - Status: 
    - Additional Information: In-Class Exam or Programming Assignment
-   - Deliverable ID: 40
+   - Deliverable ID: 40-
    - Invitation URL: 
    - Due Date: 
 
@@ -62,7 +62,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 1. My First Assignment
    - Status: Graded
-   - Deliverable ID: 01
+   - Deliverable ID: 01-
    - Public_URL: https://github.com/COMP122/first-assignment
    - Invitation URL: https://classroom.github.com/a/3Oe57wgq
    - Due Date: Wednesday, Sep 6 23:59:59 
@@ -70,7 +70,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 1. Mathematical Review (Credit/No Credit)
    - Status: Graded
-   - Deliverable ID: 02
+   - Deliverable ID: 02-
    - Invitation URL: https://classroom.github.com/a/6Q0OrY44
    - Due Date: Sep 14 23:59:59
 
@@ -86,7 +86,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 1. Assignment: practice-quiz-models
    - Status: Graded
-   - Deliverable ID: 11
+   - Deliverable ID: 11-
    - Invitation URL: https://classroom.github.com/a/OJbdrx3r
    - Due Date: Sep 24 23:59:59  (Sunday)
    - It's a practice quiz -- time yourself
@@ -95,29 +95,28 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h3 id="format">Format and Encoding (Section 2)</h3>
 
 
-   1. Name: Table Encodings
-      - Status: Assigned
-      - Deliverable ID: 21
-      - Invitation URL: https://classroom.github.com/a/79eoHK-K
-      - Due Date: Oct 03 23:59:59 (Tuesday)
+1. Name: Table Encodings
+   - Status: Past Due
+   - Deliverable ID: 21-
+   - Invitation URL: https://classroom.github.com/a/79eoHK-K
+   - Due Date: Oct 03 23:59:59 (Tuesday)
    
-   1. Name: UTF-8 Encoding
-      - Status: Assigned
-      - Deliverable ID: 22
-      - Invitation URL: https://classroom.github.com/a/GEC4DKyv
-      - Due Date: Oct 05 23:59:59 (Thursday)
+1. Name: UTF-8 Encoding
+   - Status: Past Due
+   - Deliverable ID: 22-
+   - Invitation URL: https://classroom.github.com/a/GEC4DKyv
+   - Due Date: Oct 05 23:59:59 (Thursday)
     
 
-
- 1. Name: Base Conversion and Floating Point Representation
-   - Status: 
-   - Deliverable ID: 23
+1. Name: Base Conversion and Floating Point Representation
+   - Status: Reviewed in Class
+   - Deliverable ID: 23-
    - Invitation URL: 
    - Due Date: 
  
-  1. Name: Binary Addition et al
+1. Name: Binary Addition et al
    - Status: 
-   - Deliverable ID: 24
+   - Deliverable ID: 24-
    - Invitation URL: 
    - Due Date: 
 
@@ -126,22 +125,22 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 1. Name: Digital-Logic
    - Status: 
-   - Deliverable ID: 31
+   - Deliverable ID: 31-
    - Invitation URL: 
    - Due Date: 
 
 ---
 <h3 id="mips">MIPS Programming (Section 4)</h3>
 
-   1. Assignment: PEMDAS and TAC
-      - Status: Graded
-      - Deliverable ID: 41
-      - Invitation URL: https://classroom.github.com/a/aHiTCHuq
-      - Due Date: Sep 19 23:59:59  (Tuesday)
+1. Assignment: PEMDAS and TAC
+   - Status: Graded
+   - Deliverable ID: 41-
+   - Invitation URL: https://classroom.github.com/a/aHiTCHuq
+   - Due Date: Sep 19 23:59:59  (Tuesday)
 
-   1. Assignment: Checksum
-      - Status: Assigned
-      - Deliverable ID: 42
-      - Invitation URL: https://classroom.github.com/a/BlKyKwkj
-      - Due Date: Oct 12 23:59:59  (Thursday)
+1. Assignment: Checksum
+   - Status: Assigned
+   - Deliverable ID: 42
+   - Invitation URL: https://classroom.github.com/a/BlKyKwkj
+   - Due Date: Oct 12 23:59:59  (Thursday)
 
