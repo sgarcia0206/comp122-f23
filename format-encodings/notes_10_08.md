@@ -5,8 +5,7 @@
    1. Assignment: quiz-models
       - Status: Graded
       - Average: 78
-      - Due Date: Oct 12 23:59:59  (Thursday)
-
+``
       
 ## Today's Agenda:
    1. Random view of quiz submissions
@@ -19,6 +18,9 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Can I commit to the comp122 repository
+       - yes, but you need to address merge conflicts
+       - yes, but you CAN NOT push to the remote repo
 
    * T/R @ 9:00 am
 
@@ -34,22 +36,27 @@
 
   1. Floating Point Encoding: floating-point-encoding.pdf
   1. Floating Point Encoding (encode_float.mdf)
+  <!--
   1. Bitwise Operations: bitwise-operations.pdf
- 
+  -->
 
 # Today's Lab Material
   1. Field Questions on Checksum Project
      - slide_presentation/checksum.pdf
+     - for-loop --> for-loop TAC  -> MIPS
+     - register book keeping, with multiple use of a register
+     - mips.read_d() in JAVA
 
   1. Review of Floating Point Assignment
      - https://github.com/COMP122/floating-point-encoding/blob/main/assignment.md
      - Note this above URL is associated with a private repository
-      
+  
+  <!--    
   1. TAC for Shift Instructions
      - mips_cli
 
   1. Floating Point algorithm 
-
+  -->    
 
 ---
 ## Resources
