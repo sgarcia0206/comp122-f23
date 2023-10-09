@@ -138,13 +138,17 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
    
 
 
-      | MIPS Output Routines          | MIPS Macro                |
+      1. MIPS Output Routines
+
+      | Java TAC                      | MIPS Macro                |
       |-------------------------------|---------------------------|
       | `mips.print_d(a);`            | `print_d(a)`              |
       | `mips.print_di(imm);`         | `print_di(imm)`           |
       |  See print_routines.md        | etc., etc., etc.,         |
 
-      | MIPS Intput Routines          | MIPS Macro                |
+      1. MIPS Input Routins
+
+      | Java TAC                      | MIPS Macro                |
       |-------------------------------|---------------------------|
       | `mips.read_d();`              | `read_d()`                |
       | `mips.read(fd, buff, imm);`   | `read(fd, buff, imm)`     |
