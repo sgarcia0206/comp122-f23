@@ -23,6 +23,10 @@
        - yes, but you CAN NOT push to the remote repo
 
    * T/R @ 9:00 am
+     - How to rewrite IF-then-else --> TAC
+     - Question on README.md
+       - difference between header_checksum and checksum in the algorithm
+
 
 
 
@@ -44,8 +48,9 @@
   1. Field Questions on Checksum Project
      - slide_presentation/checksum.pdf
      - for-loop --> for-loop TAC  -> MIPS
-     - register book keeping, with multiple use of a register
-     - mips.read_d() in JAVA
+     - * register book keeping, with multiple use of a register
+     - * mips.read_d() in JAVA
+     - * in MIPS, proper way to compare if (X == 2)
 
   1. Review of Floating Point Assignment
      - https://github.com/COMP122/floating-point-encoding/blob/main/assignment.md
