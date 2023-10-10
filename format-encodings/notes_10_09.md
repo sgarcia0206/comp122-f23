@@ -1,11 +1,11 @@
-# COMP122 Lecture Notes: October 04, 2023
+# COMP122 Lecture Notes: October 09, 2023
 
 ## Announcements:
 
    1. Assignment: quiz-models
       - Status: Graded
       - Average: 78
-``
+
       
 ## Today's Agenda:
    1. Random view of quiz submissions
@@ -71,6 +71,8 @@
    | `x = a;`                      | `move x, a`               |
    | `x = a <op_i> imm; `          | `<op_i> x, a, imm`        |
    | `x = a <op> b;`               | `<op> x, a, b`            |
+
+      
    | `x = ~ a;`                    | `nor x, a, $zero`         |
    | `x = a >>> imm;`              | `srl x, a, imm`           |
    | `x = a >> imm;`               | `sra x, a, imm`           |

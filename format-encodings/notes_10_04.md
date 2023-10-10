@@ -41,7 +41,7 @@
            * java_subroutine includes a class (mips) to make things easier for COMP122
            * The following code is how you do it in COMP122
               ```java
-              mips.read()
+              mips.read_d()
               num = mips.retval()
               ```
               
