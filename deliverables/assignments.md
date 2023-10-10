@@ -20,11 +20,11 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Quiz 1: Models of Communication and Computation
-   - Status: 
+   - Status: Graded
    - Additional Information: 
    - Deliverable ID: 10-
    - Invitation URL: https://classroom.github.com/a/-3YZEYoh
-   - Due Date: Oct 01 23:59:59
+
  
 
 1. Exam 2: Formats and Encodings
