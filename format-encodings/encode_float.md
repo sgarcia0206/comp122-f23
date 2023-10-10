@@ -30,7 +30,7 @@ The following steps can be used to convert a binary number represented in scient
    2. Exponent:
       - Convert the exponent to a signed integer
         * Set to `- exponent` if '-', otherwise set to `exponent`
-      - Add the bias to the exponent, say 127 for binary32.
+      - Add the bias to the exponent, say 127, for binary32.
    3. Mantissa: 
       - Determine the number of bits in the coefficient
         * i.e., determine the position of the MSb of the coefficient
@@ -120,7 +120,7 @@ The following steps can be used to convert a binary number represented in scient
    - Mantissa: `01011010101` --> `0101 1010 1010 0000 00000000 00000000 00000000 000000 0000` 
 
      | S   | E (11)        | M (52) | 
-     | --: | :------:      | :----- | 
+     | --: | :-----------: | :----- | 
      | 1   | 100 0000 0100 | 0101 1010 1010 0000 00000000 00000000 00000000 000000 0000 | 
 
 
