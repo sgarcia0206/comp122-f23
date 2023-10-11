@@ -98,7 +98,7 @@
       |                               | `mfhi x`                  |
       |                               |                           |
 
-      | TAC Mult/Div Psuedo Equations | MIPS Instruction          |
+      | TAC Mult/Div Pseudo Equations | MIPS Instruction          |
       |-------------------------------|---------------------------|
       | `x = a * b;`                  | `mul x, a, b`             |
       | `x = a / b;`                  | `div x, a, b`             |

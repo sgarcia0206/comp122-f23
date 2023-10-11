@@ -54,7 +54,7 @@
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
      - Universal Computer ?
-     - Layers differances between OSI  & TCP/IP models
+     - Layers differences between OSI  & TCP/IP models
      - Why OS is different from the User code in Universal Computer
      
    * T/R @ 9:00 am
@@ -124,7 +124,7 @@
       |                               | `mfhi x`                  |
       |                               |                           |
 
-      | TAC Mult/Div Psuedo Equations | MIPS Instruction          |
+      | TAC Mult/Div Pseudo Equations | MIPS Instruction          |
       |-------------------------------|---------------------------|
       | `x = a * b;`                  | `mul x, a, b`             |
       | `x = a / b;`                  | `div x, a, b`             |
