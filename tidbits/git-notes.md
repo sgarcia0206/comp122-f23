@@ -9,7 +9,7 @@
    * `git fetch`: obtain a copy of your remote repository
    * `git merge origin/main`: incorporate origin/main branch into the current branch of the local repository
    * `git pull`: obtain a copy of your remote repository and merge it with your local repository
-   * `git push`: update the remote repository to be insync with your local repository
+   * `git push`: update the remote repository to be in sync with your local repository
    * `git pull-request`: generate a file that enumerates all changes to the repository from a given commit
 
 ---
@@ -22,7 +22,7 @@
 
 
 ---
-## Opps, Undo
+## Oops, Undo
    * `git restore <filename>` : bring back a previous version of `<filename>`
    * `git reset --hard  <commit>` : undoes a set of commits in the local repository
    * `git revert <commit>` : perform a set of new commits that effectively removes changes since the noted `<commit>`
@@ -41,12 +41,12 @@
    * `git tag -d <tag>`: delete a tag
 
 
-## Terminalogy
+## Terminology
 ---
-   - branch: a set of commits that are an offset of the "main" line of code developement
-   - commit: either a hash or a tag that uniquiely identifies a point in time
+   - branch: a set of commits that are an offset of the "main" line of code development
+   - commit: either a hash or a tag that uniquely identifies a point in time
    - hash: a globally unique value associated with a commit
    - HEAD: the reference to the current version of the repository as it is reflected in the working directory
    - index: a list of pending changes that are to be made upon the next "commit"
    - tag: a human readable string used as an alias to a hash
-   - working-directory: a directory in your file system in which you develope your code
+   - working-directory: a directory in your file-system in which you developed your code

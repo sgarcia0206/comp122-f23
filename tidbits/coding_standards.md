@@ -17,11 +17,11 @@
 
 1. Frequently make commits to your local repository
    - anytime you take a break
-   - anytime you have made substantial progress on your developement
+   - anytime you have made substantial progress on your development
    - anytime you reach a milestone
    
 1. Frequently synchronize your remote repository and local repositories
-   - (Future) Use branches to maintain code under developement
+   - (Future) Use branches to maintain code under development
 
 1. Authorship
    - List your name and any team members at the top of the source file
@@ -40,8 +40,8 @@
 
 1. Indentation
 	- first 16 columns are used for labels
-	- global labelss must be placed in column 1
-	- local lables must indented 
+	- global labels must be placed in column 1
+	- local labels must indented 
 	- indent blocks of code associated with control flow
 
 1. Macros and local subroutines
