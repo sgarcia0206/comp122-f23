@@ -21,6 +21,10 @@
    - Invitation URL: TBP [To Be Provided] on Friday!
    - Due Date: Oct 19 23:59:59 (Thursday)
 
+1. Tool Developed by former students of COMP122
+   - conversion between different bases
+   - https://www.csun.edu/~steve/classes/integers-conversion-encoding/integer-conversion.html
+
       
 ## Today's Agenda:
    1. Bitwise Operations: bitwise-operations.pptx 
