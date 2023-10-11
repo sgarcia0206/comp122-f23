@@ -109,11 +109,17 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
     
 
 1. Name: Base Conversion and Floating Point Representation
-   - Status: Reviewed in Class
+   - Status: Released
    - Deliverable ID: 23-
-   - Invitation URL: 
-   - Due Date: 
+   - Invitation URL: https://classroom.github.com/a/hVsevPB0
+   - Due Date: Oct 15 23:59:59 (Sunday)
  
+ 1. Name: Bitwise Operations
+   - Status: Reviewed in Class
+   - Deliverable ID: 24-
+   - Invitation URL: https://classroom.github.com/a/iMnfacqu
+   - Due Date: Oct 17 23:59:59 (Tuesday)
+
 1. Name: Binary Addition et al
    - Status: 
    - Deliverable ID: 24-
@@ -143,4 +149,10 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Deliverable ID: 42
    - Invitation URL: https://classroom.github.com/a/BlKyKwkj
    - Due Date: Oct 12 23:59:59  (Thursday)
+
+1. Assignment: binary32 
+   - Status: Assigned
+   - Deliverable ID: 43
+   - Invitation URL: 
+   - Due Date: Oct 19 23:59:59 (Thursday)
 
