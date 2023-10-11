@@ -6,8 +6,8 @@
    1. The Topic of This Class:  "Computer Architecture and Assembly Language"
       - We will be focusing on the MIPS Architecture -- Alternatives x86, ARM, ...
       - Will you program in MIPS in the future?
-      - Consider:  Telsa uses 1000 - 2000 computer chips in their vehicals
-        - The have a multitude of sensers to monitor the environment
+      - Consider:  Telsa uses 1000 - 2000 computer chips in their vehicles
+        - The have a multitude of sensors to monitor the environment
           * pedestrian steps in front of the car
           * traffic lights have change
           * etc. 
@@ -30,7 +30,7 @@
       - I try to be interactive as much as possible in class.
         - I have slides, but I don't want death by power point 
         - I modify in notes on the fly
-        - I demostrate the software development process interactively
+        - I demonstrate the software development process interactively
 
       - Feel free to make various point-of-orders
         - Speak louder, Slow down, Speed up, etc
