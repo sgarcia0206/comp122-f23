@@ -51,8 +51,6 @@
 # Today's Lab Material
   1. Binary32 Encoding: Review
 
-  1. Binary32 Decode Algorithm
-
   1. Practicum: Binary32 Decoding
      - separating the pieces
      - repositioning the pieces
