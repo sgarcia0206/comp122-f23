@@ -115,7 +115,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Oct 15 23:59:59 (Sunday)
  
  1. Name: Bitwise Operations
-   - Status: Reviewed in Class
+   - Status: Released
    - Deliverable ID: 24-
    - Invitation URL: https://classroom.github.com/a/iMnfacqu
    - Due Date: Oct 17 23:59:59 (Tuesday)
