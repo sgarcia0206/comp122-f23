@@ -28,15 +28,17 @@
       
 ## Today's Agenda:
    1. Bitwise Operations: bitwise-operations.pptx 
+   1. Tidbit on Merge Conflicts
 
-   1. Floating Point Algorithm 
+   1. Binary32 Encoding Algorithm Review
 
-   1. In-lab time to work on Binary32 Encoding
+   1. Practicum in Binary32 Decoding
 
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-
+     - \*.class files don't put into rep ... why?
+     - a += 3;  -->  a = a + 3;  addi $X, $X, 3
 
    * T/R @ 9:00 am
 
@@ -47,10 +49,10 @@
 
 
 # Today's Lab Material
-  1. Binary32 Encoding:  Assignment Review
-     - 
-     - Note this above URL is associated with a private repository
-  
+  1. Binary32 Encoding: Review
+
+  1. Binary32 Decode Algorithm
+
   1. Practicum: Binary32 Decoding
      - separating the pieces
      - repositioning the pieces
