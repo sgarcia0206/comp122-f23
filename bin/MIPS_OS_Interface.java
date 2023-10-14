@@ -109,6 +109,15 @@ class MIPS_OS_Interface {
     return;
   }
 
+  public static void print_x(int register) {
+    System.out.printf("%x", register);
+    return;
+  }
+
+  public static void print_xi(int immediate  ) {
+    System.out.printf("%x", immediate);
+    return;
+  }
   public static void print_t(int register) {
 
     StringBuilder binaryValue = new StringBuilder();
@@ -154,29 +163,6 @@ class MIPS_OS_Interface {
     $sp = $sp - 1; 
     return x;
   }
-
-
- static int pos_msb(int $a0){
-            // $a0 : original_number
-            int $v0; // : return value
-            int $zero = 0;
-
-            int counter;
-            int number;
-
-            counter = $zero;
-            number = $a0;
-     loop:  for(; number != $zero ;) {
-               counter ++;
-               number = number >> 1;
-               continue;
-            }
-     done:  ;
-            $v0 = counter;
-
-            return $v0;
-  }
-
 
 }
 
