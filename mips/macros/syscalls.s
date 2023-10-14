@@ -356,10 +356,3 @@
         li $v0, 17
         syscall
 .end_macro
-
-
-
-
-
-
-
