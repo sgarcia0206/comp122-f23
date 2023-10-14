@@ -702,7 +702,7 @@ function pretty_print_output () {
 
           # integers are 32 bits in java and in MIPS, but 64 bits in bash
           # hence, truncate to 32 bits to address signed numbers
-          (( i = i  & 0x00000000FFFFFFFF ))
+          (( i = i & 0x00000000FFFFFFFF ))
           printf "%x\n" ${i}
           _hex=$(to_hex 8 ${i} )
           _binary=$(to_binary "${_hex}")
