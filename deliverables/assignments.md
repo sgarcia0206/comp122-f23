@@ -20,7 +20,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Quiz 1: Models of Communication and Computation
-   - Status: Graded
+   - Status: Past Due, Graded, Closed
    - Additional Information: 
    - Deliverable ID: 10-
    - Invitation URL: https://classroom.github.com/a/-3YZEYoh
@@ -61,7 +61,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: ASAP
 
 1. My First Assignment
-   - Status: Graded
+   - Status: Past Due, Graded, Closed
    - Deliverable ID: 01-
    - Public_URL: https://github.com/COMP122/first-assignment
    - Invitation URL: https://classroom.github.com/a/3Oe57wgq
@@ -69,7 +69,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Mathematical Review (Credit/No Credit)
-   - Status: Graded
+   - Status: Past Due, Graded, Closed
    - Deliverable ID: 02-
    - Invitation URL: https://classroom.github.com/a/6Q0OrY44
    - Due Date: Sep 14 23:59:59
@@ -85,7 +85,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h3 id="models">Models of Computation and Communication (Section 1)</h3>
 
 1. Assignment: practice-quiz-models
-   - Status: Graded
+   - Status: Past Due, Graded, Closed
    - Deliverable ID: 11-
    - Invitation URL: https://classroom.github.com/a/OJbdrx3r
    - Due Date: Sep 24 23:59:59  (Sunday)
@@ -109,7 +109,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
     
 
 1. Name: Base Conversion and Floating Point Representation
-   - Status: Released
+   - Status: Past Due
    - Deliverable ID: 23-
    - Invitation URL: https://classroom.github.com/a/hVsevPB0
    - Due Date: Oct 15 23:59:59 (Sunday)
@@ -139,20 +139,20 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 <h3 id="mips">MIPS Programming (Section 4)</h3>
 
 1. Assignment: PEMDAS and TAC
-   - Status: Graded
+   - Status: Graded, Closed
    - Deliverable ID: 41-
    - Invitation URL: https://classroom.github.com/a/aHiTCHuq
    - Due Date: Sep 19 23:59:59  (Tuesday)
 
 1. Assignment: Checksum
-   - Status: Assigned
-   - Deliverable ID: 42
+   - Status: Past Due, Closed
+   - Deliverable ID: 42-
    - Invitation URL: https://classroom.github.com/a/BlKyKwkj
    - Due Date: Oct 12 23:59:59  (Thursday)
 
 1. Assignment: binary32 
    - Status: Assigned
-   - Deliverable ID: 43
-   - Invitation URL: 
-   - Due Date: Oct 19 23:59:59 (Thursday)
+   - Deliverable ID: 43-
+   - Invitation URL: https://classroom.github.com/a/61ujMp63
+   - Due Date: To Be Determined
 
