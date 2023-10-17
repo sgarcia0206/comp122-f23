@@ -21,6 +21,31 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - no question
+       ```quote
+       No news is bad news,
+         bad news is good news,
+            good news is no news.
+       ```
+       ```sed
+         s/news/information/g
+       ```
+     - do a "pull request"
+     - git repo-state
+     - exponponent part
+       - example:  + 1.00101100101  x 2^  - 1011 (11)
+         1. sign: +
+         1. coefficient: 1.00101100101
+            1. whole:  1
+            1. mantissa: 00101100101
+         1. sign expon: -
+         1. exponenet 1011 (11)
+       - exponent encoding
+         1.  - 1011 (11)
+         1. add bias    ( -11 + 15 = 4)
+         1. 0 0100  (4)
+
+     - bitwise example from the homework
 
    * T/R @ 9:00 am
 
@@ -28,7 +53,7 @@
 ---
 # Today's Lecture Material
   1. Conversion Between Bases
-       - See slides: conversion-between-bases.pdf
+     - See slides: conversion-between-bases.pdf
 
   1. Base N to Base 10
 
@@ -38,7 +63,7 @@
        |------:|:-:|------:|:--------:|---------:|:-----:|
        |       | = |       | * base + |          |       |
 
-       Answer:             (read glyph from top to bottom)
+       Answer:            
 
      - Example: 0x2F
 
@@ -47,7 +72,30 @@
        |     2 | = |     0 | * 16 + |     2    |   2   |
        |    47 | = |     2 | * 16 + |    15    |   F   |
 
-       Answer: 0x 2F      (read glyph from top to bottom)
+       Answer: 47
+
+     - Example:  15# 2E3
+     
+       |   v   | = |   v   | * 15 +   | digit_10 | glyph |
+       |------:|:-:|------:|:--------:|---------:|:-----:|
+       |   2   | = |   0   | * 15 +   |     2    |   2   |
+       |  44   | = |   2   | * 15 +   |    14    |   E   |
+       | 663   | = |  44   | * 15 +   |     3    |   3   |
+
+       Answer: 663
+
+     - Example: 2# 10 1011
+
+       |   v   | = |   v   | * 2 + | digit_10 | glyph |
+       |------:|:-:|------:|:-----:|---------:|:-----:|
+       |    1  | = |    0  | * 2 + |    1     |   1   |
+       |    2  | = |    1  | * 2 + |    0     |   0   |
+       |    5  | = |    2  | * 2 + |    1     |   1   |
+       |   10  | = |    5  | * 2 + |    0     |   0   |
+       |   21  | = |   10  | * 2 + |    1     |   1   |
+       |   43  | = |   21  | * 2 + |    1     |   1   |
+
+       Answer: 43        
 
   1. Base 10 to Base N
      
@@ -57,13 +105,13 @@
       |---------|:------:|---------:|----------:|:-----:|
       |         | / N -> |          |           |       |         
 
-       Answer:     (read glyph from top to bottom)
+       Answer:     (read glyph from bottom to the top)
 
      - Example: 470 to Base 16
 
       |  number | / 16 -> | quotient | remainder | glyph |
       |---------|:-------:|---------:|----------:|:-----:|
-      |   470   | / 16 -> |    29    |     6     |   6   |        
+      |   470   | / 16 -> |    29    |     6     |   6   |  
       |   29    | / 16 -> |     1    |    13     |   D   |
       |   1     | / 16 -> |     0    |     1     |   1   |   
       
@@ -83,7 +131,27 @@
            3 / 2 =   1, 1
            1 / 2 =   0, 1
            0 / 2 =   0, -
-       answer:   111010110    
+       answer:   1 1101 0110    
+       ```
+
+    - Example 497 to Base 2  
+
+       ```response
+       number = 497    
+         497 / 2 = 248, 1
+         248 / 2 = 124, 0
+         124 / 2 =  62, 0
+          62 / 2 =  31, 0
+
+          31 / 2 =  15, 1
+          15 / 2 =   7, 1
+           7 / 2 =   3, 1
+           3 / 2 =   1, 1
+
+           1 / 2 =   0, 1
+           0 / 2 =   0, 0
+ 
+       answer:   01 1111 0001  
        ```
 
 # Today's Lab Material
