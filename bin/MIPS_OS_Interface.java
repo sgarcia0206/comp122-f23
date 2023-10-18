@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 class MIPS_OS_Interface {
 
