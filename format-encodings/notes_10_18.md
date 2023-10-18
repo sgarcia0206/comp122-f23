@@ -5,7 +5,7 @@
       
 ## Today's Agenda:
    1. Conversion Between Bases
-      - Review an then Fractional Values
+      - Review and then Fractional Values
 
    1. Binary32 Assignment
       - Time to work on the assignment
@@ -13,6 +13,10 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - review of the base64 question on 24-
+     - Mask construction:
+       - xxxx xxxx
+       - 0000 1100
 
    * T/R @ 9:00 am
 
@@ -43,9 +47,57 @@
        answer:    (read remainders from bottom to the top)
        ```
 
-     - Example:
+     - Example: 321 --> Base 2
+
+      ```response
+       number = 321    
+           321   / 2 = 160, 1
+           160   / 2 =  80, 0
+            80   / 2 =  40, 0
+            40   / 2 =  20, 0
+
+            20   / 2 =  10, 0
+            10   / 2 =   5, 0
+             5   / 2 =   2, 1
+             2   / 2 =   1, 0
+
+             1   / 2 =   0, 1
+
+       answer: 1 0100 0001   (read remainders from bottom to the top)
+       ```
+     - Example: 321 --> Base 18
+
+       ```response
+       number = 321    
+           321   / 18 = 17, 15 (F)
+           17    / 18 =  0, 17 (H)
+           0     / 18 =  0, 0
 
 
+       answer: 18# HF   (read remainders from bottom to the top)
+       ```
+
+       - A: 10
+       - B: 11
+       - C: 12
+       - D: 13
+       - E: 14
+       - F: 15
+       - G: 16
+       - H: 17
+
+    - Example: 321 --> Base 7
+
+       ```response
+       number = 321    
+           321   / 7 = 45, 6
+            45   / 7 =  6, 2
+             6   / 7 =  0, 6
+             0   / 7 =  0, 0
+
+
+       answer: 7# 626  (read remainders from bottom to the top)
+       ```
 
   1. Base 10 to Base N: Fractional Part
 
@@ -56,7 +108,7 @@
              number  * N = overflow, product
              product * N = 
 
-          answer:    (read remainders from bottom to the top)
+          answer:    (read overflows from top to bottom)
         ```
 
      - Example:  .456 to Base 2
@@ -77,17 +129,49 @@
             472 * 2 =
         answer:  2# 0111 0100 1
         ```
+
+     - Example: 1999 to Base 16
+       ```response
+       number =   1999
+       max    = 1,0000
+
+       1999 * 16 =  3, 1984   3
+       1984 * 16 =  3, 1744   3
+       1744 * 16 =  2, 7904   2
+       7904 * 16 = 12, 6464   C
+       6464 * 16 = 10, 3424   A
+
+       answer = 0x 332CA.....
+       ```
+
+     - Example:  532 to Base 8
+       ```response
+       number =   532
+       max    = 1,000
+          532 * 8 = 4, 256
+          256 * 8 = 2, 048
+           48 * 8 = 0, 384
+          384 * 8 = 3, 072
+           72 * 8 = 0, 576
+
+       answer= 8# 42030
+         or  =   042030   (C, C++, C#, Java)
+         or  =  0o42030   (python & javascript)
+       ```
+
+
   1. Code: Whole Part
      ```java
-     static int whole2bin (int number) {
+     static int whole2bin (int whole) {
 
 
+        return 0;
      }
      ```
 
   1. Code: Fractional Part
      ```java
-     static int fractional2bin(int number, int precision) {
+     static int fractional2bin(int fractional, int precision) {
         int max;
         final int max_bits = 23;
 
