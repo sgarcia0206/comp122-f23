@@ -81,10 +81,6 @@
      ```java
      mips.read_d()
      number = mips.retval;
-     mips.read_d();
-     precision = mips.retval;
-
-     max = (int) Math.pow(10, precision);
 
 
      ```
