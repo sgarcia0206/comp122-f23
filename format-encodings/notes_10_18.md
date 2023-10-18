@@ -79,24 +79,26 @@
         ```
   1. Code: Whole Part
      ```java
-     mips.read_d()
-     number = mips.retval;
+     static int whole2bin (int number) {
 
 
+     }
      ```
 
   1. Code: Fractional Part
      ```java
-     mips.read_d()
-     number = mips.retvalue;
-     mips.read_d();
-     precision = mips.retval;
+     static int fractional2bin(int number, int precision) {
+        int max;
+        final int max_bits = 23;
 
-     max = (int) Math.pow(10, precision);
+        max = (int) Math.pow(10, precision);
 
-
-
+        return 0;
      ```
+     - notes:
+       * the number is left justified
+       * precision == num_digits(number);
+   
 
 
 
