@@ -128,23 +128,23 @@
      
      - Pattern
 
-      |  number | / N -> | quotient | remainder | glyph |
-      |---------|:------:|---------:|----------:|:-----:|
-      |         | / N -> |          |           |       |         
+       |  number | / N -> | quotient | remainder | glyph |
+       |---------|:------:|---------:|----------:|:-----:|
+       |         | / N -> |          |           |       |         
 
        Answer:     (read glyph from bottom to the top)
 
      - Example: 470 to Base 16
 
-      |  number | / 16 -> | quotient | remainder | glyph |
-      |---------|:-------:|---------:|----------:|:-----:|
-      |   470   | / 16 -> |    29    |     6     |   6   |  
-      |   29    | / 16 -> |     1    |    13     |   D   |
-      |   1     | / 16 -> |     0    |     1     |   1   |   
+       |  number | / 16 -> | quotient | remainder | glyph |
+       |---------|:-------:|---------:|----------:|:-----:|
+       |   470   | / 16 -> |    29    |     6     |   6   |  
+       |   29    | / 16 -> |     1    |    13     |   D   |
+       |   1     | / 16 -> |     0    |     1     |   1   |   
       
-      Answer: 0x 1D6   
+       Answer: 0x 1D6   
 
-     - Example 470 to Base 2  
+     - Example: 470 to Base 2  
 
        ```response
        number = 470    
@@ -163,7 +163,7 @@
        answer:   1 1101 0110    
        ```
 
-    - Example 497 to Base 2  
+     - Example: 497 to Base 2  
 
        ```response
        number = 497    
@@ -183,24 +183,24 @@
        answer:   01 1111 0001  
        ```
 
-    - Example 420 to Base 2  
+     - Example: 420 to Base 2  
 
-      ```response
-      number = 420
-        420 / 2  =  210, 0
-        210 / 2  =  105, 0
-        105 / 2  =   52, 1
-         52 / 2  =   26, 0
+       ```response
+       number = 420
+         420 / 2  =  210, 0
+         210 / 2  =  105, 0
+         105 / 2  =   52, 1
+          52 / 2  =   26, 0
 
-         26 / 2  =   13, 0
-         13 / 2  =    6, 1
-          6 / 2  =    3, 0
-          3 / 2  =    1, 1
+          26 / 2  =   13, 0
+          13 / 2  =    6, 1
+           6 / 2  =    3, 0
+           3 / 2  =    1, 1
 
-          1 / 2  =    0, 1 
+           1 / 2  =    0, 1 
 
-      answer: 1 1010 0100
-      ```
+       answer: 1 1010 0100
+       ```
 
 # Today's Lab Material
   1. Binary32 Assignment
