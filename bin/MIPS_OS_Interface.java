@@ -162,6 +162,7 @@ class MIPS_OS_Interface {
   public int pop() {
     int x = stack[$sp];
     $sp = $sp - 1; 
+    $v0 = x;
     return x;
   }
 
