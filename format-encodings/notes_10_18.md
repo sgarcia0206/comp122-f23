@@ -19,6 +19,7 @@
        - 0000 1100
 
    * T/R @ 9:00 am
+     - base64 question
 
 
 ---
@@ -99,6 +100,35 @@
        answer: 7# 626  (read remainders from bottom to the top)
        ```
 
+
+    - Example: 547 --> Base 12
+
+       ```response
+       number = 547    
+           547   / 12 = 45, 1
+            45   / 12 =  3, 1
+             3   / 12 =  0, 3
+             0   / 12 =  0, 0
+
+
+       answer: 12#  311   (read remainders from bottom to the top)
+       ```
+   - Example:  1224 --> Base 9
+
+       ```response
+       number =     
+            1224 / 9 =  136, 0
+             136 / 9 =   15, 1
+              15 / 9 =    1, 6
+               1 / 9 =    0, 1
+
+
+       answer: 9# 1610  (read remainders from bottom to the top)
+       ```
+
+
+
+
   1. Base 10 to Base N: Fractional Part
 
      - Pattern (code block)
@@ -127,7 +157,7 @@
 
             736 * 2 = 1, 472
             472 * 2 =
-        answer:  2# 0111 0100 1
+        answer:  2# 0111 0100 1.....
         ```
 
      - Example: 1999 to Base 16
@@ -158,6 +188,54 @@
          or  =   042030   (C, C++, C#, Java)
          or  =  0o42030   (python & javascript)
        ```
+
+     - Example:  75 ->   Base 2
+       ```
+       number =     750
+       max    =  1, 000
+
+           75 * 2 =  1, 50
+           50 * 2 =  1, 00
+           00 * 2 =  0, 00
+
+       answer: 2# 110
+
+       ```
+
+     - Example:  1541 ->   Base 2
+       ```
+       number =     1541
+       max    =  1, 0000
+
+           1541 * 2 =  0, 3082
+           3082 * 2 =  0, 6164
+           6164 * 2 =  1, 2328
+           2328 * 2 =  0, 4656
+
+
+       answer: 2# 0010 .....
+
+       ```
+
+    - Example:  1541 ->   Base 16
+       ```response
+       number =     1541
+       max    =  1, 0000
+
+         1541 * 16 =  2, 4656   - 2
+         4656 * 16 =  7, 4496   - 7
+         4496 * 16 =  7, 1936   - 7
+         1936 * 16 =  3, 0976   - 3
+         0976 * 16 =  1, 5616   - 1
+         5616 * 16 =  8, 9856   - 8
+         9856 * 16 = 15, 7696   - F
+         7696 * 16 = 
+
+       answer: 16#  2 7 7 3 1 8 F
+
+       ```
+
+
 
 
   1. Code: Whole Part
