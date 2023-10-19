@@ -1,0 +1,12 @@
+#! /bin/bash
+
+TAG='<!-- response'
+ANSWER="\([\t ]*.*\)"
+
+# Print out each section heading:  ^#
+# Print out each response blocks
+# Print out each answer associated with a TAG line
+
+sed -n -e '/^#/p'   \
+       -e '/```response/,/```/p'   \
+       -e "/${TAG}/s/^${ANSWER}[\t ]*${TAG}.*/\1/p"
