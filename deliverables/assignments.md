@@ -96,26 +96,26 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Name: Table Encodings
-   - Status: Past Due
+   - Status: Graded on Oct 20
    - Deliverable ID: 21-
    - Invitation URL: https://classroom.github.com/a/79eoHK-K
    - Due Date: Oct 03 23:59:59 (Tuesday)
    
 1. Name: UTF-8 Encoding
-   - Status: Past Due
+   - Status: Graded on Oct 22
    - Deliverable ID: 22-
    - Invitation URL: https://classroom.github.com/a/GEC4DKyv
    - Due Date: Oct 05 23:59:59 (Thursday)
     
 
 1. Name: Base Conversion and Floating Point Representation
-   - Status: Past Due
+   - Status: Graded on Oct 22
    - Deliverable ID: 23-
    - Invitation URL: https://classroom.github.com/a/hVsevPB0
    - Due Date: Oct 15 23:59:59 (Sunday)
  
  1. Name: Bitwise Operations
-   - Status: Released
+   - Status: Past Due
    - Deliverable ID: 24-
    - Invitation URL: https://classroom.github.com/a/iMnfacqu
    - Due Date: Oct 17 23:59:59 (Tuesday)
