@@ -27,7 +27,6 @@
   1. Mathematical Review & Base 2 Encodings
      1. Base10: Mathematical Review
         * Addition
-        * BCD Addition
         * Subtraction
         * Method of Complements
         * Subtraction via Complements
