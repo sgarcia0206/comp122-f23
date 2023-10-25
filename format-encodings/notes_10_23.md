@@ -34,8 +34,14 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Lab question -- deferred
+     
 
    * T/R @ 9:00 am
+     - TAC for the if-then-else
+     - shift right logical vs.  shift right arithmetic 
+       * Java:  >>>   vs. >>
+       * MIPS:  srl   vs.  sra
 
 
 ---
