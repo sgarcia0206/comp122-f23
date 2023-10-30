@@ -16,7 +16,10 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-     
+     - When is the 03- assignment due?
+     - When will 42-checksum be graded?
+     - How to isolate bits:  typically  & and >>,>>>,  <<<
+     - How to add bits: typically |
 
    * T/R @ 9:00 am
 
@@ -47,20 +50,31 @@
 
   1. Encodings:
      1. One's complement:   ~X
-     1. Two's complement:   ~X + 1
+     1. Two's complement:   ~X + 1   ===   - X
 
      1. 4-bit:
 
      | number |  unsigned  | 1's comp  | 2's comp  |
      |-------:|:----------:|:---------:|:---------:|
      |      0 |       0000 |      0000 |      0000 | 
-     |        |            |           |           | 
+     |   3    |       0011 |      0011 |      0011 | 
+     |   -3   |       ---- |      1100 |      1101 | 
+     |   -8   |       ---- |      ---- |      1000 | 0 1000 --> 1 0111 + 1 
+     |   -7   |       ---- |      1000 |      1001 | 
+     |   5    |       0101 |      0101 |      0101 | 
+     |  -4    |       ---- |      1011 |      1100 |
+
+        - recall the bit pattern is: s xxx
+
 
      1. 8-bit:
 
      | number |  unsigned  | 1's comp  | 2's comp  |
      |-------:|:----------:|:---------:|:---------:|
      |      0 |  0000 0000 | 0000 0000 | 0000 0000 | 
+     |     -8 |  ---- ---- | 1111 0111 | 1111 1000 |      
+     |        |            |           |           |      
+     |        |            |           |           |      
      |        |            |           |           |      
 
 

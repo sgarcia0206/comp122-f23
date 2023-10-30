@@ -115,7 +115,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Oct 15 23:59:59 (Sunday)
  
  1. Name: Bitwise Operations
-   - Status: Past Due
+   - Status: Graded on Oct 27
    - Deliverable ID: 24-
    - Invitation URL: https://classroom.github.com/a/iMnfacqu
    - Due Date: Oct 17 23:59:59 (Tuesday)
@@ -145,7 +145,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Sep 19 23:59:59  (Tuesday)
 
 1. Assignment: Checksum
-   - Status: Past Due, Closed
+   - Status: Graded on Oct 29
    - Deliverable ID: 42-
    - Invitation URL: https://classroom.github.com/a/BlKyKwkj
    - Due Date: Oct 12 23:59:59  (Thursday)
