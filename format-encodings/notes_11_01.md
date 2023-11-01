@@ -13,7 +13,7 @@
          - Status: Assigned
          - Deliverable ID: 44
          - Invitation URL: https://classroom.github.com/a/9a7konBI
-         - Due Date: Nov 10 23:59:59 (Tuesday)
+         - Due Date: Nov 10 23:59:59 (Friday)
 
 
 ## Today's Agenda:
@@ -36,6 +36,16 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - How do I convert a int into a char in Java?
+       - int x = 8;
+       - char c = (char) x;
+
+     - How do I convert a char into an int in Java?
+       1. int x = (int) c;
+       1. write code to do the mapping.
+
+     - How do I do conversion from ASCII --> Binary
+       (in various base)?   see the lab.
 
    * T/R @ 9:00 am
 
@@ -104,21 +114,18 @@
    1. Buffer Allocation:
        - static char [] buffer = new char[256];
        - buffer:  .space 256
-       - sbrk($t0), sbrk(256)
+       - sbrk($t0), sbrki(256)
 
    1. Practicum: strcat
+
+   ```java
+ 
+   ```
 
 
 # Today's Lab Material
 
   1. Accept the assignment
-  1. Create your repository
-     - a template directory has not be created for you
-     - follow the instructions provided by github
-     …or create a new repository on the command line
-
-
-
   1. Clone the assignment
   1. Don't read the README.md file
      - it should contain the specification

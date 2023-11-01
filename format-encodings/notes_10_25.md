@@ -5,7 +5,7 @@
  
 ## Today's Agenda:
 
-   1. Mathematic Review 
+   1. Mathematical Review 
       - Base10
       - Reframed into Base2
 
@@ -30,7 +30,7 @@
   1. base2-encoding-and-mathematical-operations.pdf
  
 
-  1. Integer Represenations:
+  1. Integer Representations:
      * Java `unsigned int X;` 
        - Nope does not have it
        - Use the next size up!
@@ -56,16 +56,21 @@
 
      | number |  unsigned  | 1's comp  | 2's comp  |
      |-------:|:----------:|:---------:|:---------:|
-     |      0 |       0000 |      0000 |      0000 | 
-     |   3    |       0011 |      0011 |      0011 | 
+     |    0   |       0000 |      0000 |      0000 | 
+     |    3   |       0011 |      0011 |      0011 | 
      |   -3   |       ---- |      1100 |      1101 | 
      |   -8   |       ---- |      ---- |      1000 | 0 1000 --> 1 0111 + 1 
      |   -7   |       ---- |      1000 |      1001 | 
-     |   5    |       0101 |      0101 |      0101 | 
-     |  -4    |       ---- |      1011 |      1100 |
+     |    5   |       0101 |      0101 |      0101 | 
+     |   -4   |       ---- |      1011 |      1100 |
+     |    7   |       0111 |      0111 |      0111 |
+     |   -6   |       ---- |      1001 |      1010 |
+
 
         - recall the bit pattern is: s xxx
-
+          * 1001 : is a negative number, i.e., -7
+            - flip all the bits (0110) and then add one (0111)
+          * 0111 : is a positive number, i.e., 7
 
      1. 8-bit:
 
@@ -74,9 +79,16 @@
      |      0 |  0000 0000 | 0000 0000 | 0000 0000 | 
      |     -8 |  ---- ---- | 1111 0111 | 1111 1000 |      
      |        |            |           |           |      
-     |        |            |           |           |      
-     |        |            |           |           |      
+     |    17  |  0001 0001 | 0001 0001 | 0001 0001 |      
+     |   -17  |  ---- ---- | 1110 1110 | 1110 1111 | 
+     |   -6   |  ---- ---- | 1111 1001 | 1111 1010 |
 
+
+       - Notice the pattern for the representation of a negative number within different sizes:
+         *   -6 :                                     1010
+         *   -6 :                                1111 1010
+         *   -6 :                      1111 1111 1111 1010
+         *   -6 :  1111 1111 1111 1111 1111 1111 1111 1010
 
     1. Binary Addition
        * Example 1:
@@ -102,7 +114,7 @@
 
          C: ?; V: ?; S: ?; Z: ?
          ```
-    1. Status Bits: Reexplained
+    1. Status Bits: Re-explained
        - ../tidbits/status_bits_explained.gif
        - V = C ^ previous C
        - consider
@@ -150,9 +162,9 @@
 ---
 ## Resources
 
-   1. Encodings: unsigned, 1's complement, 2's complement, bais 8
+   1. Encodings: unsigned, 1's complement, 2's complement, bias 8
 
-   | #  |  binary number | unsigned |   1's  |   2's  | bais 8 |
+   | #  |  binary number | unsigned |   1's  |   2's  | bias 8 |
    |---:|:--------------:|:--------:|:------:|:------:|:------:|
    | -8 |   2# - 1000    |    --    |   --   |  1000  |  0000  |
    | -7 |   2# - 0111    |    --    |  1000  |  1001  |  0001  |

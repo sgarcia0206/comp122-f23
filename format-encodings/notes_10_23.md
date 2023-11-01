@@ -53,7 +53,7 @@
      - determine position of msb
      - determine number of bytes
        - chunk into new bytes
-       - add framming bits
+       - add framing bits
        - output 
 
   1. Exercise:  UTF-8 decoding
