@@ -21,10 +21,14 @@ class MIPS_OS_Interface {
      if (fd != 0 || size != 1) {
        return;
      }
-     MEM[buffer] = stdin.nextByte();
-     print_d(MEM[buffer]);
-     print_ci('\n');     print_ci('\n');
-     $v0 = 1;
+     if (stdin.hasNext() == true) {
+       MEM[buffer] = stdin.nextByte();
+       print_d(MEM[buffer]);
+       print_ci('\n');     print_ci('\n');
+       $v0 = 1;
+     } else {
+       $v0 = 0;
+     }
   }
 
   public static void read(int fd, int buffer[], int size) {
@@ -33,14 +37,20 @@ class MIPS_OS_Interface {
      if (fd != 0 || size != 4) {
        return;
      }
-     buffer[0] = stdin.nextInt();
-     $v0 = 4;
+     if (stdin.hasNext()) {
+       buffer[0] = stdin.nextInt();
+       $v0 = 4;
+     } else {
+       $v0 = 0;
+     }
   }
 
   // MEMORY
   static int sbrk_p = 0;
   static byte[] MEM = new byte[1024];
   static int[] stack = new int[256];
+
+
 
   //  TYPE Conversion
   public static int u_byte(byte value) {
@@ -107,6 +117,15 @@ class MIPS_OS_Interface {
 
   public static void print_s(String register) {
     System.out.printf("%s", register);
+    return;
+  }
+
+  public static void print_s(char [] register) {
+    StringBuilder str 
+            = new StringBuilder(""); 
+
+    str.append(register);
+    System.out.printf("%s", str);
     return;
   }
 
