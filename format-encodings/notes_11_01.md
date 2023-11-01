@@ -19,6 +19,8 @@
 ## Today's Agenda:
    1. Review of Stuff
 
+   1. {java, mips}\_subroutine use with strings
+
    1. strcat description
 
    1. Buffer Allocation:
@@ -27,8 +29,6 @@
        - sbrk($t0), sbrk(256)
 
    1. Practicum: strcat
-
-   1. {java, mips}\_subroutine use with strings
 
    1. Lab time
       1. Conversion ASCII -> Binary
@@ -83,6 +83,22 @@
       ```
 
 
+   1. {java, mips}\_subroutine use with strings
+
+       ```java
+       public static int hello(char [] input) {
+       
+          mips.print_s(input);
+          return 0;
+       
+       }
+       ```
+       
+       ```bash
+       java_subroutine hello  "This is my string"
+       java_subroutine -S hello  "456"
+       ```
+
    1. strcat description
 
    1. Buffer Allocation:
@@ -91,8 +107,6 @@
        - sbrk($t0), sbrk(256)
 
    1. Practicum: strcat
-
-   1. {java, mips}\_subroutine use with strings
 
 
 # Today's Lab Material
@@ -188,6 +202,29 @@
    | `x = & A;`                    | `la x, A`                 |
    | `x = (* p);`                  | `lb x, 0(p)`              |
    | `(* p) = x;`                  | `sb x, 0(p)`              |
+
+
+
+```java
+static char [] buffer = new char[100];
+
+public static int strcat(char [] first, char [] second) {
+
+   int i;
+   int j;
+
+   for(i=0; first[i] != '\0' ; i++) {
+      buffer[i] = first[i];
+   }
+   for (j=0; second[j] != '\0' ; j++ ){
+      buffer[i+j] = second[j];
+   }
+   buffer[i+j+1] = '\0';
+
+   mips.print_s(buffer);
+   return 0;
+}
+```
 
 
 ---
