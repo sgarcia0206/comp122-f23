@@ -1,14 +1,14 @@
 # COMP122 Lecture Notes: October 23, 2023
 
 ## Announcements:
-   1. Assigment 24-bitwise-operations graded.
-   1. Assigment 42-checksum graded.
+   1. Assignment 24-bitwise-operations graded.
+   1. Assignment 42-checksum graded.
       - Noted Items:
         1. large number of students (18) did not attempt
         1. scores greater than 90: 33 == 42%
         1. not following the process
-           - Java --> Java Tac --> MIPS
-        1. register allocation in Java Tac --- Don't do
+           - Java --> Java TAC --> MIPS
+        1. register allocation in Java TAC --- Don't do
         1. readability of code
            - direct correlation between   "working code <- and -> readable code"
            - check your tab versus spaces setting.

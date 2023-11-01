@@ -5,7 +5,7 @@
  
 ## Today's Agenda:
 
-   1. Mathematic Review 
+   1. Mathematical Review 
       - Base10
       - Reframed into Base2
 
@@ -30,7 +30,7 @@
   1. base2-encoding-and-mathematical-operations.pdf
  
 
-  1. Integer Represenations:
+  1. Integer Representations:
      * Java `unsigned int X;` 
        - Nope does not have it
        - Use the next size up!
@@ -84,7 +84,7 @@
      |   -6   |  ---- ---- | 1111 1001 | 1111 1010 |
 
 
-       - Notice the pattern for the represenation of a negative number within different sizes:
+       - Notice the pattern for the representation of a negative number within different sizes:
          *   -6 :                                     1010
          *   -6 :                                1111 1010
          *   -6 :                      1111 1111 1111 1010
@@ -114,7 +114,7 @@
 
          C: ?; V: ?; S: ?; Z: ?
          ```
-    1. Status Bits: Reexplained
+    1. Status Bits: Re-explained
        - ../tidbits/status_bits_explained.gif
        - V = C ^ previous C
        - consider
@@ -162,9 +162,9 @@
 ---
 ## Resources
 
-   1. Encodings: unsigned, 1's complement, 2's complement, bais 8
+   1. Encodings: unsigned, 1's complement, 2's complement, bias 8
 
-   | #  |  binary number | unsigned |   1's  |   2's  | bais 8 |
+   | #  |  binary number | unsigned |   1's  |   2's  | bias 8 |
    |---:|:--------------:|:--------:|:------:|:------:|:------:|
    | -8 |   2# - 1000    |    --    |   --   |  1000  |  0000  |
    | -7 |   2# - 0111    |    --    |  1000  |  1001  |  0001  |

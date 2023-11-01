@@ -31,7 +31,7 @@ done:   nop                         # ;
         .end_macro
 
 
-        .macro aswap(%first, %second)
+        .macro swap(%first, %second)
 
         # at: temp
 
