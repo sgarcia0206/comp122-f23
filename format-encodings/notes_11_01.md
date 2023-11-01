@@ -127,7 +127,7 @@
 
   1. Write a Java method
      - Name: public static int get_bit();
-     - Arguements:  none
+     - Arguments:  none
      - Description: 
        * reads a char from stdin
        * returns the value of the bit
@@ -140,7 +140,7 @@
 
    1. Write a Java method
       - Name: public static int bits2int();
-      - Arguements: none
+      - Arguments: none
       - Description:
         * reads a sequence of bits (via 'get_bit')
         * converts this sequence into a base10 number
@@ -153,7 +153,7 @@
 
       1. Refactor your get_bit() method to:
          - Name: public static int glyph2int(int radix);
-         - Arguements: radix
+         - Arguments: radix
          - Description:
            * reads a glyph within the appropriate radix
            * converts the glyph to the corresponding base10 number
@@ -162,7 +162,7 @@
 
       1. Refactor your bit2int() method to:
          - Name: public static int nextInt(int radix);
-         - Arguements: radix
+         - Arguments: radix
          - Description:
            * reads a sequence of glyphs within the appropriate radix
            * converts this sequence into a base10 number
