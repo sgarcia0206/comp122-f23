@@ -114,7 +114,8 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       | `if (a <cond> b) {`               | `b<cond> a, b, {cons}`     |
       |                                   | `b {alt}`                  |
       |                                   |                            |
-      | `if (a <cond> b) break;`          | `b<cond> a, b, {done}`     |
+      | `if (a <cond> b) break label;`    | `b<cond> a, b, {done}`     |
+      | `if (a <cond> b) continue label;` | `b<cond> a, b, label`      |
       |                                   |                            |
       | `} else {`                        |                            |
       | `}`                               |                            |
@@ -161,11 +162,11 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
 ## Appendix
 
    1. "Continue" Statement
-      If your original Java code contains "continue" statement, the 
-      the simplistic method used to perform the Java -> Java TAC
-      need to be augmented.
+      If your original Java code contains a "continue" statement, the 
+      the simplistic method used to perform the Java -> Java TAC 
+      transformation needs to be augmented.
 
-      Sample Java Code
+      Consider the following sample Java code
       ```java
 
       for (i=0; i <=10; i++) {
@@ -197,10 +198,13 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       done:  ;
       ```
 
-      Notice in the next code block, a copy of the init block
-      must be copied and placed just prior to the users "continue" statement.
+      Consider line 189 above.  The `continue` statement results
+      in line 187 to be executed next.  But we need to execute line
+      194 to keep the semantics of the original code.
 
-
+      To address this issue, a copy of the 'next' block must be
+      copied and placed just prior to the users "continue" statement.
+      This transformation is depicted in the following code block.
       ```java TAC
       // This is the more robust translation approach
       init:  {
@@ -231,7 +235,7 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       ```
 
       If you could use a "goto" in Java, a "continue" statement could
-      be transformed into a "goto {next}"
+      be transformed into a "goto {next}".
 
 
 
