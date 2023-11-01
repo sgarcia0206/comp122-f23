@@ -6,13 +6,13 @@
       1. Name: Binary Addition
          - Status: Assigned
          - Deliverable ID: 25
-         - Invitation URL: 
+         - Invitation URL: https://classroom.github.com/a/xjTmuaU9
          - Due Date: Nov 07 23:59:59 (Tuesday)
 
       1. Name: nextInt (atoi)
          - Status: Assigned
-         - Deliverable ID: 43
-         - Invitation URL: 
+         - Deliverable ID: 44
+         - Invitation URL: https://classroom.github.com/a/9a7konBI
          - Due Date: Nov 10 23:59:59 (Tuesday)
 
 
@@ -98,6 +98,13 @@
 # Today's Lab Material
 
   1. Accept the assignment
+  1. Create your repository
+     - a template directory has not be created for you
+     - follow the instructions provided by github
+     …or create a new repository on the command line
+
+
+
   1. Clone the assignment
   1. Don't read the README.md file
      - it should contain the specification
