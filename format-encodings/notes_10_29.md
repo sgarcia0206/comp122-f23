@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: October 23, 2023
+# COMP122 Lecture Notes: October 29, 2023
 
 ## Announcements:
    1. Assignment 24-bitwise-operations graded.
