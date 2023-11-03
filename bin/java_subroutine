@@ -918,10 +918,12 @@ if [[ $# == 0 ]] ; then
 fi
 
 #### Process CMD LINE
-while getopts hASsr:R:tv option ; do
+while getopts hL:ASsr:R:tv option ; do
     case "${option}" in
         h)  usage_full
             exit 1
+            ;;
+        L)  LINK_FILE=${OPTARG}
             ;;
         A)  ARG_STRUCTURE="array" ;;
         R)  SUB_RETURN_ARRAY="FALSE"
@@ -961,6 +963,9 @@ shift ${OPTIND}
 # # Note that you must run the command in the current working directory of the files
 #
 SUB_NAME_FILE="${SUB_NAME}.${LANG_EXT}"
+[[ -n "${LINK_FILE}" ]] && SUB_NAME_FILE=${LINK_FILE}
+
+
 SUB_NAME=$(basename ${SUB_NAME})
 
 # Command line related error checking
