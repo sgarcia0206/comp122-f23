@@ -114,17 +114,18 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Invitation URL: https://classroom.github.com/a/hVsevPB0
    - Due Date: Oct 15 23:59:59 (Sunday)
  
- 1. Name: Bitwise Operations
+1. Name: Bitwise Operations
    - Status: Graded on Oct 27
    - Deliverable ID: 24-
    - Invitation URL: https://classroom.github.com/a/iMnfacqu
    - Due Date: Oct 17 23:59:59 (Tuesday)
 
-1. Name: Binary Addition et al
-   - Status: 
-   - Deliverable ID: 24-
-   - Invitation URL: 
-   - Due Date: 
+1. Name: Binary Addition
+   - Status: Assigned
+   - Deliverable ID: 25
+   - Invitation URL: https://classroom.github.com/a/xjTmuaU9
+   - Due Date: Nov 07 23:59:59 (Tuesday)
+
 
 ---
 <h3 id="digital">Digital Logic (Section 3)</h3>
@@ -154,5 +155,12 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Status: Assigned
    - Deliverable ID: 43-
    - Invitation URL: https://classroom.github.com/a/61ujMp63
-   - Due Date: To Be Determined
+   - Due Date: Oct 24 23:59:59 (Tuesday)
+
+
+1. Name: nextInt (atoi)
+   - Status: Assigned
+   - Deliverable ID: 44
+   - Invitation URL: https://classroom.github.com/a/9a7konBI
+   - Due Date: Nov 10 23:59:59 (Friday)
 
