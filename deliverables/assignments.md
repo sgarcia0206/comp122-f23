@@ -60,7 +60,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
      * Follow the steps in: ~/classes/comp122/setup.md
    - Due Date: ASAP
 
-1. My First Assignment
+1. Name: My First Assignment
    - Status: Past Due, Graded, Closed
    - Deliverable ID: 01-
    - Public_URL: https://github.com/COMP122/first-assignment
@@ -68,16 +68,20 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Wednesday, Sep 6 23:59:59 
 
 
-1. Mathematical Review (Credit/No Credit)
+1. Name: Mathematical Review (Credit/No Credit)
    - Status: Past Due, Graded, Closed
    - Deliverable ID: 02-
    - Invitation URL: https://classroom.github.com/a/6Q0OrY44
    - Due Date: Sep 14 23:59:59
 
-1. Name: 
-   - Status:
-   - Deliverable ID: 
-   - Invitation URL:
+1. Name: UTF-8
+   - Status: Past Due, In class participation 10-23 
+   - Deliverable ID: 03-
+   - Invitation URL: https://classroom.github.com/a/5npebIb3
+   - Due Date: Commit at the end of class.
+   - Extended: After class cleanup, etc.
+   - Final Due Date: Sunday, Oct 27 23:59:59
+
    - Due Date: 
 
 ---
@@ -152,7 +156,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Oct 12 23:59:59  (Thursday)
 
 1. Assignment: binary32 
-   - Status: Assigned
+   - Status: Closed
    - Deliverable ID: 43-
    - Invitation URL: https://classroom.github.com/a/61ujMp63
    - Due Date: Oct 24 23:59:59 (Tuesday)
