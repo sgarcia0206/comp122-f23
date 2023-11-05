@@ -3,7 +3,7 @@
 ## Announcements:
    1. Update on {java, mips}\_subroutine
       - Recall: -S option  (String)
-        - Program uses the "duck" real of input
+        - The program uses the "duck" real of input
           * If it looks like a duck, sounds like a duck, walks like a duck -- its a duck.
           * The following all look like numbers:  1456234, "1456234", "1 456 234"
           * The following all look like strings:  string, "a string", 14_item
@@ -50,6 +50,8 @@
 ## Today's Agenda:
    1. Syscalls for reading aggreate data
 
+   1. Big 0 notation
+
    1. Multiplication
 
 
@@ -67,7 +69,21 @@
       -  bytes_read = read_s(buffer, bytes_requested)
       -  bytes_read = read(fd, buffer, bytes_requested)
 
+  1. Big 0 notation
+     ```gnuplot
+     log2(n) = log(n)/log(2)
+     plot [x=1:10][y=1:10] x            # O(n)           Search a list
+     plot [x=1:10][y=1:10] 5            # O(c)           MIPS R instruction, addition
+     plot [x=1:10][y=1:10] log2(x)      # O(log_2 n)     Search an ordered list
+     plot [x=1:10][y=1:10] x            # O(n)           Search a list, multiplication (n= wordsize)
+     plot [x=1:10][y=1:10] x * log2(x)  # O(n log_2 n)   Quicksort, Mergesort
+     plot [x=1:10][y=1:10] x*x          # O(n^2)         BubbleSort
+     plot [x=1:10][y=1:10] x*x*x        # O(n^3)         Matrix Multiplication
+     #                                  ! O(n^x)         NP-hard Traveling Salesman Problem
+     ```
+
   1. Multiplication
+     - Supporting Slides: multiplication.pdf
      - Issues:
        1. Overflow: 
           - Consider: 127 * 127 = 16,129 
@@ -91,9 +107,8 @@
 
        1. Execution Time:
           - Successive Additions
+            - See slide 1
             - java_subroutine mult_loop a b
-
-
 
             ```java java/mult_loop.j
             public static int mult_loop(int a, int b) {
@@ -109,6 +124,7 @@
             - It is executed `b` times.
 
   1. Long Multiplication: Base 10
+     - See Slide 2
      - View the number as an array of digits;
      
      ```java java/long_mult.j
@@ -130,6 +146,7 @@
      ```
 
   1. Long Multiplication: Base 2
+     - See Slide 3
      - Leverage:
        - x * 0 == 0
        - x << 1 ==  x * 2
@@ -155,6 +172,7 @@
      ```
 
   1. Long Multiplication: Base 2
+     - See Slide 4
      - View the register as a stack
 
      ```java java/multiplication.j
@@ -186,9 +204,11 @@
 
   1. Specialized Hardware (Mult/Add unit)
      - native instructions 
-       - mul $t0, $t1
-       - div $t0, $t1
-       - madd $t0, $t1
+       - mul $t0, $t1   #  {hi, lo} = $t0, $t1
+       - div $t0, $t1   #  { r,  q} = $t0, $t1   
+       - mfhi $t0       #  move $t0, {hi/r}
+       - mflo $t0       #  move $t1, {lo/q}
+       - mul a, x ; madd b, x; madd c, x;
          *  `a*x + b*x + c*x` 
      - pseudo instructions
        - mult, div, rem, etc.
@@ -196,7 +216,17 @@
 # Today's Lab Material
 
   1. Makefile for 44-nextInt
-  1. Branches
+  1. Git Branches
+     - list:   git branch
+     - create: git branch {name}
+     - delete: git branch -D {name}
+     - switch: git checkout {name}
+     - track:  git branch --set-upstream-to={upstream}     # to make it a remote branch
+     - merge:  git merge {name}
+       - merge {feature} into {dev}:  git checkout {dev}; git merge {feature}
+         * you completed your work on a new feature, and want it intergraded into the team's dev branch
+       - merge {dev} into {feature}:  git checkout {feature}; git merge {dev}
+         * you have NOT completed your work on a new feature, BUT you want say current with the team's development
 
 
 
