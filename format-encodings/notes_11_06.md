@@ -216,10 +216,10 @@
 
   1. Specialized Hardware (Mult/Add unit)
      - native instructions 
-       - mul $t0, $t1   #  {hi, lo} = $t0, $t1
-       - div $t0, $t1   #  { r,  q} = $t0, $t1   
-       - mfhi $t0       #  move $t0, {hi/r}
-       - mflo $t0       #  move $t1, {lo/q}
+       - mul $t0, $t1   #  {hi, lo} = $t0 *  $t1
+       - div $t0, $t1   #  { r,  q} = $t0 / $t1   
+       - mfhi $t0       #  $t0 = {hi/r}
+       - mflo $t0       #  $t1 = {lo/q}
        - mul a, x ; madd b, x; madd c, x;
          *  `a*x + b*x + c*x` 
      - pseudo instructions
