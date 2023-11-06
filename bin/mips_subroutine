@@ -252,7 +252,7 @@ class ${SUB_NAME} {
 
 EOF
 
-cat ${SUB_NAME}.j 
+cat ${SUB_NAME_FILE}
 
 cat <<-EOF
 
