@@ -156,7 +156,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Oct 12 23:59:59  (Thursday)
 
 1. Assignment: binary32 
-   - Status: Closed
+   - Status: Graded on Nov 5
    - Deliverable ID: 43-
    - Invitation URL: https://classroom.github.com/a/61ujMp63
    - Due Date: Oct 24 23:59:59 (Tuesday)
