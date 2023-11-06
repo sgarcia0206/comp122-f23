@@ -1,6 +1,18 @@
 # COMP122 Lecture Notes: November 06, 2023
 
 ## Announcements:
+
+   1. Graded Assignments:
+      1. Name: binary32
+         - Deliverable ID: 43-
+         - Average: 81
+         - 90 or above:  26 students == 35%
+         - Issues:  
+           1. Following the process...Java --> Java TAC -> MIPS
+           1. Retagging "java_version" in the wrong place, i.e., with Java TAC
+           1. Tagging when you start working on a version
+           1. No Tagging
+
    1. Update on {java, mips}\_subroutine
       - Recall: -S option  (String)
         - The program uses the "duck" real of input
