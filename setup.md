@@ -189,4 +189,9 @@
 If you have any problems completing these tasks, post a message in the #fitzgerald-f23 channel.
 
 
+# Notes for future
+https://packagecontrol.io/packages/MarkdownPreview
+package control for markdown
+package control for mips
+
 
