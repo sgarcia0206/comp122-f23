@@ -9,7 +9,7 @@
          - 90 or above:  26 students == 35%
          - Issues:  
            1. Following the process...Java --> Java TAC -> MIPS
-           1. Retagging "java_version" in the wrong place, i.e., with Java TAC
+           1. Re-tagging "java_version" in the wrong place, i.e., with Java TAC
            1. Tagging when you start working on a version
            1. No Tagging
 
@@ -34,10 +34,10 @@
         echo 0 | java_subroutine -L bits2int.j get_bit 
         ```
 
-  1. Validating your paperlike submission
+  1. Validating your paper-like submission
      - recall you must craft your submission so:
        1. the rendering of your  submission.md file is correct ({open,start} submission.md)
-       1. the text formating of your submission.md file is correct (subl submission.md)
+       1. the text formatting of your submission.md file is correct (subl submission.md)
        1. you have correctly associated your responses with response tags/blocks
 
      - recall you should be using `make` to review your submission 
@@ -60,7 +60,7 @@
 
 
 ## Today's Agenda:
-   1. Syscalls for reading aggreate data
+   1. Syscalls for reading aggregate data
 
    1. Big 0 notation
 
@@ -70,16 +70,22 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - none
 
    * T/R @ 9:00 am
+     - none
 
 
 ---
 # Today's Lecture Material
 
-   1. Syscalls for reading aggreate data
+   1. Syscalls for reading aggregate data
       -  bytes_read = read_s(buffer, bytes_requested)
       -  bytes_read = read(fd, buffer, bytes_requested)
+
+         - bytes_read:  if < 0, error
+         - bytes_read:  if == 0, no more data to read
+         - bytes_read:  if <= bytes_read, success
 
   1. Big 0 notation
      ```gnuplot
@@ -92,6 +98,19 @@
      plot [x=1:10][y=1:10] x*x          # O(n^2)         BubbleSort
      plot [x=1:10][y=1:10] x*x*x        # O(n^3)         Matrix Multiplication
      #                                  ! O(n^x)         NP-hard Traveling Salesman Problem
+     ```
+
+     # O(1)           MIPS R instruction, addition
+     # O(n)           multiplication (n= wordsize)
+
+     ```
+     x = x * 2;    x = x << 1;
+     x = x * 4;    x = x << 2;
+     x = x * 8;    x = x << 3;
+     x = x * 16;   x = x << 4;
+
+     x = x * 10;   x = 8*x + 2*x;   x = (x << 3) + (x << 1 )
+
      ```
 
   1. Multiplication
@@ -236,7 +255,7 @@
      - track:  git branch --set-upstream-to={upstream}     # to make it a remote branch
      - merge:  git merge {name}
        - merge {feature} into {dev}:  git checkout {dev}; git merge {feature}
-         * you completed your work on a new feature, and want it intergraded into the team's dev branch
+         * you completed your work on a new feature, and want it integrated into the team's dev branch
        - merge {dev} into {feature}:  git checkout {feature}; git merge {dev}
          * you have NOT completed your work on a new feature, BUT you want say current with the team's development
 
