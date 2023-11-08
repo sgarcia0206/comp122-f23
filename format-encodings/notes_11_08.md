@@ -48,7 +48,8 @@
     1. Oh My Git!
 
 ## Today's Agenda:
-
+   1. Memory Segments
+   1. Cache
    1. Call Marco
    1. Subroutine
    1. Base64 Encoding
@@ -62,13 +63,30 @@
 
 ---
 # Today's Lecture Material
+
+   1. Memory Segments
+      1. text
+         - static, read-only, temporal locality
+      1. data
+         - static, read/write, spatial locality
+      1. stack
+         - dynamic, read/write, temporal locality
+      1. heap
+         - dynamic, read/write, spatial locality
+
+   1. Cache and the "Principal of Locality"
+      - browser cache
+      - web cache
+
    1. Call Marco
+      - used to transition from one subroutine to another 
+      - new subroutine, new focus, new scratch space
       - from 44-nextInt
 
-        | Java TAC                | MIPS Macro                |
-        |-------------------------|---------------------------|
-        | a = glyph2int(b, c);    | call glyph2int b c        |
-        |                         | move a, $v0               |
+      | Java TAC                | MIPS Macro                |
+      |-------------------------|---------------------------|
+      | a = glyph2int(b, c);    | call glyph2int b c        |
+      |                         | move a, $v0               |
 
 
       ```mips
@@ -83,6 +101,12 @@
       .end_macro
       ```
 
+      ```mips
+      glyph2int:  nop
+                  ...
+                  move $v0, %ret_value
+                  jr $ra
+      ```
 
    1. Subroutine
       - See Slides: assembly_programming/slide_presentation/
