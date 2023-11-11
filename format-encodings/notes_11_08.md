@@ -2,9 +2,9 @@
 
 ## Announcements:
 
-   1. The Planning for the rest of the summer
+   1. The Planning for the rest of the semester
       1. Exam #2: Formats & Encodings
-         - November 20/21
+         - November 20/21 (the day before Thanksgiving)
          - During Class time
          - Paper-like Deliverable 
 
@@ -57,6 +57,10 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - Process of a regrade...
+     - 44-... do I have to do every base from 2..16
+       * cause mult by 7 with shifts are hard!
+     - switch/case statement... can show us?
 
    * T/R @ 9:00 am
 
