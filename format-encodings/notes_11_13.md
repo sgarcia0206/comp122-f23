@@ -14,11 +14,17 @@
 
 ## Today's Agenda:
    1. Subroutine
-   1. Associated Macros
+      - and associated macros
+
+   1. ???
 
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - review on git branch -- during labtime
+     - allocation and read into a buffer -- during labtime
+     - switch statement -- deferred until W/R or next week.
+     - macros that operaton on aggregate data
 
    * T/R @ 9:00 am
 
@@ -26,33 +32,11 @@
 ---
 # Today's Lecture Material
 
-   1. Call Marco
-      ```mips
-      .macro call( %sub, %arg0, %arg1)
-          save_state()
-          push $a0, $a1
-          move $a0, %arg0
-          move $a1, %arg1
-          jal %sub
-          pop $a0, $a1
-          restore_state()
-      .end_macro
-      ```
-
-      ```mips
-      glyph2int:  nop
-                  ...
-                  move $v0, %ret_value
-                  jr $ra
-      ```
-
-   1. Subroutine
-      - See Slides: assembly_programming/slide_presentation/
-
+  1. Subroutine
+     - See Slides: assembly_programming/slide_presentation/
  
 
 # Today's Lab Material
-  1. Review of nextInt()  ?
 
 
 
