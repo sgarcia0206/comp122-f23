@@ -9,7 +9,7 @@
 
    1. Exam #4: Assembly Language
       - Programming Assignment in MIPS
-      - Presented on:  November 20/21  (Lab time)
+      - Presented on: November 20/21  (Lab time)
       - Due on: Monday, Dec 11 23:59:59
 
 ## Today's Agenda:
@@ -21,12 +21,14 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-     - review on git branch -- during labtime
-     - allocation and read into a buffer -- during labtime
+     - allocation and read into a buffer -- during lab time
+     - macros that operate on aggregate data
+     - review on git branch -- during lab time
      - switch statement -- deferred until W/R or next week.
-     - macros that operaton on aggregate data
 
    * T/R @ 9:00 am
+     - read_s, read_si  -- during lab time
+     - how do you re-tag a previous commit -- during lab time
 
 
 ---

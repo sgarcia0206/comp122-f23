@@ -24,5 +24,7 @@
 ## Resources
 
 ---
-## Notes
-<!-- This section is for students to place their notes -->
+<!-- This section is for student's to place their own notes. -->
+<!-- This section will not be updated by the Professor.   -->
+
+## Notes  
