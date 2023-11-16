@@ -78,6 +78,10 @@ alias git="my_git "
 function my_git () {
 
     case "$1" in 
+      safe-to-switch)
+        git-safe-to-switch
+        ;;
+
       pull-request)
           shift 
           git-pull-request "$@"
@@ -136,6 +140,15 @@ function git-pull-request () {
 
    git-repo-state "$branch"
    'git' request-pull $base $repo $branch | tee pull-request.$(date +%b%d:%H:%M)
+}
+
+function git-safe-to-switch () {
+  local _output=$(git status --untracked-files=no -s)
+  if [[ -z $_output ]] ; then
+    return 0
+   else
+     return 1
+  fi
 }
 
 function git-repo-state () {
