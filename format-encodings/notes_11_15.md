@@ -1,6 +1,11 @@
 # COMP122 Lecture Notes: November 15, 2023
 
+
 ## Announcements:
+   1. Issues with tags.. and being in the middle
+
+   1. Fix you tags... before I grade 44-
+      - but no new commits are valid
 
 
 ## Today's Agenda:
@@ -13,8 +18,11 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - If a branch of a branch is it a copy of the previous branch
+       * they share a common history
 
    * T/R @ 9:00 am
+     - none
 
 
 ---
