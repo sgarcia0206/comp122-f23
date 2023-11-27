@@ -159,6 +159,14 @@ Note that sometimes there is not a 100% direct correlation between your JAVA TAC
       | `mips.sbrki(imm);`            | `sbrki(imm)`              |
       | `X = mips.retval();`          | `move X, $v0`             |
 
+      1. MIPS Stack Routines
+
+      | Java TAC                      | MIPS Macro                |
+      |-------------------------------|---------------------------|
+      | `mips.push(a);`               | `push a`                  |
+      | `a = mips.pop();`             | `pop a`                   |
+
+
 ## Appendix
 
    1. "Continue" Statement

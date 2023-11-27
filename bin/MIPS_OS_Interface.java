@@ -52,6 +52,7 @@ class MIPS_OS_Interface {
   static int sbrk_p = 0;
   static byte[] MEM = new byte[1024];
   static int[] stack = new int[256];
+  static char[][] str_stack = new char[25][];
 
 
 
@@ -148,11 +149,13 @@ class MIPS_OS_Interface {
   }
 
   public static void print_s(char [] register) {
-    StringBuilder str 
-            = new StringBuilder(""); 
+    // The char [] has a 
 
-    str.append(register);
-    System.out.printf("%s", str);
+    int index;
+    for (index=0; index < register.length; index++ ) {
+       if (register[index] == '\0' ) break;
+       System.out.printf("%c", register[index]);
+     }
     return;
   }
 
@@ -200,7 +203,18 @@ class MIPS_OS_Interface {
   }
 
 
-  
+  public void push(char [] register) {
+    $sp = $sp + 1;
+    str_stack[$sp] = register;
+  }
+  public char [] pop( char [] dumb ) {
+    char [] x = str_stack[$sp];
+    $sp = $sp - 1; 
+    //$v0 = x;
+    return x;
+  }
+
+
   public void push(int register) {
     $sp = $sp + 1;
     stack[$sp] = register;
