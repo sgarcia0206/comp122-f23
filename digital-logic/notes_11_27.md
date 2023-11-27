@@ -20,7 +20,16 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
- 
+     - Will you provide me info on bash scripting? hmm, maybe
+     - 3x- practice assignments, will you give answers? maybe
+     - binaryReal: does it make calls to other files? yes!
+       * java_subroutine -L '\*.j' -S binaryReal 10 "#" 2345 . 1234
+     - push & pop
+       | java           | mips       |
+       |----------------|------------|
+       | mips.push(a)   | push(a)    |
+       | b = mips.pop() | pop(b)     |
+
    * T/R @ 9:00 am
 
 
@@ -39,6 +48,38 @@
 ---
 ## Resources
 
+      | A | B |  X |
+      |---|---|----| 
+ A'B' | 0 | 0 |  0 |  
+ A'B  | 0 | 1 |  1 |
+ AB'  | 1 | 0 |  1 |
+ AB   | 1 | 1 |  0 |
+
+A'B + AB'
+
+      | A | B |  X |
+      |---|---|----| 
+ A'B' | 0 | 0 |  1 |   1   
+ A'B  | 0 | 1 |  1 |   1 
+ AB'  | 1 | 0 |  ? |   0 
+ AB   | 1 | 1 |  1 |   1 
+
+
+A'B' + A'B  + AB
+
+         | A | B | C | X | Y |
+         |---|---|---|---|---|
+ A'B'C'  | 0 | 0 | 0 | 1 | 1 |
+ A'B'C   | 0 | 0 | 1 | 0 | 0 |
+ A'BC'   | 0 | 1 | 0 | 1 | 0 |
+ A'BC    | 0 | 1 | 1 | 1 | 0 |
+ AB'C'   | 1 | 0 | 0 | 1 | 1 |
+ AB'C    | 1 | 0 | 1 | 0 | 1 |
+ ABC'    | 1 | 1 | 0 | 0 | 1 |
+ ABC     | 1 | 1 | 1 | 1 | 0 |
+
+X = A'B'C' + A'BC' + A'BC + AB'C' + ABC
+Y = 
 
 ---
 <!-- This section for student's to place their own notes. -->
