@@ -21,17 +21,6 @@
      - See Slides: digital-logic/slide_presentations/.hidden/Combinational_Circuits.pptx
  
 
- <!-- response-block -->
- | a | b |  <!-- response-block -->
- |---|---|  
- | 1 | 1 |  <!-- response-block -->
- | 0 | 1 |  <!-- response-block -->
-
- <!-- response-block -->
-
-
-
-
 
 # Today's Lab Material
 
