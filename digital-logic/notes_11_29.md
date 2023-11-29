@@ -22,7 +22,7 @@
  
 
  <!-- response-block -->
- | a | b |  
+ | a | b |  <!-- response-block -->
  |---|---|  
  | 1 | 1 |  <!-- response-block -->
  | 0 | 1 |  <!-- response-block -->
