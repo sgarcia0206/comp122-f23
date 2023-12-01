@@ -7,7 +7,7 @@
         ```
         number = 43690                           <!-- response -->
                                                  <!-- response -->
-        answer: 1010 1010 1010 1010              <!-- response -->
+        answer: 2# 1010 1010 1010 1010               <!-- response -->
         ```
       - Should a student receive credit for knowning HOW to do something?
         Or receive for copying the anwer from a website/other?
@@ -18,7 +18,7 @@
 
 
 ## Today's Agenda:
-   1. Quick Review of Matter from the lecture before
+   1. Quick Review of Material from the lecture before
    1. Combinational Circuits
 
 
@@ -27,6 +27,8 @@
      - TT -> Boolean Expression
  
    * T/R @ 9:00 am
+     - How do I do push in Java, Java TAC, and then --> MIPS?
+
 
 
 ---
@@ -48,6 +50,20 @@
  ABC     | 1 | 1 | 1 | 0 |
 
 X = A'B'C' + A'B'C +  A'BC +  ABC' 
+
+         | A | B | C | X | Y |
+         |---|---|---|---|---|
+ A'B'C'  | 0 | 0 | 0 | 1 | 0 |
+ A'B'C   | 0 | 0 | 1 | 0 | 0 |
+ A'BC'   | 0 | 1 | 0 | 0 | 0 |
+ A'BC    | 0 | 1 | 1 | 1 | 1 |
+ AB'C'   | 1 | 0 | 0 | 0 | 0 |
+ AB'C    | 1 | 0 | 1 | 0 | 0 |
+ ABC'    | 1 | 1 | 0 | 0 | 0 |
+ ABC     | 1 | 1 | 1 | 1 | 1 |
+
+X = A'B'C' + A'BC + ABC
+Y = A'BC + ABC
 
 --
 Divide and Conquer, Working backward 
