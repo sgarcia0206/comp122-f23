@@ -35,18 +35,22 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: 
 
 1. Quiz 3: Digital Logic
-   - Status: 
+   - Status: Announced
    - Additional Information: 
+     - structure and format is the same as Quiz #1
+     - paper-like deliverable
+     - 1 hour timed quiz: 
+     - time starts when you accept the assignment
    - Deliverable ID: 30-
-   - Invitation URL: 
-   - Due Date: 
+   - Invitation URL: To be released on Dec 5 23:59:59
+   - Due Date: Dec 7 23:59:59
+
 
 1. Exam 4: MIPS Assembly Language
-   - Status: 
-   - Additional Information: In-Class Exam or Programming Assignment
+   - Status: Assigned
    - Deliverable ID: 40-
-   - Invitation URL: 
-   - Due Date: 
+   - Invitation URL: https://classroom.github.com/a/8AGaEhBs
+   - Due Date: Monday, Dec 11 23:59:59
 
 
 ---
@@ -75,14 +79,12 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Sep 14 23:59:59
 
 1. Name: UTF-8
-   - Status: Past Due, In class participation 10-23 
+   - Status: Graded on Nov 26
    - Deliverable ID: 03-
    - Invitation URL: https://classroom.github.com/a/5npebIb3
    - Due Date: Commit at the end of class.
    - Extended: After class cleanup, etc.
    - Final Due Date: Sunday, Oct 27 23:59:59
-
-   - Due Date: 
 
 ---
 
@@ -125,8 +127,8 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Oct 17 23:59:59 (Tuesday)
 
 1. Name: Binary Addition
-   - Status: Assigned
-   - Deliverable ID: 25
+   - Status: Graded on Dec 1
+   - Deliverable ID: 25-
    - Invitation URL: https://classroom.github.com/a/xjTmuaU9
    - Due Date: Nov 07 23:59:59 (Tuesday)
 
@@ -134,11 +136,17 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 ---
 <h3 id="digital">Digital Logic (Section 3)</h3>
 
-1. Name: Digital-Logic
-   - Status: 
+1. Name: Digital-Logic: Practice #1
+   - Status: Not Graded, practice instrument
    - Deliverable ID: 31-
-   - Invitation URL: 
-   - Due Date: 
+   - Invitation URL: https://classroom.github.com/a/6w86Qqv7
+   - Due Date: Dec 5 23:59:59
+
+1. Name: Digital-Logic: Practice #1
+   - Status: Not Graded, practice instrument
+   - Deliverable ID: 32-
+   - Invitation URL: https://classroom.github.com/a/f2EX48-q
+   - Due Date: Dec 5 23:59:59
 
 ---
 <h3 id="mips">MIPS Programming (Section 4)</h3>
@@ -163,7 +171,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Name: nextInt (atoi)
-   - Status: Assigned
+   - Status: Passed Due
    - Deliverable ID: 44
    - Invitation URL: https://classroom.github.com/a/9a7konBI
    - Due Date: Nov 10 23:59:59 (Friday)
