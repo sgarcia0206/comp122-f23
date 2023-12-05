@@ -52,7 +52,7 @@
 # | print.d          |  3   | void ƛ(double);       | # to match c1 instructions
 # | print_f          |  3   | void ƛ(double);       | # to match printf
 # | print_s          |  4   | void ƛ(&str);         |
-# | print_si         |  4   | void ƛ(&str);         |
+# | print_si         |  4   | void ƛ(label);        |
 # | read_d           |  5   | int  ƛ(void);         |
 # | read_s           |  8   | int  ƛ(&str, int);    |
 # | read_si          |  8   | int  ƛ(&str, imm);    |
@@ -150,7 +150,7 @@
 # | print.d          |  3   | void ƛ(double);       | # to match c1 instructions
 # | print_f          |  3   | void ƛ(double);       | # to match printf
 # | print_s          |  4   | void ƛ(&str);         |
-# | print_si         |  4   | void ƛ(&str);         |
+# | print_si         |  4   | void ƛ(label);        |
 # | print_c          | 11   | void ƛ(byte);         |
 # | print_ci         | 11   | void ƛ(byte);         |
 # | print_x          | 34   | void ƛ(int);          |

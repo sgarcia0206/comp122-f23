@@ -2,7 +2,8 @@
 
 ## Announcements:
    1. 25-binary-addition graded
-   1. 43-nextInt pregraded
+
+   1. 44-nextInt pregraded
       * there are a total of 76 students in the class
       * 28 students (36%) had NO tags, which is equivalent to a "0"
       ```
@@ -52,12 +53,12 @@
    1. 31-digital-logic released
       - Provide as an example of what will be on the quiz
       - Ungraded assignment
-      - Invitation URL:
+      - Invitation URL: https://classroom.github.com/a/6w86Qqv7
 
-   1.  32-digital-logic released
+   1. 32-digital-logic released
       - Provide as an example of what will be on the quiz
       - Ungraded assignment
-      - Invitation URL: 
+      - Invitation URL: https://classroom.github.com/a/f2EX48-q
                      
 
 ## Today's Agenda:
@@ -67,8 +68,13 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
+     - If I merge, does my total commit count consider those branches?  Yes. 
+     - Can you review Push and Pop during the lab? Yes.
+
  
    * T/R @ 9:00 am
+     - Can you review Push and Pop during the lab to help in the programing assignent? Yes.
+
 
 
 

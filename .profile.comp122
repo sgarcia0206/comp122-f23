@@ -178,6 +178,20 @@ function git-repo-state () {
     return ${return_value}
 }
 
+function git_commit_on_time () {
+  date="$1"
+  commit="$2"
+
+  due_date=$(git log --since  "${date}" -1 --date=unix --pretty=format:"%ad")
+  commit_date=$(git log ${commit} -1 --date=unix --pretty=format:"%ad")
+
+  if (( "${commit_date}" <= "${due_date}" )) ; then
+    return 0    # on time 
+  else
+    return 1    # the commit did not occur before the due date
+  fi
+}
+
 
 PATH="${COMP122_BIN}:${SUBLIME_BIN}:$PATH"
 GIT_EDITOR="$SUBLIME"

@@ -107,7 +107,7 @@ class MIPS_OS_Interface {
        A[i] = temp[i];
     }
 
-    $v0 = str.length();
+    $v0 = $v0;
   }
 
 
