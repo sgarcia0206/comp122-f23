@@ -2,9 +2,12 @@
 
 ## Announcements:
    1. Today is the last day of our class
+
    1. 30-quiz-digital-logic
-      - due no later than midnight tonight
-      - timed instrument 
+      - due no later than midnight Thursday night
+      - timed instrument : 2 hours
+      - open notes
+
    1. 40-exam-mips
       - due @midnight on Dec 11 (Monday)
 
@@ -41,9 +44,10 @@
       cd my_repos
       git clone git@github.com:{account}/{repo}.git
       cd {repo}
-      cp ~/classes/comp122/deliverables/* .
+      cp ~/classes/comp122/deliverables/{assignment}/* .
+      cp -r ~/classes/comp122/deliverables/{assignment}/macros .
       git add {filename_1} ... {filename_n}
-      git commit -m 'making a copy of my rep'
+      git commit -m 'making a copy of my repo'
       git push
       ```
 
@@ -63,14 +67,18 @@
       - The switch statement selects one of many code blocks to be executed:
         ```java switch example
         switch(expression) {
+          
           case x:
             // code block
             break;
+          
           case y:
             // code block
             break;
+          
           default:
             // code block
+
         }
         ```
       - It is essential syntacic sugar for a nested "if-then-else" statements, 
@@ -79,9 +87,9 @@
 
    1. Switch: Java --> Java TAC translation
       * Requirements
-        1. switch expression is a single variable (limitation of Java)
+        1. case value is a single variable or immediate (limitation of Java)
         1. must have a break after each case
-        1. default must be included and is the last item
+        1. default must be included and is the last code block
 
       * Steps:
         1. Identify the parts of the switch statement
@@ -106,7 +114,7 @@
 
       * Example
         ```java tac
-                  value = expresssion;
+                  value = expression;
         top:      switch(value) {
                     case x:  ;
                              // code block
@@ -150,14 +158,15 @@
       * Example
         ```mips
         top:      nop                     # switch(val) {
+
           case_x: move gp, x              #   case x:  ;
                   bne  val, gp, case_y    
                                           #            // code block
                   b done                  #            break top;
                   b 8                     #            mips.merge();
 
-          case_y: move gp, 2              #   case 2:  ;
-                  bne  val, gp, defualt   
+          case_2: li gp, 2                #   case 2:  ;
+                  bne  val, gp, default   
                                           #            // code block
                   b done                  #            break top;
                   b 8                     #            mips.merge();
@@ -168,12 +177,15 @@
                   b done                  #            break top;
                                           # }
 
-        done:                            # ;
+        done:                             # ;
         ```
+
+        * Is this the way the compiler will do it? No!
+          ![Switch Control Flow](switch.png)
 
    1. C Switch TAC --> MIPS, with a range
       * Consider the following macro:
-        ```
+        ```mips
         .macro position_in_range(%index, %low, %high)
            # returns index within the range
            # returns -1 if not in the range
@@ -227,11 +239,32 @@
         done:       nop    
         ```
 
+        * Consider the semantics of the following switch statement
+        ```
+        switch (%input) {
+           case '0'...'10' :  
+              break;
+
+           case 'A' - 'F'  :  
+              break
+
+           case 1, 2, 3, 0 : 
+              break;
+
+           case > 10 :
+              break;
+
+           case str* :
+
+           default:           
+        }
+        ```
+
    1. Bash Scripting / Startup Scripts
       1. $HOME/.bashrc  $HOME/.bash_profile 
       1. Variable Declaration
          - uses the duck rule    # variables a string by default
-         - explict declaration
+         - explicit declaration
            * declare -i int_var   
            * declare -a index_array
            * declare -A assoc_array
@@ -244,7 +277,7 @@
          - Substring:  ${X:2:2}    # offset:length
          - Length:     ${#X}
 
-      1. Environment Array Valiables: 
+      1. Environment Array Variables: 
          - Definition: X[i]="value"
          - Definition: X=( a b c d )
          - Usage:      ${X[i]}
@@ -260,7 +293,7 @@
 
       1. Globbing (light-weight regular expressions)
          - *     : any number of characters
-         - ?     : one charater
+         - ?     : one character
          - [a-b] : one character with the set
  
       1. Control Constructs
