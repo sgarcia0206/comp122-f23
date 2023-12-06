@@ -11,6 +11,10 @@
    1. 40-exam-mips
       - due @midnight on Dec 11 (Monday)
 
+   1. All student repos are to be deleted
+      - December 22, 2023
+      - Copy your repos to build a portfolio 
+
 ## Today's Agenda:
    1. Make copies of your Git Repo
    1. Switch Statement TAC
