@@ -246,7 +246,7 @@
         * Consider the semantics of the following switch statement
         ```
         switch (%input) {
-           case '0'...'10' :  
+           case '0' ... '10' :  
               break;
 
            case 'A' - 'F'  :  
@@ -255,12 +255,17 @@
            case 1, 2, 3, 0 : 
               break;
 
+           case str* :
+              break;
+
+           case func() :
+              break;
+
            case > 10 :
               break;
 
-           case str* :
-
            default:           
+              break;
         }
         ```
 
