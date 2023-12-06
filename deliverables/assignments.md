@@ -37,7 +37,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Additional Information: 
      - structure and format is the same as Quiz #1
      - paper-like deliverable
-     - 1 hour timed quiz: 
+     - 2 hour timed quiz: 
      - time starts when you accept the assignment
    - Deliverable ID: 30-
    - Invitation URL: https://classroom.github.com/a/-nTU3-dT
