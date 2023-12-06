@@ -9,7 +9,7 @@
         .globl {subroutine_name}
 
         # Include any supporting files, such as macros
-        # .include ""
+        #.include ""
 
         .data
         # Insert an Static Data Declarations
@@ -59,18 +59,22 @@
         # Example of a Subroutine Invocation
         ####################################################
         # The Pre-call
-        move $a0, {arg}         # Marshal actual arguements
+        move $a0, {arg1}         # Marshal actual arguements
+        move $a1, {arg2}         
+        move $a2, {arg3}         
         push_t_registers()      # Save T registers
         push $ra, $sp, $fp      # Save special registers
     
         # The Call
-        jal {func_call}         # {retval} = {func_call}({arg});
+        jal {func}              # {retval} = {func}({arg1}..{arg3});
     
         # The Post-call
         pop $ra, $sp, $fp       # Restore special registers
         pop_t_registers()       # Restore T registers
         move {retval}, $v0      # Demarshal return value
         ####################################################
+
+
 
 
         ####################################################
