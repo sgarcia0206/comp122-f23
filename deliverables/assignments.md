@@ -26,11 +26,11 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Invitation URL: https://classroom.github.com/a/-3YZEYoh
 
 1. Exam 2: Formats and Encodings
-   - Status: 
+   - Status: Closed
    - Additional Information: 
    - Deliverable ID: 20-
-   - Invitation URL:
-   - Due Date: 
+   - Invitation URL: (provided in class)
+   - Due Date: Due Date: During Class: Nov 20/21
 
 1. Quiz 3: Digital Logic
    - Status: Announced
