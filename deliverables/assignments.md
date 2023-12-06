@@ -39,7 +39,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
      - 1 hour timed quiz: 
      - time starts when you accept the assignment
    - Deliverable ID: 30-
-   - Invitation URL: https://classroom.github.com/a/-nTU3-dT
+   - Invitation URL: 
    - Due Date: Dec 7 23:59:59
 
 1. Exam 4: MIPS Assembly Language
