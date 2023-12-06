@@ -1,4 +1,4 @@
-# COMP122 Lecture Notes: November 29, 2023
+# COMP122 Lecture Notes: December 04, 2023
 
 ## Announcements:
    1. 25-binary-addition graded
