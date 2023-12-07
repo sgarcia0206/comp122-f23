@@ -23,7 +23,9 @@
 
 ## Questions from Last Lecture/Lab, etc.:
    * M/W @ 9:00 am
-
+     - How do your transform a 16-bit value to a 32-bit value?
+       * How do a do sign extension?
+     - Can you provide an example of Truth Table to Boolean Expression?
  
    * T/R @ 9:00 am
 
@@ -44,8 +46,8 @@
 
       ```bash
       cd ~
-      mkdir my_repos
-      cd my_repos
+      mkdir myrepos
+      cd myrepos
       git clone git@github.com:{account}/{repo}.git
       cd {repo}
       cp ~/classes/comp122/deliverables/{assignment}/* .
@@ -150,6 +152,7 @@
       | `default:  ;`      | `default:  nop`                       |
       |                    | `          nop`                       |
       | `mips.merge();`    | `b 8`                                 |
+      |                    | * an extension to the `b` instruction |
 
    1. Steps:
       1. Use the Table above to transliterate the Java statements to MIPS
@@ -163,13 +166,13 @@
         ```mips
         top:      nop                     # switch(val) {
 
-          case_x: move gp, x              #   case x:  ;
-                  bne  val, gp, case_y    
+          case_x: move $gp, x             #   case x:  ;
+                  bne  val, gp, case_2    
                                           #            // code block
                   b done                  #            break top;
                   b 8                     #            mips.merge();
 
-          case_2: li gp, 2                #   case 2:  ;
+          case_2: li $gp, 2               #   case 2:  ;
                   bne  val, gp, default   
                                           #            // code block
                   b done                  #            break top;
@@ -203,7 +206,7 @@
       * Consider the following C switch statement
         ```c
         switch (%input) {
-           case '0'...'10' :  digit = digit - '0';
+           case '0'...'9' :  digit = digit - '0';
                 break;
 
            case 'A'...'F'  :  digit = digit - 'A' 
@@ -220,7 +223,7 @@
 
       * Resulting MIPS code
         ```mips
-        case_0_10:  index_in_range(%input, '0', '10')  
+        case_0_9:   index_in_range(%input, '0', '9')  
                     blt $v0, $zero, case_A_F
                        subi digit, digit, '0'
                        b done
@@ -246,7 +249,7 @@
         * Consider the semantics of the following switch statement
         ```
         switch (%input) {
-           case '0'...'10' :  
+           case '0'...'9' :  
               break;
 
            case 'A' - 'F'  :  
@@ -255,10 +258,17 @@
            case 1, 2, 3, 0 : 
               break;
 
+           case 1 | 2 | 3 | 0 : 
+              break;
+
            case > 10 :
               break;
 
-           case str* :
+           case "str*" :
+              break;
+
+           case func(arg) :
+               break;
 
            default:           
         }
@@ -325,7 +335,7 @@
            ```
          - for each
            ```bash
-           for name in words ; do
+           for studenet in * ; do
              list
             done
            ```
@@ -347,6 +357,7 @@
            arg1=$1
            arg2=$2
            arg3=$3
+           arg_count=$#
 
            # code
            return 0
