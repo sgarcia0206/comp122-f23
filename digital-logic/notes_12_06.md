@@ -261,16 +261,17 @@
            case 1 | 2 | 3 | 0 : 
               break;
 
-           case > 10 :
-              break;
-
-           case "str*" :
+           case str* :
               break;
 
            case func(arg) :
-               break;
+              break;
+
+           case > 10 :
+              break;
 
            default:           
+              break;
         }
         ```
 
