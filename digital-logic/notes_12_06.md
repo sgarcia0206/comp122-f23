@@ -28,6 +28,14 @@
      - Can you provide an example of Truth Table to Boolean Expression?
  
    * T/R @ 9:00 am
+     - How do your transform a 16-bit value to a 32-bit value?
+       * How do a do sign extension?
+     - Boolean Algebra Properties
+     - Boolean Proof
+     - Elements of ISA 
+     - Pipeline Stages
+     - Differences between Combinational Circuits and Sequential Circuits
+
 
 
 ---
@@ -76,7 +84,7 @@
           
           case x:
             // code block
-            break;
+            break; 
           
           case y:
             // code block
@@ -167,13 +175,12 @@
         top:      nop                     # switch(val) {
 
           case_x: move $gp, x             #   case x:  ;
-                  bne  val, gp, case_2    
+                  bne  val, $gp, case_2    
                                           #            // code block
-                  b done                  #            break top;
                   b 8                     #            mips.merge();
 
           case_2: li $gp, 2               #   case 2:  ;
-                  bne  val, gp, default   
+                  bne  val, $gp, default   
                                           #            // code block
                   b done                  #            break top;
                   b 8                     #            mips.merge();
@@ -206,7 +213,7 @@
       * Consider the following C switch statement
         ```c
         switch (%input) {
-           case '0'...'9' :  digit = digit - '0';
+           case '0'...'9' :   digit = digit - '0';
                 break;
 
            case 'A'...'F'  :  digit = digit - 'A' 
@@ -247,7 +254,7 @@
         ```
 
         * Consider the semantics of the following switch statement
-        ```
+        ```c
         switch (%input) {
            case '0'...'9' :  
               break;
