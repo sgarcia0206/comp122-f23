@@ -260,7 +260,10 @@ class ${SUB_NAME} {
 
 EOF
 
-cat ${LOAD_FILES}
+for i in ${LOAD_FILES} ; do
+  cat $i
+  echo
+done
 
 cat <<-EOF
 
