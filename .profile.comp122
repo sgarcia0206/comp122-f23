@@ -182,8 +182,15 @@ function git_commit_on_time () {
   date="$1"
   commit="$2"
 
-  due_date=$(git log --since  "${date}" -1 --date=unix --pretty=format:"%ad")
-  commit_date=$(git log ${commit} -1 --date=unix --pretty=format:"%ad")
+  # Note that this requires the DATE to be in the format of: Nov 11 12:52
+  due_date=$(date -j -f "%b %d %H:%M" "$date" +%s)
+
+  # Note if the commit is empty, then it is equivalent to the last commit
+  commit_date=$(git log "${commit}" -1 --date=unix --pretty=format:"%ad" 2>/dev/null)
+  if [[ -z ${commit_date} ]] ; then
+    # the ${commit} did not exist
+    return 1
+  fi
 
   if (( "${commit_date}" <= "${due_date}" )) ; then
     return 0    # on time 
