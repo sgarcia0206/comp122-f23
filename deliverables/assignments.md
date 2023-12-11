@@ -26,14 +26,14 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Invitation URL: https://classroom.github.com/a/-3YZEYoh
 
 1. Exam 2: Formats and Encodings
-   - Status: Closed
+   - Status: Closed, Graded on Dec 10
    - Additional Information: 
    - Deliverable ID: 20-
    - Invitation URL: (provided in class)
    - Due Date: Due Date: During Class: Nov 20/21
 
 1. Quiz 3: Digital Logic
-   - Status: Announced
+   - Status: Passed Due, Graded on Dec 11
    - Additional Information: 
      - structure and format is the same as Quiz #1
      - paper-like deliverable
@@ -76,7 +76,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Sep 14 23:59:59
 
 1. Name: UTF-8
-   - Status: Graded on Nov 26
+   - Status: Past Due, Graded, Closed
    - Deliverable ID: 03-
    - Invitation URL: https://classroom.github.com/a/5npebIb3
    - Due Date: Commit at the end of class.
@@ -99,32 +99,32 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
 
 
 1. Name: Table Encodings
-   - Status: Graded on Oct 20
+   - Status: Graded on Oct 20, Closed
    - Deliverable ID: 21-
    - Invitation URL: https://classroom.github.com/a/79eoHK-K
    - Due Date: Oct 03 23:59:59 (Tuesday)
    
 1. Name: UTF-8 Encoding
-   - Status: Graded on Oct 22
+   - Status: Graded on Oct 22, Closed
    - Deliverable ID: 22-
    - Invitation URL: https://classroom.github.com/a/GEC4DKyv
    - Due Date: Oct 05 23:59:59 (Thursday)
     
 
 1. Name: Base Conversion and Floating Point Representation
-   - Status: Graded on Oct 22
+   - Status: Graded on Oct 22, Closed
    - Deliverable ID: 23-
    - Invitation URL: https://classroom.github.com/a/hVsevPB0
    - Due Date: Oct 15 23:59:59 (Sunday)
  
 1. Name: Bitwise Operations
-   - Status: Graded on Oct 27
+   - Status: Graded on Oct 27, Closed
    - Deliverable ID: 24-
    - Invitation URL: https://classroom.github.com/a/iMnfacqu
    - Due Date: Oct 17 23:59:59 (Tuesday)
 
 1. Name: Binary Addition
-   - Status: Graded on Dec 1
+   - Status: Graded on Dec 1, Closed
    - Deliverable ID: 25-
    - Invitation URL: https://classroom.github.com/a/xjTmuaU9
    - Due Date: Nov 07 23:59:59 (Tuesday)
@@ -155,20 +155,20 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Sep 19 23:59:59  (Tuesday)
 
 1. Assignment: Checksum
-   - Status: Graded on Oct 29
+   - Status: Graded on Oct 29, Closed
    - Deliverable ID: 42-
    - Invitation URL: https://classroom.github.com/a/BlKyKwkj
    - Due Date: Oct 12 23:59:59  (Thursday)
 
 1. Assignment: binary32 
-   - Status: Graded on Nov 5
+   - Status: Graded on Nov 5, Closed
    - Deliverable ID: 43-
    - Invitation URL: https://classroom.github.com/a/61ujMp63
    - Due Date: Oct 24 23:59:59 (Tuesday)
 
 
 1. Name: nextInt (atoi)
-   - Status: Passed Due
+   - Status: Passed Due, Graded on Dec 8
    - Deliverable ID: 44-
    - Invitation URL: https://classroom.github.com/a/9a7konBI
    - Due Date: Nov 10 23:59:59 (Friday)
