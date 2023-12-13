@@ -44,7 +44,7 @@ This file contains the list of deliverables for COMP 122. Such deliverables incl
    - Due Date: Dec 7 23:59:59
 
 1. Exam 4: MIPS Assembly Language
-   - Status: Assigned
+   - Status: Past Due, Graded on Dec 12
    - Deliverable ID: 40-
    - Invitation URL: https://classroom.github.com/a/8AGaEhBs
    - Due Date: Monday, Dec 11 23:59:59
