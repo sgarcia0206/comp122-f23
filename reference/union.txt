@@ -1,0 +1,20 @@
+work out how to do a union to read
+   -- lb, lw, lh
+
+
+typedef word union {
+      byte byte_value[4];
+      short half_value[2];
+      int value[1];
+   }
+
+
+word in_buffer[10];
+
+  lb x,  5(in_buff)   // x = in_buffer[5].lb_value[0];
+  lb x,  7(in_buff)  // x = in_buffer[5].byte_value[2];
+  lb x,  10(in_buff)  // x = in_buffer[10].byte_value[0];
+  lb x,  10(in_buff)  // x = in_buffer[10].byte_value[1];
+  lb x,  10(in_buff)  // x = in_buffer[10].byte_value[1];
+
+
