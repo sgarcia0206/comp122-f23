@@ -13,9 +13,27 @@
        Linux: Ubuntu 20.04.6 LTS
        ```
 
-  1. Windows Users:
+  1. For Windows Users:
      - Install the Windows Subsystem (WSL) for Linux: https://learn.microsoft.com/en-us/windows/wsl/about <br>
+        - Use the default OS, which is Ubuntu
+
+
      Note that this is the first semester in which I have required students to use WSL.  Hence, be on the lookout for issues that might arise due to the particular setup of your computer.
+
+     - Ensure you set things up to allow for gui-apps
+       - https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
+      
+
+     - After you have Ubuntu working, perform the install:
+       1. launch an terminal via ubuntu
+       1. update your Ubuntu environonment by running the following commands
+          ```
+          sudo apt-get update
+          sudo apt-get upgrade
+          sudo apt-get install build-essential    # provides essential tools for devs
+          sudo apt install retext -y              # provides the "open" command
+          sudo apt install openjdk-19-jdk         # provides the Java JDk
+          ```
 
 
   1. Establish Accounts:
@@ -28,15 +46,20 @@
        - Your account needs to be associated with your @my.csun.edu address.
        - All deliverables are submitted via GitHub Classrooms.
 
-  1. Install Software on your personal computer:
+  1. Install Software on your personal computer environment:
      - Sublime Text Editor: https://www.sublimetext.com
        - MacOS User: Move the `Sublime Text` application from the Downloads folder to the Applications folder.
+       - Windows Users: You can install this software on your Windows side.  Via the instructions above it has already been installed on you Ubuntu side
+
      - A Markdown View: (for example)
        - https://apps.microsoft.com/store/detail/markdown-view/9PJ021LR0M3G
        - https://apps.apple.com/us/app/one-markdown/id1507139439
+
      - Slack: https://slack.com  <br />   
        * Consider installing the mobile application as well
+
      - Java JDK: https://www.oracle.com/java/technologies/downloads/
+
 
 
   1. Join the Slack COMP122 work space:
@@ -99,22 +122,41 @@
         source .profile
         ```
 
+  1. Quick Access Setup
+     *  For Windows Users:
+        1. Open File Explorer
+        1. Navigate to the file:  `Linux/users/{username}/classes/`
+        1. Pin the folder `comp122` to Quick Access
+           - Right-click on the comp122 folder
+           - Select `Pin to Quick access`
+           - See: https://www.guidingtech.com/how-to-use-quick-access-in-windows-11/
+        1. Reposition comp122 in the Quick Access folder to match your preference
+      * For Mac Users:
+        1. Open Finder
+        1. Navigate to the file:  /{username}/classes/`
+        1. Drag the comp122 folder to the Favorites part of the Finder menu
+
 ### Test Your Local Environment
 
-  1. Validate Mars_4_5 is appropriately registered. <br/>
-  For System Security reasons, you may need to register the MARS IDE with the Operating System.
-     - Open up File Explorer (Windows) or Finder (Mac)
-     - Navigate to the COMP122 bin directory: \~/classes/comp122/bin/
-     - First double-click the Mars4_5.jar icon
-     - If you receive the following message, 
-       ```
-         "Mars4_5.jar” cannot be opened because it is from an unidentified developer.
-       ```
-       1. Control-click the Mars4_5.jar icon
-       1. Choose Open from the shortcut menu
-       1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
+   1. Validate Mars_4_5 is appropriately registered. For System Security reasons, you may need to register the MARS IDE with the Operating System.
+      - Open up File Explorer (Windows) or Finder (Mac)
+      - Navigate to the COMP122 bin directory: ~/classes/comp122/bin/
+      - First double-click the Mars4_5.jar icon
+      - If you receive the following message,
+        ```
+        "Mars4_5.jar” cannot be opened because it is from an unidentified developer.
+        ```
 
+        1. Control-click the Mars4_5.jar icon
+        1. Choose Open from the shortcut menu
+        1. Hereafter, you can Double-click the Mars4_5.jar icon to open the application.
 
+  1. Create a short-cut on your Desktop for Comp122 for easy access
+     - Open File Explorer or Finder
+     - Navigate to `classess` folder
+     - Copy the comp122 folder
+     - Paste the path to the Desktop # to make a shortcut
+       <!-- But sigh this does not work on Windows /WSL  -->
 
   1. Validate CLI tools for COMP122.<br/>  
      First open a new terminal and execute the following commands:
@@ -134,7 +176,11 @@
      
      10
      dwarf:mips steve$ mips_subroutine add4 2 4 6 8
-             20; 0x00 00 00 14; 0b0000 0000 0000 0000 0000 0000 0001 0100;
+     #########################################
+     # Above is the output from your program
+     #########################################
+
+     v0:         20; 0x00 00 00 14; 0b0000 0000 0000 0000 0000 0000 0001 0100;
      
      dwarf:mips steve$ 
      ```

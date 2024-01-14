@@ -30,7 +30,7 @@ The following steps can be used to convert a binary number represented in scient
    2. Exponent:
       - Convert the exponent to a signed integer
         * Set to `- exponent` if '-', otherwise set to `exponent`
-      - Add the bias to the exponent, say 127 for binary32.
+      - Add the bias to the exponent, say 127, for binary32.
    3. Mantissa: 
       - Determine the number of bits in the coefficient
         * i.e., determine the position of the MSb of the coefficient
@@ -97,7 +97,7 @@ The following steps can be used to convert a binary number represented in scient
 
 1. Binary16 (half):
    - Sign: `1`
-   - Expon: `101` (5) -->  `10100` (20 = 5 + 15)
+   - Expon: + `101` (5) -->  `10100` (20 = (+ 5) + 15)
    - Mantissa: `01011010101` --> `0101101010` 
    - Note: precision is lost via this encoding scheme
 
@@ -107,7 +107,7 @@ The following steps can be used to convert a binary number represented in scient
 
 2. Binary32 (single):   
    - Sign: `1`
-   - Expon: `101` (5) -->  `1000 0100` (132 = 5 + 127)
+   - Expon: + `101` (5) -->  `1000 0100` (132 = (+ 5) + 127)
    - Mantissa: `01011010101` --> `010110101010000..0` 
 
      | S   | E (8)      | M (23)  | 
@@ -116,17 +116,17 @@ The following steps can be used to convert a binary number represented in scient
 
 3. Binary64 (double):
    - Sign: `1`
-   - Expon: `101` (5) -->  `100 0000 0100` (1028 = 5 + 1023)
+   - Expon: + `101` (5) -->  `100 0000 0100` (1028 = (+ 5) + 1023)
    - Mantissa: `01011010101` --> `0101 1010 1010 0000 00000000 00000000 00000000 000000 0000` 
 
      | S   | E (11)        | M (52) | 
-     | --: | :------:      | :----- | 
+     | --: | :-----------: | :----- | 
      | 1   | 100 0000 0100 | 0101 1010 1010 0000 00000000 00000000 00000000 000000 0000 | 
 
 
 4. Binary128 (quad)
    - Sign: `1`
-   - Expon: `101` (5) -->  `100 0000 0000 0100` (16388 = 5 + 16383)
+   - Expon: + `101` (5) -->  `100 0000 0000 0100` (16388 = (+ 5) + 16383)
    - Mantissa: `01011010101` -->
      - <sup><sub>`0101 1010 1010 0000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 0` </sup></sub>
 

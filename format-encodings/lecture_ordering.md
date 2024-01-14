@@ -27,7 +27,6 @@
   1. Mathematical Review & Base 2 Encodings
      1. Base10: Mathematical Review
         * Addition
-        * BCD Addition
         * Subtraction
         * Method of Complements
         * Subtraction via Complements
@@ -38,5 +37,7 @@
         * Method of Complements (2's and 1's Complement)
           - Encoding of Negative Numbers
         * Subtraction via Complements
+
+  1. Multiplication
   
   1. Base64 Encoding

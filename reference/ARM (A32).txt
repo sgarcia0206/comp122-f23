@@ -1,0 +1,21 @@
+ARM (A32)
+The standard 32-bit ARM calling convention allocates the 16 general-purpose registers as:
+
+r15: Program counter (as per the instruction set specification).
+r14: Link register. The BL instruction, used in a subroutine call, stores the return address in this register.
+r13: Stack pointer. The Push/Pop instructions in "Thumb" operating mode use this register only.
+r12: Intra-Procedure-call scratch register.
+r4 to r11: Local variables.
+r0 to r3: Argument values passed to a subroutine and results returned from a subroutine.
+
+
+These names are proved by the assembler
+.eqv  r0   a1
+.eqv  r1   a2
+.eqv  r2   a3
+.eqv  r3   a4
+
+.eqv  r12  ip   scratch ... not saved... similar to $at
+.eqv  r13  sp
+.eqv  r14  lr
+.eqv  r15  pc

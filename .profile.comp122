@@ -32,17 +32,30 @@ case "${_OS}" in
      LAUNCH="open"
      CLIP_COPY="pbcopy"
      ;;
+   GNU/Linux ) # Ubuntu
+     #SUBLIME_BIN='/Applications/Sublime Text.app/Contents/SharedSupport/bin'  
+     SUBLIME='subl -w -n'
+     LAUNCH="open"
+     #CLIP_COPY="pbcopy"
+     ;;
 esac
 
+function rebuild_MIPS_OS_Interface () {
+  ( cd $COMP122_BIN
+    javac MIPS_OS_Interface.java 
+  )
+}
 
 function comp122-keygen () {
    
    mkdir -m 700 -p ~/.ssh
-   ssh-keygen -t ed25519 -f "${COMP122_KEY}" -C "comp122 git@github.com" 2>/dev/null
+   ssh-keygen -t ed25519 -C "comp122 git@github.com" 2>/dev/null
+   COMP122_KEY=~/.ssh/id_ed25519
 
    if [[ $? != 0 ]] ; then 
      # Note if the ed25519 type is not recognized then use RSA with 4096 bits
-     ssh-keygen -t rsa -b 4096 -f "${COMP122_KEY}" -C "comp122 git@github.com" 
+     ssh-keygen -t rsa -b 4096 -C "comp122 git@github.com"
+     COMP122_KEY=~/.ssh/id_rsa
    fi
 
    if [[ $? == 0 ]] ; then 
@@ -65,6 +78,10 @@ alias git="my_git "
 function my_git () {
 
     case "$1" in 
+      safe-to-switch)
+        git-safe-to-switch
+        ;;
+
       pull-request)
           shift 
           git-pull-request "$@"
@@ -125,6 +142,15 @@ function git-pull-request () {
    'git' request-pull $base $repo $branch | tee pull-request.$(date +%b%d:%H:%M)
 }
 
+function git-safe-to-switch () {
+  local _output=$(git status --untracked-files=no -s)
+  if [[ -z $_output ]] ; then
+    return 0
+   else
+     return 1
+  fi
+}
+
 function git-repo-state () {
     local branch="$1"
     [[ -z "$branch" ]] && branch="main"
@@ -150,6 +176,27 @@ function git-repo-state () {
        echo "Your local and remote repository share the same state for branch \"${branch}\""
     fi
     return ${return_value}
+}
+
+function git_commit_on_time () {
+  date="$1"
+  commit="$2"
+
+  # Note that this requires the DATE to be in the format of: Nov 11 12:52
+  due_date=$(date -j -f "%b %d %H:%M" "$date" +%s)
+
+  # Note if the commit is empty, then it is equivalent to the last commit
+  commit_date=$(git log "${commit}" -1 --date=unix --pretty=format:"%ad" 2>/dev/null)
+  if [[ -z ${commit_date} ]] ; then
+    # the ${commit} did not exist
+    return 1
+  fi
+
+  if (( "${commit_date}" <= "${due_date}" )) ; then
+    return 0    # on time 
+  else
+    return 1    # the commit did not occur before the due date
+  fi
 }
 
 

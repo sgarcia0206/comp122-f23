@@ -123,7 +123,7 @@ function ascii.index () {
          f ) value="12" ;;
          r ) value="13" ;;
          e ) value="27" ;;
-         \\ ) value="92" ;;
+         '\' ) value="92" ;;
          * ) value=0xFF ; echo "$next" ;;  # an error
       esac
       printf "%d " "$value"
